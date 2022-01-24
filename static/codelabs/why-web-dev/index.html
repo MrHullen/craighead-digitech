@@ -1,0 +1,402 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Why Web Dev</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="why-web-dev"
+                  title="Why Web Dev"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="5">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<p>You&#39;ll build a multipage website with some reasons why we choose to learn web development.</p>
+<p>It&#39;ll have the following features:</p>
+<aside class="special"><p><strong>Features</strong></p>
+<ul>
+<li>HTML structure</li>
+<li>Multiple HTML pages linked together</li>
+<li>Links styled with CSS</li>
+<li>Images</li>
+<li>Image styles with CSS</li>
+</ul>
+</aside>
+<p>Here&#39;s what it might look like:</p>
+<p class="image-container"><img style="width: 624.00px" src="img/3b57c78622220860.png"></p>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Creating multiple HTML files</li>
+<li>Linking HTML files together by creating a nav menu</li>
+<li>Vocabulary for describing your HTML and CSS code</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it is the most common)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Start your project" duration="5">
+        <h2 is-upgraded>Open the assignment</h2>
+<ol type="1" start="1">
+<li>Open the <a href="https://classroom.github.com/a/cFGgCuVn" target="_blank">GitHub Classroom assignment</a></li>
+<li>Check that you&#39;re logged in with your GitHub account</li>
+<li>Check the name of the assignment is correct and then accept it. GitHub will make a copy of the template for you.</li>
+<li>Click on the link to your repository</li>
+</ol>
+<h2 is-upgraded>Clone your repository</h2>
+<ol type="1" start="5">
+<li>Click on the green <strong>Code</strong> button and choose <strong>Open with GitHub Desktop</strong></li>
+<li>Choose a place (such as Documents) to download your code to</li>
+</ol>
+<h2 is-upgraded>Open VS Code</h2>
+<ol type="1" start="7">
+<li>Once it has cloned to your computer, click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+<li>Open the file called <code>index.html</code></li>
+</ol>
+<p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Recap: read your HTML" duration="5">
+        <p>Read over your HTML and compare it with what you see on the page in the browser.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Recap: Add content to the careers page" duration="10">
+        <p>Often your client will give you the content to add to a website. This is the content you need to add to the <code>other-careers.html</code> page:</p>
+<p><strong><em>Other Coding Careers</em></strong></p>
+<p><em>Web dev is a great start but it&#39;s only one of many different careers in digital technologies. Here are some of the others.</em></p>
+<ul>
+<li><em>Application developer</em></li>
+<li><em>Server engineer</em></li>
+<li><em>Network engineer</em></li>
+<li><em>Project manager</em></li>
+<li><em>Systems Architect</em></li>
+<li><em>Artificial intelligence researcher</em></li>
+<li><em>Cyber security consultant (hacker)</em></li>
+</ul>
+<p>and this is what the page should look like in the browser:</p>
+<p class="image-container"><img style="width: 624.00px" src="img/f99c1af7d03b9206.png"></p>
+<aside class="special"><p><strong>Reminder</strong></p>
+<p>An <strong>unordered list element</strong> is a group of <strong>list item elements</strong>. Like this:</p>
+<p><code>ul</code></p>
+<p><code>  li Item 1 /li</code></p>
+<p><code>  li Item 2 /li</code></p>
+<p><code>/ul</code></p>
+</aside>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ HTML structure</p>
+<ul>
+<li>Multiple HTML pages linked together</li>
+<li>Links styled with CSS</li>
+<li>Images</li>
+<li>Image styles with CSS</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Link the pages" duration="5">
+        <p>You now have two different web pages but no way to get from one to the other. To do this, we&#39;ll need links.</p>
+<p>Copy and paste this code below the main heading of your <code>index.html</code> file:</p>
+<pre><code>&lt;a href=&#34;opportunities.html&#34;&gt; Web Dev Opportunities &lt;/a&gt;</code></pre>
+<aside class="special"><p><code>a</code> stands for <strong>anchor</strong>, but really you can just think of them as <strong>links</strong>. This element has two parts:</p>
+<ul>
+<li>an <code>href</code> <strong>attribute</strong> that tells the browser what <strong>file </strong>the link goes to</li>
+<li>some text that tells the user what <strong>page </strong>the link goes to</li>
+</ul>
+<p>An <strong>attribute</strong> is an extra bit of information that goes inside the <strong>opening tag</strong>. In this case, the information is which file the link should go to when it&#39;s clicked.</p>
+<p>New vocabulary: <strong>attribute</strong></p>
+</aside>
+<p>Save and check your website in your browser. You should see a link that you can click to take you to your second page.</p>
+<h2 is-upgraded>Customise</h2>
+<p>Unfortunately, there&#39;s no way back to the home page.</p>
+<ul>
+<li>Add a link back to the home page (remember, the file name is <code>index.html</code>)</li>
+</ul>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ HTML structure</p>
+<p>✅ Multiple HTML pages linked together</p>
+<ul>
+<li>Links styled with CSS</li>
+<li>Images</li>
+<li>Image styles with CSS</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add more links" duration="5">
+        <p>The navigation of your website could be made easier for your users in two ways:</p>
+<ul>
+<li>they can get to any page from any page</li>
+<li>the links don&#39;t change from page to page</li>
+</ul>
+<p>Update the code on your <code>index.html</code> file to include all the pages, including the current one:</p>
+<pre><code>&lt;a href=&#34;index.html&#34;&gt; Home &lt;/a&gt;
+&lt;a href=&#34;opportunities.html&#34;&gt; Web Dev Opportunities &lt;/a&gt;
+&lt;a href=&#34;other-careers.html&#34;&gt; Other Coding Careers &lt;/a&gt;</code></pre>
+<h2 is-upgraded>Customise</h2>
+<p>The other pages need to be tidied up as well.</p>
+<ul>
+<li>Fix the links on the other pages (<em>hint: is there a way to do this quickly?</em>)</li>
+</ul>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ HTML structure</p>
+<p>✅ Multiple HTML pages linked together</p>
+<ul>
+<li>Links styled with CSS</li>
+<li>Images</li>
+<li>Image styles with CSS</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Style your links" duration="5">
+        <p>Copy and paste this code at the bottom of your front page:</p>
+<pre><code>&lt;style&gt;
+  * {
+    font-family: sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  a:hover {
+    color: white;
+    background-color: black;
+  }
+&lt;/style&gt;</code></pre>
+<aside class="special"><p>Read through the CSS code above and try to predict what it&#39;ll do.</p>
+</aside>
+<h2 is-upgraded>Customise</h2>
+<p>Style the page your way.</p>
+<ul>
+<li>Add, remove, or change the CSS code however you feel works best.</li>
+<li>If you prefer your links to be stacked vertically, add this to your link CSS rules:</li>
+</ul>
+<p><code>display: block;</code></p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ HTML structure</p>
+<p>✅ Multiple HTML pages linked together</p>
+<p>✅ Links styled with CSS</p>
+<ul>
+<li>Images</li>
+<li>Image styles with CSS</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add an image" duration="10">
+        <p><a href="https://en.wikipedia.org/wiki/HTML5#/media/File:HTML5_logo_and_wordmark.svg" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download this image</paper-button></a> and save it into the same folder as your <code>index.html</code> file.</p>
+<p>Rename the image to <code>html-logo.svg</code> so that it&#39;s easier to type into the code.</p>
+<p>Add this line into the code on your <code>index.html</code>.</p>
+<pre><code>&lt;img src=&#34;html-logo.svg&#34;&gt;</code></pre>
+<aside class="special"><p><code>img</code> stands for <strong>image</strong>. This tag has an extra piece of information inside the<strong> opening tag</strong> called an <strong>attribute</strong>. Notice that it doesn&#39;t have a <strong>closing tag</strong>.</p>
+<p><strong>Reminder</strong>: An <strong>attribute</strong> is an extra bit of information that goes inside the <strong>opening tag</strong>. In this case, the information is which file the image is.</p>
+<p>The <code>src</code> (<strong>source</strong>) <strong>attribute</strong> says what the image file name is that should be shown.</p>
+</aside>
+<aside class="special"><p><strong>Discussion</strong></p>
+<p>Why is there no closing tag?</p>
+</aside>
+<p>If your image isn&#39;t showing, check:</p>
+<ul>
+<li>spelling is all correct</li>
+<li>The <code>filename</code> is the same as the <code>src</code> attribute</li>
+<li>you have saved the HTML</li>
+</ul>
+<h2 is-upgraded>Customise</h2>
+<p>Adjust your image the way you want it to look:</p>
+<ul>
+<li>Put the <code>img</code> element in the code where you want the image to appear</li>
+<li>Add some other coding related images to the other pages</li>
+</ul>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ HTML structure</p>
+<p>✅ Multiple HTML pages linked together</p>
+<p>✅ Links styled with CSS</p>
+<p>✅ Images</p>
+<ul>
+<li>Image styles with CSS</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Style your image" duration="0">
+        <p>Often, images aren&#39;t the right size and need to be styled to fit into the web page.</p>
+<p>First, we&#39;ll change the size of your image. Copy and paste this code into your <code>style</code> element:</p>
+<pre><code>img {
+  width: 50em;
+}</code></pre>
+<aside class="special"><p>You&#39;ll notice that we didn&#39;t change the height, but it changed anyway. The browser will keep your image in proportion. If you also change the height, it&#39;s possible to get the proportions wrong and make your image look strange.</p>
+</aside>
+<h2 is-upgraded>Customise</h2>
+<p>Adjust your images the way you want them to look:</p>
+<ul>
+<li>Adjust the sizes of all of your images to be appropriate</li>
+<li>Add some spacing between them and the other elements by using <code>margin</code></li>
+</ul>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ HTML structure</p>
+<p>✅ Multiple HTML pages linked together</p>
+<p>✅ Links styled with CSS</p>
+<p>✅ Images</p>
+<p>✅ Image styles with CSS</p>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="First iteration done" duration="0">
+        <p>Congratulations, the first iteration of your site is complete.</p>
+<p>You&#39;ve created three pages and linked them together into a site.</p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ HTML structure</p>
+<p>✅ Multiple HTML pages linked together</p>
+<p>✅ Links styled with CSS</p>
+<p>✅ Images</p>
+<p>✅ Image styles with CSS</p>
+</aside>
+<p>Along the way, you&#39;ve learnt about these parts of coding.</p>
+<p><strong>(</strong>➕ <em>means new things in this project)</em></p>
+<p><strong>HTML code</strong></p>
+<ul>
+<li><code>h1</code> for main headings</li>
+<li><code>h2</code> for subheadings</li>
+<li><code>p</code> for paragraphs</li>
+<li><code>ul</code> for unordered lists (bullet points)</li>
+<li><code>li</code> for list items inside an unordered list</li>
+<li><code>style</code> for CSS styling</li>
+</ul>
+<p>➕ <code>a</code> for links</p>
+<p>➕ <code>href</code> attribute in <code>a</code> opening tags</p>
+<p>➕ <code>img</code> for images</p>
+<p>➕ <code>src</code> attribute in <code>img</code> opening tags</p>
+<p><strong>HTML vocabulary</strong></p>
+<ul>
+<li><em>tag</em> - a single piece of HTML code inside pointy brackets, i.e. <code><</code> and <code>></code></li>
+<li><em>element</em> - a component of the webpage, such as a heading or paragraph, inside an opening tag and a closing tag</li>
+</ul>
+<p>➕ <em>attribute </em>- extra information inside the pointy brackets of an opening tag, such as a file name</p>
+<p><strong>CSS code</strong></p>
+<ul>
+<li><code>background-color:</code> to change the background colour of an element</li>
+<li><code>font-family:</code> to change what letters look like</li>
+<li><code>font-size:</code> to change the size of text</li>
+<li><code>color:</code> to change the colour of text</li>
+<li><code>text-align:</code> to move text to the left, center, or right</li>
+<li><code>text-decoration:</code> to add or remove underlines and line-throughs</li>
+<li><code>text-transform:</code> to change text to all uppercase or lowercase</li>
+<li><code>text-shadow:</code> to add a shadow to text</li>
+<li><code>margin-</code>(<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>)<code>:</code> to add space around the outside of an element</li>
+<li><code>padding-</code>(<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>)<code>:</code> to add space around the inside of an element</li>
+</ul>
+<p>➕ <code>width:</code> for the width</p>
+<p>➕ <code>height:</code> for the height</p>
+<p><strong>CSS vocabulary</strong></p>
+<ul>
+<li><em>selector </em>- the start of the chunk of CSS that says what HTML element it&#39;s for</li>
+<li><em>property </em>- the thing you&#39;re going to change about the HTML element</li>
+<li><em>value </em>- what you want to change the the property to</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Take it further: hovering" duration="0">
+        <p>Elements on a web page can be in different states, such as being hovered over.</p>
+<p>Copy and paste this code into your <code>style</code> element:</p>
+<pre><code>a:hover {
+  background-color: black;
+}</code></pre>
+<p>Open your page in the browser and hover over your links with your cursor.</p>
+<p>Experiment with <code>:hover</code></p>
+<ul>
+<li>Can you add styles?</li>
+<li>Can you remove styles?</li>
+<li>Does hover work on other elements?</li>
+</ul>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Take it further: classes" duration="0">
+        <p>Usually, a website will indicate which page you&#39;re on in the list of links by highlighting it a different color.</p>
+<p>Most frequently, a good <strong>Google search</strong> will be the best option. Remember to include the keywords &#34;CSS&#34; and &#34;class&#34; so that Google will give you the best results (skip past the ads though!).</p>
+<p>If you don&#39;t find anything useful, try one of these.</p>
+<ul>
+<li><a href="https://www.w3schools.com/css/css_selectors.asp#:~:text=The%20CSS%20class%20Selector" target="_blank">W3 Schools CSS Classes</a></li>
+<li><a href="https://stackoverflow.com/questions/26514344/how-to-highlight-currently-opened-page-link-in-css" target="_blank">Stack Overflow</a></li>
+</ul>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

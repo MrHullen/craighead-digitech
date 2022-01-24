@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-01-24T02:45:53Z",
+  "id": "summer-continued",
+  "duration": 36,
+  "title": "Summer continued",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn to position the top level elements of your page.",
+  "source": "1Sxd0cslnonNWe14X6_ex1XKdP2BJsKlp7oX6ssR2WRk",
+  "theme": "html",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "html"
+  ],
+  "tags": [],
+  "url": "summer-continued"
+}

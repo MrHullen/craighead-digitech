@@ -20,8 +20,9 @@ To **write code** on your computer and run it to see what it does, you'll need t
 
 <Box title="Save">
 
-To **save and backup your code** to the cloud, you'll also need to:
+To **save and backup code** to the cloud, you'll also need to:
 
+ 1. Install Git ([Mac](https://sourceforge.net/projects/git-osx-installer/) or [Windows](https://git-scm.com/download/win))
  1. Create a [GitHub account](https://github.com/)
  1. Install [GitHub Desktop](https://desktop.github.com/)
 
@@ -56,6 +57,9 @@ Extensions are helpful extras that can customise your VS Code and make writing c
 
 - ![CSS Formatter icon](https://cdn.vsassets.io/v/M195_20211109.3/_content/Header/default_icon_128.png) [CSS Formatter](https://marketplace.visualstudio.com/items?itemName=aeschli.vscode-css-formatter)
   - `Alt` + `Shift` + `F` is an amazing tool for formatting code - this let's you do it with CSS as well.
+
+- ![GitHub Classroom icon](https://github.gallerycdn.vsassets.io/extensions/github/classroom/0.0.3/1629390767662/Microsoft.VisualStudio.Services.Icons.Default)[GitHub Classroom](https://marketplace.visualstudio.com/items?itemName=GitHub.classroom)
+  - Allows you to browse, do, and save your GitHub Classroom coding assignments.
 
 - ![Svelte for VS Code icon](https://svelte.gallerycdn.vsassets.io/extensions/svelte/svelte-vscode/105.5.3/1637157536523/Microsoft.VisualStudio.Services.Icons.Default) [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
   - Allows VS Code to understand and highlight Svelte files to make reading them easier, and lets you do `Alt` + `Shift` + `F` in them.

@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-01-23T23:45:55Z",
+  "id": "summer",
+  "duration": 51,
+  "title": "Summer",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to create a styled web page by writing HTML and CSS code.",
+  "source": "1Y50wao25VhpFpageto9HY61rvO7ISBs5_ndqN-9G-Ew",
+  "theme": "html",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "html"
+  ],
+  "tags": [],
+  "url": "summer"
+}

@@ -1,0 +1,288 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Summer continued</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="summer-continued"
+                  title="Summer continued"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="5">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<p>You&#39;ll build a page that is styled and arranged with CSS.</p>
+<p>It&#39;ll have the following features:</p>
+<aside class="special"><p><strong>Features</strong></p>
+<ul>
+<li>Semantic HTML elements</li>
+<li>Images</li>
+<li>Grid positioning</li>
+<li>Flexbox positioning</li>
+</ul>
+</aside>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Arranging HTML elements using CSS Grid</li>
+<li>Arranging HTML elements using CSS Flexbox</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account and <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
+<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most common)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Resume your project" duration="1">
+        <h2 is-upgraded>Select your repository</h2>
+<ol type="1" start="1">
+<li>Open <strong>GitHub Desktop</strong></li>
+<li>Choose the <strong>Summer</strong> repository from the menu in the <strong>top left</strong></li>
+</ol>
+<h2 is-upgraded>Open VS Code</h2>
+<ol type="1" start="3">
+<li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+</ol>
+<p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Recap: semantic elements" duration="5">
+        <p>Add the <code>header</code>, <code>main</code>, and <code>footer</code> elements to your page.</p>
+<aside class="special"><p><strong>Reminder</strong></p>
+<p>The <code>header</code> element goes at the <strong>top</strong> and includes the <strong>main heading</strong>.</p>
+<p>The <code>main</code> element goes around the <strong>content</strong> specific to this page.</p>
+<p>The <code>footer</code> element goes at the <strong>bottom</strong> and contains the <strong>copyright</strong>, <strong>authorship</strong>, and <strong>contact</strong> information.</p>
+</aside>
+<p>Check that there are <strong>no</strong> HTML elements <strong>outside</strong> of these three semantic elements.</p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Semantic HTML elements</p>
+<ul>
+<li>Images</li>
+<li>Grid positioning</li>
+<li>Flexbox positioning</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Recap: images" duration="5">
+        <p>Find an image or two to personalise your web page.</p>
+<ul>
+<li>Find an image from your summer to include in your site</li>
+<li>Save the file into your project folder</li>
+<li>Change the <code>src</code> attribute of the <code>img</code> element to the name of your file</li>
+</ul>
+<aside class="special"><p><strong>Reminder</strong></p>
+<p>The <code>img</code> opening tag has an attribute called <code>src</code>, which needs to have the exact name of your image file.</p>
+</aside>
+<h2 is-upgraded>Customise</h2>
+<p>Change your images to personalise your web page.</p>
+<ul>
+<li>Add a <code>style</code> element at the bottom of your page and change the look of your images.</li>
+<li>Try out some additional style rules:</li>
+</ul>
+<p><code>border-radius: 50%;</code></p>
+<p><code>filter: grayscale(100%);</code></p>
+<p><code>filter: saturate(500%);</code></p>
+<p><code>filter: sepia(100%);</code></p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Semantic HTML elements</p>
+<p>✅ Images</p>
+<ul>
+<li>Grid positioning</li>
+<li>Flexbox positioning</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Position with Grid" duration="10">
+        <p>CSS Grid lets you arrange HTML elements into a... well, a grid. It makes creating interesting and modern layouts easy, without having to add or change a lot of HTML code.</p>
+<p>There are a few new things we need to add to get this working.</p>
+<ul>
+<li>A body element around your semantic elements. The opening tag is right at the top above your header, and the closing tag right after your footer.</li>
+<li>A body selector to your CSS and two rules:</li>
+<li>The display property set to grid</li>
+<li>The grid property set to the layout we want (use the code below)</li>
+<li>The semantic elements given a grid-area property</li>
+</ul>
+<pre><code>&lt;body&gt;
+  &lt;header&gt;
+    ...
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    ...
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    ...
+  &lt;/footer&gt;
+&lt;/body&gt;
+
+&lt;style&gt;
+  body {
+    display: grid;
+    grid: &#34; h    m    .  &#34; auto
+          &#34; .    m    .  &#34; auto
+          &#34; .    m    f  &#34; auto
+          / auto auto auto;
+  }
+
+  header { grid-area: h; }
+  main   { grid-area: m; }
+  footer { grid-area: f; }
+&lt;/style&gt;</code></pre>
+<aside class="special"><p>The body element represents everything that&#39;s shown on the page to the user. It wraps around everything else, apart from the style element.</p>
+<p>The display: grid; rule in the body rules tells the browser that the body is the container element for the grid. The grid rule itself says what the layout should be. All the auto words tell the browser to automatically choose the width and height of the grid.</p>
+<p>The grid-area rules for all of the semantic elements give those elements a letter that you can put into the grid rule where you want the element to go.</p>
+<p>The dot (.) inside the grid rule tells the browser that there should be a gap there. It lets you add space to a layout without using margins or padding.</p>
+<p>New vocabulary: body, display, grid, grid-area</p>
+</aside>
+<p>Result</p>
+<h2 is-upgraded>Customise</h2>
+<p>Change your grid rule to personalise your web page.</p>
+<ul>
+<li>Arrange the semantic elements of your page the way you like.</li>
+</ul>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Semantic HTML elements</p>
+<p>✅ Images</p>
+<p>✅ Grid positioning</p>
+<ul>
+<li>Flexbox positioning</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Position with Flexbox" duration="10">
+        <h2 is-upgraded>Customise</h2>
+<p>Change your CSS rule to personalise your web page.</p>
+<ul>
+<li>Arrange the elements in your main element the way you like.</li>
+</ul>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Semantic HTML elements</p>
+<p>✅ Images</p>
+<p>✅ Grid positioning</p>
+<p>✅ Flexbox positioning</p>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Next iteration done" duration="0">
+        <p>Congratulations, the next iteration of your web page is complete.</p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Semantic HTML elements</p>
+<p>✅ Images</p>
+<p>✅ Grid positioning</p>
+<p>✅ Flexbox positioning</p>
+</aside>
+<p>You&#39;ve taken the code provided and customised it to create your unique web page.</p>
+<p>Along the way, you&#39;ve learnt about these parts of coding.</p>
+<p><strong>(</strong>➕ <em>means new things in this project)</em></p>
+<p><strong>HTML code</strong></p>
+<ul>
+<li><code>h1</code> for main headings</li>
+<li><code>h2</code> for subheadings</li>
+<li><code>p</code> for paragraphs</li>
+<li><code>ul</code> for unordered lists (bullet points)</li>
+<li><code>li</code> for list items inside an unordered list</li>
+<li><code>style</code> for CSS styling</li>
+<li><code>a</code> for links</li>
+<li><code>href</code> attribute in <code>a</code> opening tags</li>
+<li><code>img</code> for images</li>
+<li><code>src</code> attribute in <code>img</code> opening tags</li>
+<li><code>header</code> for page headers</li>
+<li><code>nav</code> for navigation menus</li>
+<li><code>main</code> for the main page content</li>
+<li><code>footer</code> for page footers</li>
+</ul>
+<p>body for the whole page the user can see</p>
+<p><strong>HTML vocabulary</strong></p>
+<ul>
+<li><em>tag</em> - a single piece of HTML code inside pointy brackets, i.e. <code><</code> and <code>></code></li>
+<li><em>element</em> - a component of the webpage, such as a heading or paragraph, inside an opening tag and a closing tag</li>
+<li><em>attribute </em>- extra information inside the pointy brackets of an opening tag, such as a file name</li>
+</ul>
+<p><strong>CSS code</strong></p>
+<ul>
+<li><code>background-color:</code> to change the background colour of an element</li>
+<li><code>font-family:</code> to change what letters look like</li>
+<li><code>font-size:</code> to change the size of text</li>
+<li><code>color:</code> to change the colour of text</li>
+<li><code>text-align:</code> to move text to the left, center, or right</li>
+<li><code>text-decoration:</code> to add or remove underlines and line-throughs</li>
+<li><code>text-transform:</code> to change text to all uppercase or lowercase</li>
+<li><code>text-shadow:</code> to add a shadow to text</li>
+<li><code>margin-</code>(<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>)<code>:</code> to add space around the outside of an element</li>
+<li><code>padding-</code>(<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>)<code>:</code> to add space around the inside of an element</li>
+<li><code>width:</code> for the width</li>
+<li><code>height:</code> for the height</li>
+</ul>
+<p>display to change the way this should be shown</p>
+<p>grid to change the way the page layout</p>
+<p>grid-area to give an element a letter to use in grid</p>
+<p><strong>CSS vocabulary</strong></p>
+<ul>
+<li><em>selector </em>- the start of the chunk of CSS that says what HTML element it&#39;s for</li>
+<li><em>property </em>- the thing you&#39;re going to change about the HTML element</li>
+<li><em>value </em>- what you want to change the the property to</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Take it further: mobile friendly" duration="0">
+        <p>In your coding career you will often need to look up how to do things. In this section are a couple of websites to help you find information online about how to do what you want to do.</p>
+<p>Most frequently, a good <strong>Google search</strong> will be the best option. Remember to include the keywords &#34;HTML&#34; and the thing you want to do, so that Google will give you the best results (skip past the ads though!).</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

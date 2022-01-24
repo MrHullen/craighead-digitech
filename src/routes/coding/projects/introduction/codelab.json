@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-01-23T22:31:06Z",
+  "id": "introduction",
+  "duration": 25,
+  "title": "Introduction",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to create a web page by writing HTML code.",
+  "source": "1mADTTQ_w7YPQD8q6ks-0TS2sAdyM3epJKePe2v4-IUs",
+  "theme": "html",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "html"
+  ],
+  "tags": [],
+  "url": "introduction"
+}

@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-01-24T02:46:24Z",
+  "id": "why-web-dev-continued",
+  "duration": 27,
+  "title": "Why Web Dev continued",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to add meta data and validate HTML.",
+  "source": "1nyu1riYqdPZHZECuZqrVbCo_9T35Kfyqajkkt0sRBds",
+  "theme": "html",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "html"
+  ],
+  "tags": [],
+  "url": "why-web-dev-continued"
+}

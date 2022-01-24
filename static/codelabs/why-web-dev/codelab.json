@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-01-23T23:47:06Z",
+  "id": "why-web-dev",
+  "duration": 50,
+  "title": "Why Web Dev",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to create a multipage website by writing HTML code.",
+  "source": "11eIXeOu4__CPFsyQB7n7JS903OCcgsr5EPK2_KCBq5M",
+  "theme": "html",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "html"
+  ],
+  "tags": [],
+  "url": "why-web-dev"
+}

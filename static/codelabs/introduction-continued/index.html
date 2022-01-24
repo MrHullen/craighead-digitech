@@ -1,0 +1,229 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Introduction continued</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="introduction-continued"
+                  title="Introduction continued"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="5">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<p>You&#39;ll build on your Introduction project to add semantic HTML elements that help you structure your page.</p>
+<p>It&#39;ll have the following features:</p>
+<aside class="special"><p><strong>Features</strong></p>
+<ul>
+<li>A header</li>
+<li>A main section</li>
+<li>A footer</li>
+</ul>
+</aside>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Semantic HTML elements</li>
+<li>Grouping HTML elements</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account and <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
+<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most common)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Resume your project" duration="1">
+        <h2 is-upgraded>Select your repository</h2>
+<ol type="1" start="1">
+<li>Open <strong>GitHub Desktop</strong></li>
+<li>Choose the <strong>Introduction</strong> repository from the menu in the <strong>top left</strong></li>
+</ol>
+<h2 is-upgraded>Open VS Code</h2>
+<ol type="1" start="3">
+<li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+</ol>
+<p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add your header" duration="5">
+        <p>The <code>header</code> element is a section, usually at the <strong>top</strong> of the page, that contains the <strong>name</strong> of the website, a <strong>logo</strong>, and other things that are the same on every page.</p>
+<p>Usually, the <code>header</code> is the <strong>same</strong> or <strong>similar</strong> on every page.</p>
+<p>Try putting your main heading inside a <code>header</code> element.</p>
+<pre><code>&lt;header&gt;
+  &lt;h1&gt; Introduce Yourself &lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+<h2 is-upgraded>Customise</h2>
+<p>Change your header to personalise your web page.</p>
+<ul>
+<li>Add an image of yourself in your header</li>
+</ul>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A header</p>
+<ul>
+<li>A main section</li>
+<li>A footer</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add your main" duration="2">
+        <p>The <code>main</code> element is the... <strong>main</strong> part of your page. It contains all the content that&#39;s specific to this page, so it should be <strong>different</strong> on every page.</p>
+<p>Add a <code>main</code> element around the main content of your page.</p>
+<pre><code>&lt;main&gt;
+  &lt;h2&gt; About Me &lt;/h2&gt;
+
+  &lt;p&gt;
+    A paragraph about me.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    My interests include:
+  &lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt; Thing 1 &lt;/li&gt;
+    &lt;li&gt; Thing 2 &lt;/li&gt;
+    &lt;li&gt; Thing 3 &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A header</p>
+<p>✅ A main section</p>
+<ul>
+<li>A footer</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add your footer" duration="5">
+        <p>The <code>footer</code> element usually contains <strong>copyright</strong> information about the content on the page and the code behind the page. It can include the <strong>author</strong> who wrote the code, who they <strong>work for</strong>, and <strong>contact information</strong>.</p>
+<p>Add a <code>footer</code> element at the <strong>bottom</strong> of your page with as much of this information as you want to include. You at least need to claim <strong>copyright</strong> on the work you&#39;ve done.</p>
+<pre><code>&lt;footer&gt;
+  &lt;p&gt;
+    &amp;copy; Your Name 2022
+  &lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+<aside class="special"><p><code>&copy;</code> is the code for the copyright symbol.</p>
+</aside>
+<h2 is-upgraded>Customise</h2>
+<p>Change your <code>footer</code> to personalise your web page.</p>
+<ul>
+<li>Add <strong>Craighead</strong> as the place where you&#39;re a web developer</li>
+<li>Add as much additional detail as you like</li>
+</ul>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A header</p>
+<p>✅ A main section</p>
+<p>✅ A footer</p>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Next iteration done" duration="0">
+        <p>Congratulations, the next iteration of your web page is complete.</p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A header</p>
+<p>✅ A main section</p>
+<p>✅ A footer</p>
+</aside>
+<p>You&#39;ve taken the code provided and customised it to create your unique web page.</p>
+<p>Along the way, you&#39;ve learnt about these parts of coding.</p>
+<p><strong>(</strong>➕ <em>means new things in this project)</em></p>
+<p><strong>HTML code</strong></p>
+<ul>
+<li><code>h1</code> for main headings</li>
+<li><code>h2</code> for subheadings</li>
+<li><code>p</code> for paragraphs</li>
+<li><code>ul</code> for unordered lists (bullet points)</li>
+<li><code>li</code> for list items inside an unordered list</li>
+<li><code>style</code> for CSS styling</li>
+<li><code>a</code> for links</li>
+<li><code>href</code> attribute in <code>a</code> opening tags</li>
+<li><code>img</code> for images</li>
+<li><code>src</code> attribute in <code>img</code> opening tags</li>
+</ul>
+<p>➕ <code>header</code> for page headers</p>
+<p>➕ <code>nav</code> for navigation menus</p>
+<p>➕ <code>main</code> for the main page content</p>
+<p>➕ <code>footer</code> for page footers</p>
+<p><strong>HTML vocabulary</strong></p>
+<ul>
+<li><em>tag</em> - a single piece of HTML code inside pointy brackets, i.e. <code><</code> and <code>></code></li>
+<li><em>element</em> - a component of the webpage, such as a heading or paragraph, inside an opening tag and a closing tag</li>
+<li><em>attribute </em>- extra information inside the pointy brackets of an opening tag, such as a file name</li>
+</ul>
+<p><strong>CSS code</strong></p>
+<ul>
+<li><code>background-color:</code> to change the background colour of an element</li>
+<li><code>font-family:</code> to change what letters look like</li>
+<li><code>font-size:</code> to change the size of text</li>
+<li><code>color:</code> to change the colour of text</li>
+<li><code>text-align:</code> to move text to the left, center, or right</li>
+<li><code>text-decoration:</code> to add or remove underlines and line-throughs</li>
+<li><code>text-transform:</code> to change text to all uppercase or lowercase</li>
+<li><code>text-shadow:</code> to add a shadow to text</li>
+<li><code>margin-</code>(<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>)<code>:</code> to add space around the outside of an element</li>
+<li><code>padding-</code>(<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>)<code>:</code> to add space around the inside of an element</li>
+<li><code>width:</code> for the width</li>
+<li><code>height:</code> for the height</li>
+</ul>
+<p><strong>CSS vocabulary</strong></p>
+<ul>
+<li><em>selector </em>- the start of the chunk of CSS that says what HTML element it&#39;s for</li>
+<li><em>property </em>- the thing you&#39;re going to change about the HTML element</li>
+<li><em>value </em>- what you want to change the the property to</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Take it further: styles" duration="0">
+        <p>Add a <code>style</code> element to the bottom of your page and apply some of the CSS skills you&#39;ve been developing.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

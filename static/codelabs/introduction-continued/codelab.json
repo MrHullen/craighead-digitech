@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-01-24T00:17:35Z",
+  "id": "introduction-continued",
+  "duration": 18,
+  "title": "Introduction continued",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn to add semantic HTML elements to structure your page.",
+  "source": "168WRKa1IkzztOLM0CBwr_Zbdvca0X2kuDnsOnPVUgac",
+  "theme": "html",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "html"
+  ],
+  "tags": [],
+  "url": "introduction-continued"
+}
