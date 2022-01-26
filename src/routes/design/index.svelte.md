@@ -149,7 +149,7 @@ Tasks in this stage: developing, refining, adjusting, improving
 
   ---
 
-  <h2 id="justification">Justification</h2>
+  ## Justification *- Te Parahau* <a name="iterate"></a>
 
   <Box title="Justify aesthetic elements">
 
@@ -172,5 +172,11 @@ Tasks in this stage: developing, refining, adjusting, improving
 <style>
   h2 em {
     color: hotpink;
+  }
+
+  @media only screen and (max-width: 600px) {
+    h2 em {
+      display: block;
+    }
   }
 </style>

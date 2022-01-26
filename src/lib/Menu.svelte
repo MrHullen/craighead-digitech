@@ -22,15 +22,15 @@
     </a>
   </p>
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.path.includes('/coding')} href="/coding">
+    <a class="menu-link" class:is-active={$page.path.includes('/code')} href="/code">
       <i class="fas fa-code fa-2x" />
-      <span class="link-text">Coding</span>
+      <span class="link-text">Code</span>
     </a>
   </p>
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.path.includes('/testing')} href="/testing">
+    <a class="menu-link" class:is-active={$page.path.includes('/test')} href="/test">
       <i class="fas fa-tasks fa-2x" />
-      <span class="link-text">Testing</span>
+      <span class="link-text">Test</span>
     </a>
   </p>
 </nav>

@@ -64,21 +64,21 @@
 			</a>
 			
       <a class="navbar-item"
-         class:is-active={segment === 'coding'}
+         class:is-active={segment === 'code'}
          on:click={toggle}
-				 aria-current="{segment === 'coding' ? 'page' : undefined}"
-         href="coding">
+				 aria-current="{segment === 'code' ? 'page' : undefined}"
+         href="code">
          <i class="fas fa-code" />
-        <span>Coding</span>
+        <span>code</span>
 			</a>
 			
       <a class="navbar-item"
-         class:is-active={segment === 'testing'}
+         class:is-active={segment === 'test'}
          on:click={toggle}
-				 aria-current="{segment === 'testing' ? 'page' : undefined}"
-         href="testing">
+				 aria-current="{segment === 'test' ? 'page' : undefined}"
+         href="test">
          <i class="fas fa-tasks"></i>
-        <span>Testing</span>
+        <span>Test</span>
 			</a>
 			
     </div>

@@ -4,10 +4,10 @@
       <strong>Digital Technology</strong> by <a href="https://github.com/MrHullen">Mr Hullen</a>
     </p>
     <p>
-      See this site's source code <a href="https://github.com/MrHullen/craighead-digitech/tree/master/src/routes">here</a>.
+      <a href="https://github.com/MrHullen/craighead-digitech/tree/master/src/routes">Read the code</a>
     </p>
     <p>
-      &copy; <a href="https://craighead.school.nz">Craighead Diocesan School</a>
+      &copy; <a href="https://craighead.school.nz">Craighead Diocesan School</a> 2022
     </p>
   </div>
 </footer>

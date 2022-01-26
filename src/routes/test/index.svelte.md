@@ -3,7 +3,7 @@
   import Box from '$lib/Box.svelte.md'
 </script>
 
-<Hero title="Testing" subtitle="Making sure you've built a quality outcome" />
+<Hero title="Test" subtitle="Making sure you've built a quality outcome" />
 
 <section class="content section">
 
