@@ -90,7 +90,7 @@ Extensions are helpful extras that can customise your VS Code and make writing c
 
 With your GitHub account setup, VS Code and GitHub Desktop logged in, and your VS Code customised just the way you want it, you're ready to go!
 
-Check out some of the [Projects](/coding/projects) that you can start coding right away, and remember to regularly practice your [Vocabulary](/coding/vocabulary) and [Flow](/coding/flow) skills so you can talk the talk as well as walk the walk.
+Check out some of the [Projects](/code/projects) that you can start coding right away, and remember to regularly practice your [Vocabulary](/code/vocabulary) and [Flow](/code/flow) skills so you can talk the talk as well as walk the walk.
 
 </section>
 

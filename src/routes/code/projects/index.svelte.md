@@ -73,6 +73,7 @@
 
 ## Svelte
 
+<!--
   <a href="codelabs/new-project">
     <Box title="Project 00 - New Project">
 
@@ -80,7 +81,7 @@
 
     </Box>
   </a>
-
+-->
 </section>
 
 <style>
