@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-01-31T20:28:21Z",
+  "id": "digital-induction",
+  "duration": 30,
+  "title": "Digital Induction",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to get your computer ready for school.",
+  "source": "1_SRd2uLbhr5lxaNzeSyUp1Bt5jcIS9L0TdAq9IWxSWk",
+  "theme": "misc",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "misc"
+  ],
+  "tags": [],
+  "url": "digital-induction"
+}
