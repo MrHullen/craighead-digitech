@@ -5,31 +5,31 @@
 <nav class="menu">
   <p class="menu-label">
     <a class="menu-link" class:is-active={$page.path == '/'} href="/">
-      <i class="fas fa-home fa-2x" />
+      <i class="icon fas fa-home fa-2x" />
       <span class="link-text">Home</span>
     </a>
   </p>
   <p class="menu-label">
     <a class="menu-link" class:is-active={$page.path.includes('/input')} href="/input">
-      <i class="fas fa-keyboard fa-2x" />
+      <i class="icon fas fa-keyboard fa-2x" />
       <span class="link-text">Input</span>
     </a>
   </p>
   <p class="menu-label">
     <a class="menu-link" class:is-active={$page.path.includes('/design')} href="/design">
-      <i class="fas fa-drafting-compass fa-2x" />
+      <i class="icon fas fa-drafting-compass fa-2x" />
       <span class="link-text">Design</span>
     </a>
   </p>
   <p class="menu-label">
     <a class="menu-link" class:is-active={$page.path.includes('/code')} href="/code">
-      <i class="fas fa-code fa-2x" />
+      <i class="icon fas fa-code fa-2x" />
       <span class="link-text">Code</span>
     </a>
   </p>
   <p class="menu-label">
     <a class="menu-link" class:is-active={$page.path.includes('/test')} href="/test">
-      <i class="fas fa-tasks fa-2x" />
+      <i class="icon fas fa-tasks fa-2x" />
       <span class="link-text">Test</span>
     </a>
   </p>
@@ -45,6 +45,8 @@
   .menu-link {
     display: flex;
     align-items: center;
+    color: #3DA35D;
+
   }
 
   .menu-link i {
@@ -56,7 +58,7 @@
   }
 
   .is-active {
-    color: black;
+    color: #363636;
   }
 
   /* Small screens */

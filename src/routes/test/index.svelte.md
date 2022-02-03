@@ -31,6 +31,7 @@
 
   ---
 
+<!-- 
   <h2 id="console">console.log</h2>
 
   ---
@@ -48,5 +49,5 @@
   <h2 id="usability-heurisitcs">Usability Heuristics</h2>
 
   ---
-
+ -->
 </section>
