@@ -23,19 +23,19 @@
       </figcaption>
     </figure>
 
-  <Box title="Tags">
+  <Box title="Tag">
 
     HTML is a tag-based language, which means that everything is wrapped in tags that describe what it is. A piece of content has an opening tag at the beginning to show where it starts, and a closing tag at the end to show where it ends.
 
   </Box>
 
-  <Box title="Elements">
+  <Box title="Element">
 
     An element is a block of HTML, or a component of the page. It gives a label and meaning to the content inside of it. For example, a `p` element contains **paragraph** content, an `img` element contains **image** content, etc.
 
   </Box>
 
-  <Box title="Attributes">
+  <Box title="Attribute">
 
     Tags can have attributes that give extra information about the tag. They go inside the pointy brackets and have a name and a value.
 

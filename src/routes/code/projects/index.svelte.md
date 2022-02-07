@@ -73,15 +73,15 @@
 
 ## Svelte
 
-<!--
-  <a href="codelabs/new-project">
-    <Box title="Project 00 - New Project">
 
-      This is a short tutorial on how to start a new project. It'll be useful for all your future projects.
+  <a href="/codelabs/summer-gallery/index.html" rel="external">
+    <Box title="Project 01 - Components">
+
+      The first part of the **Summer Gallery** project will introduce you to creating pages from **components**.
 
     </Box>
   </a>
--->
+
 </section>
 
 <style>
