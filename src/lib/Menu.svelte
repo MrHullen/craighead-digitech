@@ -4,31 +4,31 @@
 
 <nav class="menu">
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.path == '/'} href="/">
+    <a class="menu-link" class:is-active={$page.url.pathname == '/'} href="/">
       <i class="icon fas fa-home fa-2x" />
       <span class="link-text">Home</span>
     </a>
   </p>
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.path.includes('/input')} href="/input">
+    <a class="menu-link" class:is-active={$page.url.pathname.includes('/input')} href="/input">
       <i class="icon fas fa-keyboard fa-2x" />
       <span class="link-text">Input</span>
     </a>
   </p>
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.path.includes('/design')} href="/design">
+    <a class="menu-link" class:is-active={$page.url.pathname.includes('/design')} href="/design">
       <i class="icon fas fa-drafting-compass fa-2x" />
       <span class="link-text">Design</span>
     </a>
   </p>
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.path.includes('/code')} href="/code">
+    <a class="menu-link" class:is-active={$page.url.pathname.includes('/code')} href="/code">
       <i class="icon fas fa-code fa-2x" />
       <span class="link-text">Code</span>
     </a>
   </p>
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.path.includes('/test')} href="/test">
+    <a class="menu-link" class:is-active={$page.url.pathname.includes('/test')} href="/test">
       <i class="icon fas fa-tasks fa-2x" />
       <span class="link-text">Test</span>
     </a>
