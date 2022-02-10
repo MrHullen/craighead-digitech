@@ -74,10 +74,18 @@
 ## Svelte
 
 
-  <a href="/codelabs/summer-gallery/index.html" rel="external">
+  <a href="/codelabs/summer-gallery-components/index.html" rel="external">
     <Box title="Project 01 - Components">
 
       The first part of the **Summer Gallery** project will introduce you to creating pages from **components**.
+
+    </Box>
+  </a>
+
+  <a href="/codelabs/summer-gallery-links/index.html" rel="external">
+    <Box title="Project 02 - Links">
+
+      The second part of the **Summer Gallery** project will introduce you to creating multiple pages and linking them together.
 
     </Box>
   </a>

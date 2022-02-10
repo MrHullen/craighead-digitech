@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-02-10T02:36:24Z",
+  "id": "summer-gallery-components",
+  "duration": 20,
+  "title": "Summer Gallery Components",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn to create a web page from components in different files.",
+  "source": "1kO24AErZjEfoubgAuq9LoPgLFPGuYPOYY3JgPc8fleo",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "web",
+    "html",
+    "svelte"
+  ],
+  "tags": [],
+  "url": "summer-gallery-components"
+}

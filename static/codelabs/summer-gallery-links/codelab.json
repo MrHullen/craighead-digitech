@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-02-10T02:40:47Z",
+  "id": "summer-gallery-links",
+  "duration": 20,
+  "title": "Summer Gallery Links",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn to create a web site by building and linking pages with components.",
+  "source": "1IlXguiRr86bavcsdcK7RjxTRLI9yUbflAnw2H7lwzuk",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "web",
+    "html",
+    "svelte"
+  ],
+  "tags": [],
+  "url": "summer-gallery-links"
+}

@@ -1,0 +1,173 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Summer Gallery Links</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="summer-gallery-links"
+                  title="Summer Gallery Links"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="5">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<p>You&#39;ll build a site that connects multiple pages together with a reusable navigation component. </p>
+<p>It&#39;ll have the following features:</p>
+<aside class="special"><p><strong>Features</strong></p>
+<ul>
+<li>A second page that reuses existing components</li>
+<li>A nav menu component</li>
+</ul>
+</aside>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Creating multiple pages</li>
+<li>Linking to a page</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account and <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
+<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most common)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Start your project" duration="5">
+        <h2 is-upgraded>Open your repository</h2>
+<ol type="1" start="1">
+<li>Open <strong>GitHub Desktop</strong></li>
+<li>Check the <strong>Current Repository</strong> in the top left is your project</li>
+</ol>
+<h2 is-upgraded>Open VS Code</h2>
+<ol type="1" start="3">
+<li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+<li>Open the file called <code>index.svelte</code> in the <code>src</code> folder</li>
+</ol>
+<h2 is-upgraded>Start your dev server</h2>
+<ol type="1" start="5">
+<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>Shift</code> + <code>`</code></li>
+<li>Start the server on your laptop by entering the command <code>npm run dev</code></li>
+<li>Open the link that it creates to view your site</li>
+</ol>
+<aside class="special"><p>The server will update the site in your browser every time you save a file, so that you can easily see the changes as you make them.</p>
+</aside>
+<p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add an About Me page" duration="5">
+        <p>Creating new pages in Svelte is as easy as creating a new file in your <code>routes</code> folder. We&#39;re going to create a second page so that you can practice reusing <strong>components</strong>, and learn how to create a reusable <strong>nav menu</strong>.</p>
+<ol type="1" start="1">
+<li>Create a new <strong>page</strong> by creating a new file in your <code>routes</code> folder, and call it <code>about-me.svelte</code></li>
+<li><code>Import</code> and add your <code>Header</code> and <code>Footer</code> components to the page</li>
+<li>Add in a <code>main</code> section with some information about yourself</li>
+</ol>
+<pre><code>&lt;script&gt;
+  import ComponentName from &#39;ComponentName.svelte&#39;
+&lt;/script&gt;
+
+&lt;ComponentName /&gt;</code></pre>
+<aside class="special"><p><strong>Reminder</strong></p>
+<p>Components are reusable chunks of code that sit in their own file. You can import and use those chunks anywhere on your website.</p>
+<p>When you update the component, anywhere it&#39;s used on your site will be updated as well, which makes it easy to iterate and improve.</p>
+</aside>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A second page that reuses existing components</p>
+<ul>
+<li>A nav menu component</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add a nav component" duration="5">
+        <p>Navigation menus can quickly become unwieldy when your site gets large enough - update one page name and you have to go through every nav menu and update them accordingly.</p>
+<p>In modern websites, developers create one reusable nav menu.</p>
+<ol type="1" start="1">
+<li>Create a new <strong>component</strong> by creating a new file in your <code>lib</code> folder, and call it <code>Nav.svelte</code></li>
+<li>Copy and paste the code below into your new component</li>
+</ol>
+<pre><code>&lt;nav&gt;
+  &lt;a href=&#34;/&#34;&gt; Home &lt;/a&gt;
+  &lt;a href=&#34;/about-me&#34;&gt; About Me &lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+<ol type="1" start="3">
+<li><code>Import</code> and add your <code>Nav</code> component to both pages</li>
+</ol>
+<aside class="special"><p><strong>Links</strong></p>
+<p>You&#39;ll notice that your links start with <code>/</code> and then the name of your page, or just <code>/</code> for your home page. You might also notice that it does <strong>not</strong> include the file extension <code>.svelte</code>.</p>
+<p>This is because Svelte will handle most of the details of the navigation in the background, so that you can focus on more important things.</p>
+</aside>
+<h2 is-upgraded>Customise</h2>
+<p>Change your <code>nav</code> to personalise your web page.</p>
+<ul>
+<li>Add a style element to your component and write your own CSS</li>
+<li>Make sure you have a hover effect so that the user knows it&#39;s a link</li>
+<li>Try some of these:</li>
+</ul>
+<p><code>text-align: center;</code></p>
+<p><code>text-decoration: line-through;</code></p>
+<p><code>text-transform: uppercase;</code></p>
+<p><code>text-shadow: 2px 2px orange;</code></p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A second page that reuses existing components</p>
+<p>✅ A nav menu component</p>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Second iteration done" duration="0">
+        <p>Congratulations, the second iteration of your web page is complete.</p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A second page that reuses existing components</p>
+<p>✅ A nav menu component</p>
+</aside>
+<p>You&#39;ve taken the code provided and customised it to create your unique site.</p>
+<p>Along the way, you&#39;ve learnt about these parts of coding.</p>
+<p><strong>(</strong>➕ <em>means new things in this project)</em></p>
+<p><strong>Svelte</strong></p>
+<ul>
+<li><code>components</code> for reusable blocks of code</li>
+</ul>
+<p>From here, you can take your page further, if you like, by adding images from your summer, links to your social media, YouTube channel, blog, or whatever you like.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
