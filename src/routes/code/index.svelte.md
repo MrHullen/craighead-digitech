@@ -11,7 +11,7 @@
   ]
 </script>
 
-<Hero title="Code" subtitle="Building your outcome the way you want" />
+<Hero title="Code" subtitle="Build your outcome the way you want" />
 
 <section class="content section">
 
