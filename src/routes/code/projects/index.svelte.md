@@ -90,6 +90,13 @@
     </Box>
   </a>
 
+  <a href="/codelabs/summer-gallery-styles/index.html" rel="external">
+    <Box title="Project 03 - Styles">
+
+      The third part of the **Summer Gallery** project will introduce you to styling your page with a CSS framework.
+
+    </Box>
+  </a>
 </section>
 
 <style>

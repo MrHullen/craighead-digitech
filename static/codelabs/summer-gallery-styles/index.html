@@ -1,0 +1,267 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Summer Gallery Styles</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="summer-gallery-styles"
+                  title="Summer Gallery Styles"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="5">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<p>You&#39;ll build a styled web app that uses Bulma&#39;s CSS framework.</p>
+<p>It&#39;ll have the following features:</p>
+<aside class="special"><p><strong>Features</strong></p>
+<ul>
+<li>A styled hero header</li>
+<li>A styled footer</li>
+<li>Section and content styles</li>
+<li>A styled navbar</li>
+</ul>
+</aside>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Creating multiple HTML files</li>
+<li>Linking HTML files together by creating a nav menu</li>
+<li>Vocabulary for describing your HTML and CSS code</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account and <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
+<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most common)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Start your project" duration="5">
+        <h2 is-upgraded>Open your repository</h2>
+<ol type="1" start="1">
+<li>Open <strong>GitHub Desktop</strong></li>
+<li>Check the <strong>Current Repository</strong> in the top left is your project</li>
+</ol>
+<h2 is-upgraded>Open VS Code</h2>
+<ol type="1" start="3">
+<li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+<li>Open the file called <code>index.svelte</code> in the <code>src</code> folder</li>
+</ol>
+<h2 is-upgraded>Start your dev server</h2>
+<ol type="1" start="5">
+<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>Shift</code> + <code>`</code></li>
+<li>Start the server on your laptop by entering the command <code>npm run dev</code></li>
+<li>Open the link that it creates to view your site</li>
+</ol>
+<p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Style your header" duration="5">
+        <p>CSS frameworks are collections of CSS code that you can use and reuse to build your site quickly, and know that it will work.</p>
+<p>CSS can be tricky to write because you need to test on multiple browsers, devices, and screen sizes. CSS frameworks have already done this testing for you, so you can be confident that your site will look good no matter where it&#39;s being accessed from.</p>
+<p>Bulma is one of many CSS frameworks, and the one we&#39;ll be using for this project. Bulma is easy to use, and is already built into the project you&#39;re working on. It exclusively uses <strong>classes</strong> - add the class to the HTML and it&#39;ll get styled.</p>
+<p>Try updating your <code>Header.svelte</code> to use Bulma, instead of hand-written CSS. We&#39;ll use the Bulma <a href="https://bulma.io/documentation/layout/hero/" target="_blank">Hero banner</a> instead.</p>
+<ol type="1" start="1">
+<li>Delete your entire <code>style</code> element</li>
+<li>Add the <code>hero</code> class to your <code>header</code> element</li>
+<li>Add a new <code>div</code> element inside your <code>header</code> and give it the class <code>hero-body</code></li>
+<li>Add the <code>title</code> class to your <code>h1</code> element</li>
+<li>Add a subtitle with the <code>subtitle</code> class</li>
+</ol>
+<pre><code>&lt;header class=&#34;hero&#34;&gt;
+  &lt;div class=&#34;hero-body&#34;&gt;
+    &lt;h1 class=&#34;title&#34;&gt; Main heading &lt;/h1&gt;
+    &lt;h2 class=&#34;subtitle&#34;&gt; Subheading &lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+<aside class="special"><p><strong>Classes</strong></p>
+<p>These CSS classes should look familiar to you from previous studies. A class is just a way of applying CSS rules to HTML, but without using the HTML tag as the selector, instead using the class name.</p>
+<p>Classes in CSS use a dot <code>.</code> to show they&#39;re a class instead of an HTML tag. Below is an example of what a <code>title</code> class might look like.</p>
+</aside>
+<pre><code>.title {
+  font-weight: bold;
+  Font-size: xx-large;
+}</code></pre>
+<p>View your new header in your browser. It might seem a bit plain but it&#39;s now much more robust and will display nicely on mobile and desktop browsers.</p>
+<h2 is-upgraded>Customise</h2>
+<p>You can change your <code>hero</code> <code>header</code> by adding more classes.</p>
+<ul>
+<li>Change the colour by adding one of these:</li>
+</ul>
+<p><code>is-light</code></p>
+<p><code>is-dark</code></p>
+<p><code>is-primary</code></p>
+<p><code>is-link</code></p>
+<p><code>is-info</code></p>
+<p><code>is-success</code></p>
+<p><code>is-warning</code></p>
+<p><code>Is-danger</code></p>
+<ul>
+<li>Change the size by adding one of these:</li>
+</ul>
+<p><code>is-small</code></p>
+<p><code>is-medium</code></p>
+<p><code>is-large</code></p>
+<p><code>is-halfheight</code></p>
+<p><code>is-fullheight</code></p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A styled hero header</p>
+<ul>
+<li>A styled footer</li>
+<li>Section and content styles</li>
+<li>A styled navbar</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Style your footer" duration="5">
+        <p>All of your components can benefit from the Bulma framework&#39;s classes.</p>
+<p>Try using <a href="https://bulma.io/documentation/layout/footer/" target="_blank">Bulma&#39;s Footer documentation</a> to style your own Footer component.</p>
+<p>Remember to delete your own <code>style</code> element first.</p>
+<h2 is-upgraded>Customise</h2>
+<p>Change your things to personalise your web page.</p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A styled hero header</p>
+<p>✅ A styled footer</p>
+<ul>
+<li>Section and content styles</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Style your sections" duration="5">
+        <p>Every page can use Bulma, and if you get familiar with it, a CSS framework can save you hours of coding and testing.</p>
+<ol type="1" start="1">
+<li>Delete the <code>style</code> element on your home page</li>
+<li>Add the <a href="https://bulma.io/documentation/layout/section/" target="_blank">section</a> class to your <code>main</code> element</li>
+<li>Add the <a href="https://bulma.io/documentation/elements/content/" target="_blank">content</a> class to your <code>main</code> element</li>
+</ol>
+<pre><code>&lt;main class=&#34;content section&#34;&gt;
+  ...
+&lt;/main&gt;</code></pre>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A styled hero header</p>
+<p>✅ A styled footer</p>
+<p>✅ Section and content styles</p>
+<ul>
+<li>A styled navbar</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Style your nav" duration="5">
+        <p>The <a href="https://bulma.io/documentation/components/navbar/" target="_blank">documentation page for the Navbar</a> goes into a lot of detail very quickly, but we&#39;ll work through it a little at the time.</p>
+<ol type="1" start="1">
+<li>Delete any <code>style</code> you&#39;ve written for your <code>Nav</code> component</li>
+<li>Add the <code>navbar</code> class to your <code>nav</code> element</li>
+<li>Add the <code>navbar-item</code> class to your link (<code>a</code>) elements</li>
+</ol>
+<pre><code>&lt;nav class=&#34;navbar&#34;&gt;
+  &lt;a class=&#34;navbar-item&#34; href=&#34;/&#34;&gt; Home &lt;/a&gt;
+  &lt;a class=&#34;navbar-item&#34; href=&#34;/page-2&#34;&gt; Page 2 &lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+<h2 is-upgraded>Customise</h2>
+<p>You can change your <code>hero</code> <code>header</code> by adding more classes.</p>
+<ul>
+<li>Change the colour by adding one of these:</li>
+</ul>
+<p><code>is-light</code></p>
+<p><code>is-dark</code></p>
+<p><code>is-primary</code></p>
+<p><code>is-link</code></p>
+<p><code>is-info</code></p>
+<p><code>is-success</code></p>
+<p><code>is-warning</code></p>
+<p><code>Is-danger</code></p>
+<ul>
+<li>Change the position by adding one of these:</li>
+</ul>
+<p><code>is-fixed-top</code></p>
+<p><code>is-fixed-bottom</code></p>
+<ul>
+<li>Change other looks by adding one of these:</li>
+</ul>
+<p><code>is-spaced</code></p>
+<p><code>has-shadow</code></p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A styled hero header</p>
+<p>✅ A styled footer</p>
+<p>✅ Section and content styles</p>
+<p>✅ A styled navbar</p>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Third iteration done" duration="0">
+        <p>Congratulations, the third iteration of your web page is complete.</p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A styled hero header</p>
+<p>✅ A styled footer</p>
+<p>✅ Section and content styles</p>
+<p>✅ A styled navbar</p>
+</aside>
+<p>You&#39;ve taken the code provided and customised it to create your unique site.</p>
+<p>Along the way, you&#39;ve learnt about these parts of coding.</p>
+<p><strong>(</strong>➕ <em>means new things in this project)</em></p>
+<p><strong>Svelte</strong></p>
+<ul>
+<li><code>components</code> for reusable blocks of code</li>
+</ul>
+<p>From here, you can take your page further, if you like, by adding images from your summer, links to your social media, YouTube channel, blog, or whatever you like.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Take it further:" duration="0">
+        <p>In your coding career you will often need to look up how to do things. In this section are a couple of websites to help you find information online about how to do what you want to do.</p>
+<p>Most frequently, a good <strong>Google search</strong> will be the best option. Remember to include the keywords &#34;HTML&#34; and the thing you want to do, so that Google will give you the best results (skip past the ads though!).</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

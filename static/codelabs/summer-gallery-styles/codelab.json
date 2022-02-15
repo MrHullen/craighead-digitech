@@ -1,0 +1,23 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-02-14T02:26:48Z",
+  "id": "summer-gallery-styles",
+  "duration": 30,
+  "title": "Summer Gallery Styles",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn to style HTML using Bulma classes.",
+  "source": "1m4ZyJ4yenEZPAkfT9VuYhDm97c4wMN5cXFLz8DSbpfU",
+  "theme": "html",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "html",
+    "svelte"
+  ],
+  "tags": [],
+  "url": "summer-gallery-styles"
+}
