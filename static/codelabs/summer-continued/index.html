@@ -35,8 +35,8 @@
 <ul>
 <li>Semantic HTML elements</li>
 <li>Images</li>
-<li>Grid positioning</li>
-<li>Flexbox positioning</li>
+<li>Grid layout</li>
+<li>Flexbox layout</li>
 </ul>
 </aside>
 <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
@@ -81,8 +81,8 @@
 <p>✅ Semantic HTML elements</p>
 <ul>
 <li>Images</li>
-<li>Grid positioning</li>
-<li>Flexbox positioning</li>
+<li>Grid layout</li>
+<li>Flexbox layout</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -92,11 +92,11 @@
       </google-codelab-step>
     
       <google-codelab-step label="Recap: images" duration="5">
-        <p>Find an image or two to personalise your web page.</p>
+        <p>Find at least 3 images to personalise your web page.</p>
 <ul>
-<li>Find an image from your summer to include in your site</li>
-<li>Save the file into your project folder</li>
-<li>Change the <code>src</code> attribute of the <code>img</code> element to the name of your file</li>
+<li>Find images from your summer to include in your site</li>
+<li>Save the files into your project folder</li>
+<li>Add an <code>img</code> element and change the <code>src</code> attribute to the name of your file</li>
 </ul>
 <aside class="special"><p><strong>Reminder</strong></p>
 <p>The <code>img</code> opening tag has an attribute called <code>src</code>, which needs to have the exact name of your image file.</p>
@@ -115,8 +115,8 @@
 <p>✅ Semantic HTML elements</p>
 <p>✅ Images</p>
 <ul>
-<li>Grid positioning</li>
-<li>Flexbox positioning</li>
+<li>Grid layout</li>
+<li>Flexbox layout</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -125,15 +125,17 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Position with Grid" duration="10">
-        <p>CSS Grid lets you arrange HTML elements into a... well, a grid. It makes creating interesting and modern layouts easy, without having to add or change a lot of HTML code.</p>
+      <google-codelab-step label="Layout with Grid" duration="10">
+        <p>CSS <strong>Grid</strong> lets you arrange HTML elements into a... well, a grid. It makes creating interesting and modern layouts easy, without having to add or change a lot of HTML code.</p>
 <p>There are a few new things we need to add to get this working.</p>
 <ul>
-<li>A body element around your semantic elements. The opening tag is right at the top above your header, and the closing tag right after your footer.</li>
-<li>A body selector to your CSS and two rules:</li>
-<li>The display property set to grid</li>
-<li>The grid property set to the layout we want (use the code below)</li>
-<li>The semantic elements given a grid-area property</li>
+<li>A <code>body</code> element around your semantic elements. The opening tag is right at the top above your <code>header</code>, and the closing tag at the bottom right after your <code>footer</code>.</li>
+<li>A <code>body</code> selector to your <strong>CSS</strong> and two <strong>rules</strong>:</li>
+</ul>
+<p>The <code>display</code> <strong>property</strong> with the <strong>value </strong><code>grid</code></p>
+<p>The <code>grid</code> <strong>property</strong> and the <strong>value</strong> with be the layout we want (use the code below)</p>
+<ul>
+<li>The semantic elements need a <code>grid-area</code> <strong>property</strong> with a letter to represent them as a <strong>value</strong>.</li>
 </ul>
 <pre><code>&lt;body&gt;
   &lt;header&gt;
@@ -162,24 +164,24 @@
   main   { grid-area: m; }
   footer { grid-area: f; }
 &lt;/style&gt;</code></pre>
-<aside class="special"><p>The body element represents everything that&#39;s shown on the page to the user. It wraps around everything else, apart from the style element.</p>
-<p>The display: grid; rule in the body rules tells the browser that the body is the container element for the grid. The grid rule itself says what the layout should be. All the auto words tell the browser to automatically choose the width and height of the grid.</p>
-<p>The grid-area rules for all of the semantic elements give those elements a letter that you can put into the grid rule where you want the element to go.</p>
-<p>The dot (.) inside the grid rule tells the browser that there should be a gap there. It lets you add space to a layout without using margins or padding.</p>
+<aside class="special"><p>The <code>body</code> element represents everything that&#39;s shown on the page to the user. It wraps around everything apart from the <code>style</code> element.</p>
+<p>The <code>display: grid;</code> rule in the <code>body</code> rules tells the browser that the <code>body</code> is the container element for the <code>grid</code>. The <code>grid</code> rule itself says what the layout should be. All the <code>auto</code> words tell the browser to automatically choose the width and height of the grid.</p>
+<p>The <code>grid-area</code> rules for all of the semantic elements give those elements a letter that you can put into the <code>grid</code> rule where you want the element to go.</p>
+<p>The dot (<code>.</code>) inside the <code>grid</code> rule tells the browser that there should be a gap there. It lets you add space to a layout without using margins or padding.</p>
 <p>New vocabulary: body, display, grid, grid-area</p>
 </aside>
-<p>Result</p>
+<p>View your page in your browser. Your <code>header</code> should now be in the top left, your <code>main</code> running down the center, and your <code>footer</code> in the bottom right.</p>
 <h2 is-upgraded>Customise</h2>
 <p>Change your grid rule to personalise your web page.</p>
 <ul>
-<li>Arrange the semantic elements of your page the way you like.</li>
+<li>Arrange the semantic elements of your page the way you like by changing where the letters are in the <code>grid</code> rule.</li>
 </ul>
 <aside class="special"><p><strong>Features</strong></p>
 <p>✅ Semantic HTML elements</p>
 <p>✅ Images</p>
-<p>✅ Grid positioning</p>
+<p>✅ Grid layout</p>
 <ul>
-<li>Flexbox positioning</li>
+<li>Flexbox layout</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -188,17 +190,31 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Position with Flexbox" duration="10">
-        <h2 is-upgraded>Customise</h2>
-<p>Change your CSS rule to personalise your web page.</p>
+      <google-codelab-step label="Layout with Flexbox" duration="10">
+        <p>While Grid is perfect for the large semantic elements of your page, you can use <strong>Flexbox</strong> for laying out the smaller parts of your page, such as a group of images or links.</p>
+<p>Just like <strong>Grid</strong> needs <code>body</code>, <strong>Flexbox</strong> needs a container element as well. Then, all the items inside the container will use the layout rules that you specify.</p>
+<p>Let&#39;s start with the images you added in the first step. You&#39;ll need <strong>at least 3</strong> to practice with Flexbox, so if you haven&#39;t completed that step, revisit it and resume this part when you&#39;re done.</p>
+<ol type="1" start="1">
+<li>Create a <code>div</code> element around your images - this will be the <strong>Flexbox container</strong></li>
+<li>Add a <code>div</code> selector to your CSS one rule:</li>
+</ol>
+<p>The <code>display</code> <strong>property</strong> with the <strong>value </strong><code>flex</code></p>
+<p>From here, you can decide how you&#39;d like your images to be laid out by applying one of more of the following rules to your <code>div</code> selector.</p>
+<p><code>justify-content: center;</code> centers the items</p>
+<p><code>justify-content: space-around;</code> centers and evenly distributes the items</p>
+<p><code>gap: </code><em><code>amount</code></em><code>;</code> spaces the items by the amount you specify</p>
+<p><code>flex-direction: column;</code> vertically arranges the items</p>
+<p><code>flex-wrap: wrap;</code> continues items on a new line if they don&#39;t fit on the page.</p>
+<h2 is-upgraded>Customise</h2>
+<p>Change your CSS rules to personalise your web page.</p>
 <ul>
-<li>Arrange the elements in your main element the way you like.</li>
+<li>Arrange the <code>img</code> <strong>items</strong> in your <code>div</code> <strong>container</strong> element the way you like.</li>
 </ul>
 <aside class="special"><p><strong>Features</strong></p>
 <p>✅ Semantic HTML elements</p>
 <p>✅ Images</p>
-<p>✅ Grid positioning</p>
-<p>✅ Flexbox positioning</p>
+<p>✅ Grid layout</p>
+<p>✅ Flexbox layout</p>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
 </aside>
@@ -211,8 +227,8 @@
 <aside class="special"><p><strong>Features</strong></p>
 <p>✅ Semantic HTML elements</p>
 <p>✅ Images</p>
-<p>✅ Grid positioning</p>
-<p>✅ Flexbox positioning</p>
+<p>✅ Grid layout</p>
+<p>✅ Flexbox layout</p>
 </aside>
 <p>You&#39;ve taken the code provided and customised it to create your unique web page.</p>
 <p>Along the way, you&#39;ve learnt about these parts of coding.</p>
@@ -234,7 +250,8 @@
 <li><code>main</code> for the main page content</li>
 <li><code>footer</code> for page footers</li>
 </ul>
-<p>body for the whole page the user can see</p>
+<p>➕ <code>body</code> for the whole page the user can see</p>
+<p>➕ <code>div</code> for a container</p>
 <p><strong>HTML vocabulary</strong></p>
 <ul>
 <li><em>tag</em> - a single piece of HTML code inside pointy brackets, i.e. <code><</code> and <code>></code></li>
@@ -256,9 +273,13 @@
 <li><code>width:</code> for the width</li>
 <li><code>height:</code> for the height</li>
 </ul>
-<p>display to change the way this should be shown</p>
-<p>grid to change the way the page layout</p>
-<p>grid-area to give an element a letter to use in grid</p>
+<p>➕ <code>display:</code> to change the way this should be shown, e.g. <code>grid</code> or <code>flex</code></p>
+<p>➕ <code>grid:</code> to change the way the page layout</p>
+<p>➕ <code>grid-area:</code> to give an element a letter to use in grid</p>
+<p>➕ <code>justify-content:</code> to change where inside the container the items should be placed</p>
+<p>➕ <code>gap:</code> to space the items in a container</p>
+<p>➕ <code>flex-direction:</code> to change the direction items are arranged in a container</p>
+<p>➕ <code>flex-wrap:</code> to continue items on a new line if they don&#39;t fit on the page</p>
 <p><strong>CSS vocabulary</strong></p>
 <ul>
 <li><em>selector </em>- the start of the chunk of CSS that says what HTML element it&#39;s for</li>

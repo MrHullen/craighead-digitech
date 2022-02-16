@@ -37,15 +37,15 @@
   <a href="/codelabs/introduction-continued/index.html" rel="external">
     <Box title="Project 04 - Semantic HTML">
 
-      ...
+      You revisit your Introduction project to apply your new skills and then group everything in your code into modern semantic sections.
 
     </Box>
   </a>
 
   <a href="/codelabs/summer-continued/index.html" rel="external">
-    <Box title="Project 05 - Position with Grid and Flexbox">
+    <Box title="Project 05 - Layout with Grid and Flexbox">
 
-      ...
+      Revisit your Summer project to update it with all your new skills and then learn how to layout smenatic sections as well as individual elements by using CSS Grid and CSS Flexbox.
 
     </Box>
   </a>
