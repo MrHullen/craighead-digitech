@@ -65,6 +65,20 @@ Consider the images you've been provided (if any) and decide which ones you'll u
 
 Tasks in this stage: analyse, choose, create
 
+<Box title="Lo-fi prototype">
+
+A paper and pens is often the quickest way to put together a prototype to help you visualise layout, colour, and usability. Do a rough(ish) drawing of each page on a separate landscape A4, including your header and navigation.
+
+You can present the home page to users, and swap out the "pages" as they tap on each navigation button. It's primitive, but extremely effective for getting quick feedback. You can learn if your layout doesn't suit, or if your navigation isn't intuitive. Ask questions like "what do you think this button will do?" and "which menu do you expect that to be under?"
+
+</Box>
+
+<Box title="Hi-fi prototype">
+
+
+
+</Box>
+
 ---
 
 ## Reflect *- Te Whakaata* <a name="reflect"></a>
