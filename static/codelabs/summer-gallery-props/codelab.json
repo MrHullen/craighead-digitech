@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-02-21T02:10:00Z",
+  "id": "summer-gallery-props",
+  "duration": 40,
+  "title": "Summer Gallery Props",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab you'll learn to create customisable, reusable components by adding props.",
+  "source": "1jhH1pTyQYcc5LjSZ4HV4z_IFJg1hkgmwXoLfRUtF700",
+  "theme": "html",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "html"
+  ],
+  "tags": [],
+  "url": "summer-gallery-props"
+}

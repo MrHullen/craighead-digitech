@@ -97,6 +97,15 @@
 
     </Box>
   </a>
+
+  <a href="/codelabs/summer-gallery-props/index.html" rel="external">
+    <Box title="Project 04 - Props">
+
+      The fourth part of the **Summer Gallery** project will introduce you to customising your components with props.
+
+    </Box>
+  </a>
+
 </section>
 
 <style>
