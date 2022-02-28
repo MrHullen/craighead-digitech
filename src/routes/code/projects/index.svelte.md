@@ -53,7 +53,7 @@
   <a href="/codelabs/why-web-dev-continued/index.html" rel="external">
     <Box title="Project 06 - Adding Meta Information">
 
-      ...
+      Revisit your Why Web Dev project to add everything you've learned, and then some extra bits and pieces to pass online validation.
 
     </Box>
   </a>

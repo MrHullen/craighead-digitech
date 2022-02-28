@@ -34,10 +34,10 @@
 <aside class="special"><p><strong>Features</strong></p>
 <ul>
 <li>A body element and semantic HTML elements</li>
-<li>Layout with CSS Grid</li>
+<li>A style element and layout with CSS Grid</li>
 <li>A doctype declaration</li>
 <li>A head element with meta data and a title</li>
-<li>A custom font</li>
+<li>Validation by an online HTML checker</li>
 </ul>
 </aside>
 <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
@@ -63,38 +63,86 @@
 </ol>
 <h2 is-upgraded>Open VS Code</h2>
 <ol type="1" start="3">
-<li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)s) to download your code to</li>
+<li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
 </ol>
 <p>Now you&#39;re ready to get coding!</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add your body" duration="1">
-        <p>Add the opening and closing tags for the body element, which represents the whole page that the user can see.</p>
-<aside class="special"><p><strong>Reminder</strong></p>
-<p>The body element opening tag goes just before your header element, and the closing tag goes just after your footer element.</p>
-<p>If your code doesn&#39;t look tidy after you&#39;ve done this, remember that you can Alt + Shift + f </p>
+      <google-codelab-step label="Add a body and semantic elements" duration="5">
+        <p>Remember what you learned in the semantic tags and layout projects about using <code>body</code>, <code>header</code>, <code>nav</code>, <code>main</code>, and <code>footer</code>.</p>
+<p>On each of your 3 pages, add the semantic elements, and then wrap everything in a <code>body</code> element.</p>
+<p>In general, every page should look like this:</p>
+<pre><code>&lt;body&gt;
+  &lt;header&gt;
+    ...
+  &lt;/header&gt;
+
+  &lt;nav&gt;
+    ...
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    ...
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    ...
+  &lt;/footer&gt;
+
+  &lt;style&gt;
+    ...
+  &lt;/style&gt;
+&lt;/body&gt;</code></pre>
+<aside class="special"><p><strong>Explanation</strong></p>
+<p>This page structure means that your HTML is clearly organised, easy to read, and accessible to people who are visually impaired and using a screen reader.</p>
 </aside>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Add your nav" duration="5">
-        <p>The <code>nav</code> (short for navigation) is the semantic element for the group of links for your site.</p>
-<pre><code>Code</code></pre>
-<aside class="special"><p><code>nav</code> stands for <strong>navigation</strong>. This element is semantic HTML that contains the navigation menu for your website.</p>
-<p><code>a</code> stands for <strong>anchor</strong>, but really you can just think of them as links. This element has two parts:</p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A body element and semantic HTML elements</p>
 <ul>
-<li>an <code>href</code> <strong>attribute</strong> that tells the browser what <strong>file </strong>the link goes to</li>
-<li>some text that tells the user what <strong>page </strong>the link goes to</li>
+<li>A style element and layout with CSS Grid</li>
+<li>A doctype declaration</li>
+<li>A head element with meta data and a title</li>
+<li>Validation by an online HTML checker</li>
 </ul>
 </aside>
-<p>Result</p>
-<h2 is-upgraded>Customise</h2>
-<p>Change your things to personalise your web page.</p>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Layout the page with CSS Grid" duration="5">
+        <p>Remember what you learned in the layout project about positioning the semantic elements (<code>header</code>, <code>nav</code>, <code>main</code>, and <code>footer</code>) and using the <code>body</code> as a container.</p>
+<p>On each of your 3 pages, lay out the semantic elements using CSS Grid.</p>
+<p><em>Note: your layout should be the same on every page to make it easier for the user, so copy/paste is your friend!</em></p>
+<pre><code>&lt;style&gt;
+  body {
+    display: grid;
+    grid: &#34; h    h    h  &#34; 3em
+          &#34; .    m    .  &#34; auto
+          &#34; f    f    f  &#34; 5em
+          / 1fr  5fr  1fr;
+  }
+
+  header { grid-area: h; }
+  nav    { grid-area: n; }
+  main   { grid-area: m; }
+  footer { grid-area: f; }
+&lt;/style&gt;</code></pre>
+<aside class="special"><p><strong>Explanation</strong></p>
+<p>This simple method for positioning the biggest parts of your page means you can experiment with different layouts by only changing a couple of letters.</p>
+<p>It also keeps the layout of the big parts of your site separate from positioning all the little pieces, like images and text.</p>
+</aside>
 <aside class="special"><p><strong>Features</strong></p>
-<p>✅ </p>
+<p>✅ A body element and semantic HTML elements</p>
+<p>✅ A style element and layout with CSS Grid</p>
+<ul>
+<li>A doctype declaration</li>
+<li>A head element with meta data and a title</li>
+<li>Validation by an online HTML checker</li>
+</ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
 </aside>
@@ -102,16 +150,28 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add a thing" duration="5">
-        <p>Description</p>
-<pre><code>Code</code></pre>
+      <google-codelab-step label="Add a doctype" duration="5">
+        <p>Up until now, we&#39;ve actually been relying on the browser (such as Chrome or Safari) to assume some stuff about our site. We&#39;ve let it assume:</p>
+<ul>
+<li>that the site is written in HTML</li>
+<li>how the text is encoded</li>
+<li>what text and icon to put on the tab</li>
+</ul>
+<p>To write the code properly, we need to tell the browser specifically all these things.</p>
+<p>We&#39;ll start with the doctype. It&#39;s a statement at the very beginning of the code that says what language it&#39;s written in.</p>
+<p>On each of your 3 pages, add this line to the top.</p>
+<pre><code>&lt;!doctype html&gt;</code></pre>
 <aside class="special"><p><strong>Explanation</strong></p>
+<p>For more about the <code>doctype</code>, read <a href="https://www.w3schools.com/tags/tag_doctype.asp#:~:text=Definition%20and%20Usage" target="_blank">this</a>.</p>
 </aside>
-<p>Result</p>
-<h2 is-upgraded>Customise</h2>
-<p>Change your things to personalise your web page.</p>
 <aside class="special"><p><strong>Features</strong></p>
-<p>✅ </p>
+<p>✅ A body element and semantic HTML elements</p>
+<p>✅ A style element and layout with CSS Grid</p>
+<p>✅ A doctype declaration</p>
+<ul>
+<li>A head element with meta data and a title</li>
+<li>Validation by an online HTML checker</li>
+</ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
 </aside>
@@ -119,16 +179,35 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add a thing" duration="5">
-        <p>Description</p>
-<pre><code>Code</code></pre>
+      <google-codelab-step label="Add a head element" duration="5">
+        <p>The <code>body</code> element contains all the stuff that will appear on the page. However, the extra information <em>about</em> the page needs to go in a different place, where it won&#39;t be shown to the user. This is where the <code>head</code> element comes in.</p>
+<p>The <code>head</code> element sits between the <code>doctype</code> and the <code>body</code>, and contains information for the browser about the page, but isn&#39;t shown to the user.</p>
+<p>On each of your 3 pages, add a <code>head</code> element between the <code>doctype</code> and the <code>body</code>.</p>
+<pre><code>&lt;!doctype html&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&#34;UTF-8&#34;&gt;
+  &lt;title&gt; Your website &lt;/title&gt;
+  &lt;link rel=&#34;icon&#34; href=&#34;favicon.ico&#34;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  ...</code></pre>
 <aside class="special"><p><strong>Explanation</strong></p>
+<p><code>meta</code> is a tag that gives the browser some extra information, in this case we&#39;re giving it the <code>charset</code> attribute which says how the text is encoded. This is required for every page and will always be the same for our projects.</p>
+<p>The content in the <code>title</code> element tells the browser what text to put on the tab, so that users can see what page it is at a glance.</p>
+<p>The <code>link</code> element provides... links to other files that the browser will find useful, in this case the icon to put on the tab that the user can see. Use <a href="https://favicon.io/" target="_blank">favicon.io</a> to create an icon file to put on the tab.</p>
 </aside>
-<p>Result</p>
 <h2 is-upgraded>Customise</h2>
-<p>Change your things to personalise your web page.</p>
+<p>Change your <code>title</code> and <code>favicon</code> to personalise your web page.</p>
 <aside class="special"><p><strong>Features</strong></p>
-<p>✅ </p>
+<p>✅ A body element and semantic HTML elements</p>
+<p>✅ A style element and layout with CSS Grid</p>
+<p>✅ A doctype declaration</p>
+<p>✅ A head element with meta data and a title</p>
+<ul>
+<li>Validation by an online HTML checker</li>
+</ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
 </aside>
@@ -136,16 +215,63 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add a thing" duration="5">
-        <p>Description</p>
-<pre><code>Code</code></pre>
-<aside class="special"><p><strong>Explanation</strong></p>
-</aside>
-<p>Result</p>
-<h2 is-upgraded>Customise</h2>
-<p>Change your things to personalise your web page.</p>
+      <google-codelab-step label="Validate your code" duration="5">
+        <p>Online validators check that your code has everything that the browser is expecting it to have. Making sure your code passes validation means that it&#39;s high quality, and will display the way you want it to in every browser.</p>
+<p>Copy and paste all of the code from your index.html into the <a href="https://validator.w3.org/#validate_by_input" target="_blank">Markup Validation Service</a> site.</p>
+<p>Scroll down and you might notice a few errors listed in red! It&#39;s ok if you&#39;re intimidated by the technical language they use - we&#39;ll work through them together and just look at them one at a time.</p>
+<p>The first error is likely mentioning that it saw a <code>head</code> element before the <code>html</code> element. Apologies, we deliberately left out the <code>html</code> element so that we could practice with the validator.</p>
+<p>The html element wraps around both the head and the body element. Below is what your HTML code needs to look like on every page.</p>
+<p>Try adding an html element to your code and the copy and pasting again into the validator.</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+
+  &lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;title&gt; Your website &lt;/title&gt;
+    &lt;link rel=&#34;icon&#34; href=&#34;favicon.ico&#34;&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;header&gt;
+      ...
+    &lt;/header&gt;
+
+    &lt;nav&gt;
+      ...
+    &lt;/nav&gt;
+
+    &lt;main&gt;
+      ...
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+      ...
+    &lt;/footer&gt;
+
+    &lt;style&gt;
+      body {
+        display: grid;
+        grid: &#34; h    h    h  &#34; 3em
+              &#34; .    m    .  &#34; auto
+              &#34; f    f    f  &#34; 5em
+              / 1fr  5fr  1fr;
+      }
+
+      header { grid-area: h; }
+      nav    { grid-area: n; }
+      main   { grid-area: m; }
+      footer { grid-area: f; }
+    &lt;/style&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+<p>Hopefully, you have no errors this time, but more likely you just have different ones. We&#39;ll work through them together, so try talking to the people around you to see if you can figure it out as a team.</p>
 <aside class="special"><p><strong>Features</strong></p>
-<p>✅ </p>
+<p>✅ A body element and semantic HTML elements</p>
+<p>✅ A style element and layout with CSS Grid</p>
+<p>✅ A doctype declaration</p>
+<p>✅ A head element with meta data and a title</p>
+<p>✅ Validation by an online HTML checker</p>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
 </aside>
@@ -156,10 +282,14 @@
       <google-codelab-step label="Next iteration done" duration="0">
         <p>Congratulations, the first iteration of your web page is complete.</p>
 <aside class="special"><p><strong>Features</strong></p>
-<p>✅ </p>
+<p>✅ A body element and semantic HTML elements</p>
+<p>✅ A style element and layout with CSS Grid</p>
+<p>✅ A doctype declaration</p>
+<p>✅ A head element with meta data and a title</p>
+<p>✅ Validation by an online HTML checker</p>
 </aside>
 <p>You&#39;ve taken the code provided and customised it to create your unique web page.</p>
-<p>Along the way, you&#39;ve learnt about these parts of coding.</p>
+<p>Along the way, you&#39;ve learned about these parts of coding.</p>
 <p><strong>(</strong>➕ <em>means new things in this project)</em></p>
 <p><strong>HTML code</strong></p>
 <ul>
@@ -168,29 +298,52 @@
 <li><code>p</code> for paragraphs</li>
 <li><code>ul</code> for unordered lists (bullet points)</li>
 <li><code>li</code> for list items inside an unordered list</li>
+<li><code>style</code> for CSS styling</li>
+<li><code>a</code> for links</li>
+<li><code>href</code> attribute in <code>a</code> opening tags</li>
+<li><code>img</code> for images</li>
+<li><code>src</code> attribute in <code>img</code> opening tags</li>
+<li><code>header</code> for page headers</li>
+<li><code>nav</code> for navigation menus</li>
+<li><code>main</code> for the main page content</li>
+<li><code>footer</code> for page footers</li>
+<li><code>body</code> for the whole page the user can see</li>
+<li><code>div</code> for a container</li>
 </ul>
-<p>➕ <code>style</code> for CSS styling</p>
 <p><strong>HTML vocabulary</strong></p>
 <ul>
 <li><em>tag</em> - a single piece of HTML code inside pointy brackets, i.e. <code><</code> and <code>></code></li>
 <li><em>element</em> - a component of the webpage, such as a heading or paragraph, inside an opening tag and a closing tag</li>
+<li><em>attribute </em>- extra information inside the pointy brackets of an opening tag, such as a file name</li>
 </ul>
 <p><strong>CSS code</strong></p>
-<p>➕ <code>background-color:</code> to change the background colour of an element</p>
-<p>➕ <code>font-family:</code> to change what letters look like</p>
-<p>➕ <code>font-size:</code> to change the size of text</p>
-<p>➕ <code>color:</code> to change the colour of text</p>
-<p>➕ <code>text-align:</code> to move text to the left, center, or right</p>
-<p>➕ <code>text-decoration:</code> to add or remove underlines and line-throughs</p>
-<p>➕ <code>text-transform:</code> to change text to all uppercase or lowercase</p>
-<p>➕ <code>text-shadow:</code> to add a shadow to text</p>
-<p>➕ <code>margin-</code>(<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>): to add space around the outside of an element</p>
-<p>➕ <code>padding-</code>(<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>): to add space around the inside of an element</p>
+<ul>
+<li><code>background-color:</code> to change the background colour of an element</li>
+<li><code>font-family:</code> to change what letters look like</li>
+<li><code>font-size:</code> to change the size of text</li>
+<li><code>color:</code> to change the colour of text</li>
+<li><code>text-align:</code> to move text to the left, center, or right</li>
+<li><code>text-decoration:</code> to add or remove underlines and line-throughs</li>
+<li><code>text-transform:</code> to change text to all uppercase or lowercase</li>
+<li><code>text-shadow:</code> to add a shadow to text</li>
+<li><code>margin-</code>(<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>)<code>:</code> to add space around the outside of an element</li>
+<li><code>padding-</code>(<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>)<code>:</code> to add space around the inside of an element</li>
+<li><code>width:</code> for the width</li>
+<li><code>height:</code> for the height</li>
+<li><code>display:</code> to change the way this should be shown, e.g. <code>grid</code> or <code>flex</code></li>
+<li><code>grid:</code> to change the way the page layout</li>
+<li><code>grid-area:</code> to give an element a letter to use in grid</li>
+<li><code>justify-content:</code> to change where inside the container the items should be placed</li>
+<li><code>gap:</code> to space the items in a container</li>
+<li><code>flex-direction:</code> to change the direction items are arranged in a container</li>
+<li><code>flex-wrap:</code> to continue items on a new line if they don&#39;t fit on the page</li>
+</ul>
 <p><strong>CSS vocabulary</strong></p>
-<p>➕ <em>selector </em>- the start of the chunk of CSS that says what HTML element it&#39;s for</p>
-<p>➕ <em>property </em>- the thing you&#39;re going to change about the HTML element</p>
-<p>➕ <em>value </em>- what you want to change the the property to</p>
-<p>From here, you can take your page further, if you like, by adding links to your social media, YouTube channel, blog, or whatever you link.</p>
+<ul>
+<li><em>selector </em>- the start of the chunk of CSS that says what HTML element it&#39;s for</li>
+<li><em>property </em>- the thing you&#39;re going to change about the HTML element</li>
+<li><em>value </em>- what you want to change the the property to</li>
+</ul>
 
 
       </google-codelab-step>
