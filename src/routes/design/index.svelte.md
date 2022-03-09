@@ -49,7 +49,7 @@ Headings can be fancy, body text must be readable, and subheadings can be somewh
 
 <Box title="Layout">
 
-- Wireframes
+Layout options can be presented with quick wireframe sketches of where the largest parts of the page will be positioned: `header`, `nav`, `main`, and `footer`.
 
 </Box>
 
@@ -75,7 +75,9 @@ You can present the home page to users, and swap out the "pages" as they tap on 
 
 <Box title="Hi-fi prototype">
 
+In some cases you will have already written some HTML for the project, and adding some layout CSS using Grid isn't a huge extra workload. It can be very quick and easy to try a few Grid layouts, screenshot them in the browser, and use them in place of wireframe sketches.
 
+You can then do the same sorts of client and user questions to get useful feedback to help choose an option and improve your design.
 
 </Box>
 
@@ -145,41 +147,47 @@ Does it use design principles (*contrast and/or complimentary colours, white spa
 
 ---
 
+<Box title="Appropriateness">
+
+  Describe how your design is appropriate for your purpose and audience. You **must** link the design choices your made (which colours, fonts, layout, and imagery) to the purpose and audience that you defined at the beginning.
+
+  > *Example: *
+
+</Box>
+
+---
+
+### Justification
+
+<Box title="Justify aesthetic elements">
+
+  You
+
+</Box>
+
+<Box title="Personal reflection on the design">
+
+  Which methods helped the most, which didn't.
+
+  What you would do next time and where you can take it from here.
+
+</Box>
+
+---
+
 ## Test *- Te Ao Tangata* <a name="test"></a>
 
 ---
 
 Tasks in this stage: redevelop, improve, refine
 
+Testing goes in hand with <a href="/design#iterate">Iterate</a>
+
 ---
 
 ## Iterate *- Te Whakaahua* <a name="iterate"></a>
 
 Tasks in this stage: developing, refining, adjusting, improving
-
-
-
-
-
-  ---
-
-  ## Justification *- Te Parahau* <a name="iterate"></a>
-
-  <Box title="Justify aesthetic elements">
-
-    Link to research and client/user feedback
-
-  </Box>
-
-  <Box title="Personal reflection on the design">
-
-    Which methods helped the most, which didn't.
-
-    What you would do next time and where you can take it from here.
-
-  </Box>
-
-
 
 </section>
 
