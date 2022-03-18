@@ -4,31 +4,51 @@
 
 <nav class="menu">
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.url.pathname == '/'} href="/">
+    <a
+    class="menu-link"
+    class:has-text-primary={$page.url.pathname.length > 1}
+    class:has-text-dark={$page.url.pathname == '/'}
+    href="/">
       <i class="icon fas fa-home fa-2x" />
       <span class="link-text">Home</span>
     </a>
   </p>
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.url.pathname.includes('/input')} href="/input">
+    <a
+    class="menu-link"
+    class:has-text-primary={!$page.url.pathname.includes('/input')}
+    class:has-text-dark={$page.url.pathname.includes('/input')}
+    href="/input">
       <i class="icon fas fa-keyboard fa-2x" />
       <span class="link-text">Input</span>
     </a>
   </p>
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.url.pathname.includes('/design')} href="/design">
+    <a
+    class="menu-link"
+    class:has-text-primary={!$page.url.pathname.includes('/design')}
+    class:has-text-dark={$page.url.pathname.includes('/design')}
+    href="/design">
       <i class="icon fas fa-drafting-compass fa-2x" />
       <span class="link-text">Design</span>
     </a>
   </p>
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.url.pathname.includes('/code')} href="/code">
+    <a
+    class="menu-link"
+    class:has-text-primary={!$page.url.pathname.includes('/code')}
+    class:has-text-dark={$page.url.pathname.includes('/code')}
+    href="/code">
       <i class="icon fas fa-code fa-2x" />
       <span class="link-text">Code</span>
     </a>
   </p>
   <p class="menu-label">
-    <a class="menu-link" class:is-active={$page.url.pathname.includes('/test')} href="/test">
+    <a
+    class="menu-link"
+    class:has-text-primary={!$page.url.pathname.includes('/test')}
+    class:has-text-dark={$page.url.pathname.includes('/test')}
+    href="/test">
       <i class="icon fas fa-tasks fa-2x" />
       <span class="link-text">Test</span>
     </a>
@@ -45,8 +65,6 @@
   .menu-link {
     display: flex;
     align-items: center;
-    color: #3DA35D;
-
   }
 
   .menu-link i {

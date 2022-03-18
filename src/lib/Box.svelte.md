@@ -2,13 +2,15 @@
   export let title = 'Title' // default title
 </script>
 
-<div class="box">
-  <strong>{title}</strong>
+<section class="box">
+  {#if title != 'Title'}
+    <h2>{title}</h2>
+  {/if}
   <slot>
     <!-- text to display is none provided. -->
     <p><em>TODO: body text</em></p>
   </slot>
-</div>
+</section>
 
 <style>
   strong {

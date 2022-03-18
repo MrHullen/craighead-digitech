@@ -1,5 +1,5 @@
 <script>
-	export let segment
+	import { page } from '$app/stores'
 
 	// Boolean value for burger menu on mobile
   // toggled off whenever $page changes
@@ -9,78 +9,118 @@
   }
 </script>
 
-<style>
-  span {
-    margin-left: 0.5em;
-  }
-</style>
-
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+<nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item"
-      class:is-active={segment === undefined}
-      on:click={() => { active = false }}
-      aria-current="{segment === undefined ? 'page' : undefined}"
-      href="/">
-      <i class="fas fa-home" />
-      <span>Home</span>
+    on:click={() => { active = false }}
+    aria-current="{$page.url.pathname == '/' ? 'page' : undefined}"
+    href="/">
+      <figure class="image">
+        <img src="/logo.png" alt="Craighead logo">
+      </figure>
+      <span> Craighead Digital Technology </span>
     </a>
 
+    
     <!-- svelte-ignore a11y-missing-attribute -->
     <a
       on:click={toggle}
       role="button"
       class="navbar-burger burger"
       aria-label="menu"
-      aria-expanded="false"
-      data-target="mainNavbar">
+      aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="mainNavbar"
-       class="navbar-menu"
-       class:is-active={active}>
-    <div class="navbar-start">
+  <div
+  class="navbar-menu"
+  class:is-active={active}>
+    <div class="navbar-end">
 			
-      <a class="navbar-item"
-         class:is-active={segment === 'input'}
-         on:click={toggle}
-				 aria-current="{segment === 'input' ? 'page' : undefined}"
-         href="input">
-         <i class="fas fa-keyboard"></i>
-        <span>Input</span>
-			</a>
-			
-      <a class="navbar-item"
-         class:is-active={segment === 'design'}
-         on:click={toggle}
-				 aria-current="{segment === 'design' ? 'page' : undefined}"
-         href="design">
-         <i class="fas fa-drafting-compass" />
-        <span>Design</span>
-			</a>
-			
-      <a class="navbar-item"
-         class:is-active={segment === 'code'}
-         on:click={toggle}
-				 aria-current="{segment === 'code' ? 'page' : undefined}"
-         href="code">
-         <i class="fas fa-code" />
-        <span>code</span>
-			</a>
-			
-      <a class="navbar-item"
-         class:is-active={segment === 'test'}
-         on:click={toggle}
-				 aria-current="{segment === 'test' ? 'page' : undefined}"
-         href="test">
-         <i class="fas fa-tasks"></i>
-        <span>Test</span>
-			</a>
-			
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Students
+        </a>
+      
+        <div class="navbar-dropdown">
+          <a
+          class="navbar-item"
+          class:is-active={$page.url.pathname.includes('/input')}
+          on:click={toggle}
+          aria-current="{$page.url.pathname.includes('/input') ? 'page' : undefined}"
+          href="/input">
+            <i class="fas fa-keyboard"></i>
+            <span>Input</span>
+          </a>
+          
+          <a
+          class="navbar-item"
+          class:is-active={$page.url.pathname.includes('/design')}
+          on:click={toggle}
+          aria-current="{$page.url.pathname.includes('/design') ? 'page' : undefined}"
+          href="/design">
+            <i class="fas fa-drafting-compass" />
+            <span>Design</span>
+          </a>
+          
+          <a
+          class="navbar-item"
+          class:is-active={$page.url.pathname.includes('/code')}
+          on:click={toggle}
+          aria-current="{$page.url.pathname.includes('/code') ? 'page' : undefined}"
+          href="/code">
+            <i class="fas fa-code" />
+            <span>Code</span>
+          </a>
+          
+          <a
+          class="navbar-item"
+          class:is-active={$page.url.pathname.includes('/test')}
+          on:click={toggle}
+          aria-current="{$page.url.pathname.includes('/test') ? 'page' : undefined}"
+          href="/test">
+            <i class="fas fa-tasks"></i>
+            <span>Test</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Teachers
+        </a>
+      
+        <div class="navbar-dropdown">
+          <a
+          class="navbar-item"
+          class:is-active={$page.url.pathname.includes('/shop')}
+          on:click={toggle}
+          aria-current="{$page.url.pathname.includes('/shop') ? 'page' : undefined}"
+          href="/shop">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span> Resource Shop </span>
+          </a>
+        </div>
+      </div>
+
+      <a
+        class="navbar-item"
+        class:is-active={$page.url.pathname.includes('/login')}
+        on:click={toggle}
+        aria-current="{$page.url.pathname.includes('/login') ? 'page' : undefined}"
+        href="/login">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <span> Login </span>
+      </a>
     </div>
   </div>
 </nav>
+
+<style>
+  span {
+    margin-left: 0.5em;
+  }
+</style>

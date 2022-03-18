@@ -13,8 +13,8 @@
 
 <Hero title="Code" subtitle="Build your outcome the way you want" />
 
-<section class="content section">
+<main class="content section">
 
   <Tiles tiles={tiles} />
 
-</section>
+</main>
