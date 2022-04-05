@@ -4,8 +4,9 @@
 
 <Hero title="Input" subtitle="If you can type easily then that's one less thing to think about" />
 
-<section class="content section">
-
+<main class="content section">
+  <h1> Input </h1>
+  
   <p>Try out one of these to help build your fluency with typing.</p>
 
   <div>
@@ -18,7 +19,7 @@
     </figure>
   </div>
 
-</section>
+</main>
 
 <style>
   main h1 {

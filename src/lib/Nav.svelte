@@ -9,7 +9,7 @@
   }
 </script>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item"
     on:click={() => { active = false }}
@@ -41,7 +41,7 @@
     <div class="navbar-end">
 			
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+        <a class="navbar-link" href="/">
           Students
         </a>
 
@@ -79,7 +79,7 @@
       </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+        <a class="navbar-link" href="/">
           Teachers
         </a>
       

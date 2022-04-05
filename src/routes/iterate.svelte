@@ -16,7 +16,7 @@
     <h2> Test </h2>
 
     <p>
-      Testing goes in hand with <a href="/design/iterate">Iterate</a>
+      Testing goes in hand with <a href="/iterate">Iterate</a>
     </p>
   </Box>
 </main>

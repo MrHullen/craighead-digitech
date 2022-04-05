@@ -75,10 +75,6 @@
     display: none;
   }
 
-  .is-active {
-    color: #363636;
-  }
-
   /* Small screens */
   @media only screen and (max-width: 600px) {
     .menu {
