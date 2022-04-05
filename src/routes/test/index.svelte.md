@@ -1,13 +1,13 @@
 <script>
   import Hero from '$lib/Hero.svelte'
-  import Box from '$lib/Box.svelte.md'
+  import Box from '$lib/Box.svelte'
 </script>
 
 <Hero title="Test" subtitle="Making sure you've built a quality outcome" />
 
 <section class="content section">
 
-## Validating<a name="validating"></a>
+## Validating
 
   <Box title="HTML">
 

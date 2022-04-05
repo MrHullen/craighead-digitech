@@ -57,7 +57,7 @@
 
 <main class="section">
   <!-- return false stops the form from reloading the page -->
-  <form onsubmit="return false">
+  <div class="search-container">
     <!-- displays all of the unique tags and searches for them if they're clicked -->
     <section class="tags">
       {#each uniqueTags as tag}
@@ -78,7 +78,7 @@
       </p>
     </section>
     <button class="button is-success" on:click={filter}> Search </button>
-  </form>
+  </div>
   
   <!-- iterates through the array of items and displays each one as a card if it contains the search tag (is there is no search tag it displays all of them) -->
   <section id="results" class="section">
@@ -114,13 +114,13 @@
     cursor: pointer;
   }
 
-  form {
+  .search-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
 
-  form section {
+  .search-container section {
     margin: 0 0;
   }
 

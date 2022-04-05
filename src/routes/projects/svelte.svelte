@@ -1,6 +1,6 @@
 <script>
   import Hero from '$lib/Hero.svelte'
-  import Box from '$lib/Box.svelte.md'
+  import Box from '$lib/Box.svelte'
 </script>
 
 <Hero title="Svelte Projects" subtitle="Cutting edge technology to develop modern sites and apps" />

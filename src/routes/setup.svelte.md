@@ -1,6 +1,6 @@
 <script>
   import Hero from '$lib/Hero.svelte'
-  import Box from '$lib/Box.svelte.md'
+  import Box from '$lib/Box.svelte'
 </script>
 
 <Hero title="Setup" subtitle="Get everything setup just the way you like" />

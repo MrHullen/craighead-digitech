@@ -13,10 +13,6 @@
 </section>
 
 <style>
-  strong {
-    display: block;
-  }
-
 	/* Large screens */
 	@media only screen and (min-width: 600px) {
 		.box {
