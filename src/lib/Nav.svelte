@@ -44,8 +44,18 @@
         <a class="navbar-link">
           Students
         </a>
-      
+
         <div class="navbar-dropdown">
+          <a
+          class="navbar-item"
+          class:is-active={$page.url.pathname.includes('/setup')}
+          on:click={toggle}
+          aria-current="{$page.url.pathname.includes('/setup') ? 'page' : undefined}"
+          href="/setup">
+            <i class="fas fa-laptop-code"></i>
+            <span> Setup </span>
+          </a>
+      
           <a
           class="navbar-item"
           class:is-active={$page.url.pathname.includes('/input')}
@@ -53,17 +63,7 @@
           aria-current="{$page.url.pathname.includes('/input') ? 'page' : undefined}"
           href="/input">
             <i class="fas fa-keyboard"></i>
-            <span>Input</span>
-          </a>
-          
-          <a
-          class="navbar-item"
-          class:is-active={$page.url.pathname.includes('/design')}
-          on:click={toggle}
-          aria-current="{$page.url.pathname.includes('/design') ? 'page' : undefined}"
-          href="/design">
-            <i class="fas fa-drafting-compass" />
-            <span>Design</span>
+            <span> Input </span>
           </a>
           
           <a
@@ -71,19 +71,9 @@
           class:is-active={$page.url.pathname.includes('/code')}
           on:click={toggle}
           aria-current="{$page.url.pathname.includes('/code') ? 'page' : undefined}"
-          href="/code">
+          href="/projects">
             <i class="fas fa-code" />
-            <span>Code</span>
-          </a>
-          
-          <a
-          class="navbar-item"
-          class:is-active={$page.url.pathname.includes('/test')}
-          on:click={toggle}
-          aria-current="{$page.url.pathname.includes('/test') ? 'page' : undefined}"
-          href="/test">
-            <i class="fas fa-tasks"></i>
-            <span>Test</span>
+            <span> Projects </span>
           </a>
         </div>
       </div>

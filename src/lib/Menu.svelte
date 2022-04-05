@@ -6,51 +6,51 @@
   <p class="menu-label">
     <a
     class="menu-link"
-    class:has-text-primary={$page.url.pathname.length > 1}
-    class:has-text-dark={$page.url.pathname == '/'}
-    href="/">
-      <i class="icon fas fa-home fa-2x" />
-      <span class="link-text">Home</span>
+    class:has-text-primary={!$page.url.pathname.includes('/empathise')}
+    class:has-text-dark={$page.url.pathname == '/empathise'}
+    href="/empathise">
+      <i class="icon fa-solid fa-comments fa-2x" />
+      <span class="link-text"> Empathise </span>
     </a>
   </p>
   <p class="menu-label">
     <a
     class="menu-link"
-    class:has-text-primary={!$page.url.pathname.includes('/input')}
-    class:has-text-dark={$page.url.pathname.includes('/input')}
-    href="/input">
-      <i class="icon fas fa-keyboard fa-2x" />
-      <span class="link-text">Input</span>
+    class:has-text-primary={!$page.url.pathname.includes('/ideate')}
+    class:has-text-dark={$page.url.pathname.includes('/ideate')}
+    href="/ideate">
+      <i class="icon fa-solid fa-lightbulb fa-2x" />
+      <span class="link-text"> Ideate </span>
     </a>
   </p>
   <p class="menu-label">
     <a
     class="menu-link"
-    class:has-text-primary={!$page.url.pathname.includes('/design')}
-    class:has-text-dark={$page.url.pathname.includes('/design')}
-    href="/design">
-      <i class="icon fas fa-drafting-compass fa-2x" />
-      <span class="link-text">Design</span>
+    class:has-text-primary={!$page.url.pathname.includes('/prototype')}
+    class:has-text-dark={$page.url.pathname.includes('/prototype')}
+    href="/prototype">
+      <i class="icon fa-solid fa-hammer fa-2x" />
+      <span class="link-text"> Prototype </span>
     </a>
   </p>
   <p class="menu-label">
     <a
     class="menu-link"
-    class:has-text-primary={!$page.url.pathname.includes('/code')}
-    class:has-text-dark={$page.url.pathname.includes('/code')}
-    href="/code">
-      <i class="icon fas fa-code fa-2x" />
-      <span class="link-text">Code</span>
+    class:has-text-primary={!$page.url.pathname.includes('/iterate')}
+    class:has-text-dark={$page.url.pathname.includes('/iterate')}
+    href="/iterate">
+      <i class="icon fa-solid fa-arrows-rotate fa-2x" />
+      <span class="link-text"> Iterate </span>
     </a>
   </p>
   <p class="menu-label">
     <a
     class="menu-link"
-    class:has-text-primary={!$page.url.pathname.includes('/test')}
-    class:has-text-dark={$page.url.pathname.includes('/test')}
-    href="/test">
-      <i class="icon fas fa-tasks fa-2x" />
-      <span class="link-text">Test</span>
+    class:has-text-primary={!$page.url.pathname.includes('/reflect')}
+    class:has-text-dark={$page.url.pathname.includes('/reflect')}
+    href="/reflect">
+      <i class="icon fa-solid fa-magnifying-glass fa-2x" />
+      <span class="link-text"> Reflect </span>
     </a>
   </p>
 </nav>

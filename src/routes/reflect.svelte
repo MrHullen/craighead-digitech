@@ -17,7 +17,7 @@
     <h2> Legal </h2>
 
     <p>
-      Consider whether your design abides by the [Harmful Digital Communications Act](https://www.justice.govt.nz/justice-sector-policy/key-initiatives/harmful-digital-communications/) (explained on [NetSafe](https://www.netsafe.org.nz/advice/harmfuldigitalcommunications/) and [Consumer Protection](https://www.consumerprotection.govt.nz/general-help/consumer-laws/online-safety-laws-and-rules/#harmful-digital-communications)). If there is any personal information included, or images of people, consider if you have ensured their permission has been provided and their personal data is kept private.
+      Consider whether your design abides by the <a href="https://www.justice.govt.nz/justice-sector-policy/key-initiatives/harmful-digital-communications/">Harmful Digital Communications Act</a> (explained on <a href="https://www.netsafe.org.nz/advice/harmfuldigitalcommunications/">NetSafe</a> and <a href="https://www.consumerprotection.govt.nz/general-help/consumer-laws/online-safety-laws-and-rules/#harmful-digital-communications">Consumer Protection</a>). If there is any personal information included, or images of people, consider if you have ensured their permission has been provided and their personal data is kept private.
     </p>
   </Box>
 
@@ -56,11 +56,11 @@
     <h2> Accessibility </h2>
 
     <p>
-      Can it be access on different devices and browsers (*Chrome, Safari, Firefox, Edge, and Internet Explorer; and mobile and desktop*)?
+      Can it be access on different devices and browsers (<em>Chrome, Safari, Firefox, Edge, and Internet Explorer; and mobile and desktop</em>)?
     </p>
 
     <p>
-      Can it be used by differently abled people (*colour-blind safe colours, appropriate-sized and well-contrasting text, labels for inputs, aria labels where appropriate, etc.*)?
+      Can it be used by differently abled people (<em>colour-blind safe colours, appropriate-sized and well-contrasting text, labels for inputs, aria labels where appropriate, etc.</em>)?
     </p>
   </Box>
 
@@ -68,7 +68,7 @@
     <h2> Usability </h2>
 
     <p>
-      Does the app work the way a user would expect (*do links look like links, headings in logical hierarchy, etc.*)?
+      Does the app work the way a user would expect (<em>do links look like links, headings in logical hierarchy, etc.</em>)?
     </p>
   </Box>
 
@@ -76,7 +76,7 @@
     <h2> Functionality </h2>
 
     <p>
-      Do the parts of the app do what they're supposed to (*do the links go to the right pages, do the images show up, etc.*)?
+      Do the parts of the app do what they're supposed to (<em>do the links go to the right pages, do the images show up, etc.</em>)?
     </p>
   </Box>
 
@@ -88,7 +88,7 @@
     </p>
 
     <p>
-      Does it use design principles (*contrast and/or complimentary colours, white space, alignments, etc.*)?
+      Does it use design principles (<em>complimentary colours, white space, alignments, etc.</em>)?
     </p>
   </Box>
 
@@ -100,7 +100,7 @@
     <h2> Appropriateness </h2>
 
     <p>
-      Describe how your design is appropriate for your purpose and audience. You **must** link the design choices your made (which colours, fonts, layout, and imagery) to the purpose and audience that you defined at the beginning.
+      Describe how your design is appropriate for your purpose and audience. You <b>must</b> link the design choices your made (which colours, fonts, layout, and imagery) to the purpose and audience that you defined at the beginning.
     </p>
 
     <blockquote>
