@@ -5,36 +5,82 @@
 
 <Hero title="Setup" subtitle="Get everything setup just the way you like" />
 
-<section class="content section">
+<main class="content section">
+  <h1> Setup </h1>
 
-## Software
+  <Box>
+    <h2> Accounts </h2>
 
-<Box title="Write">
+    <p> You'll need to setup a couple of accounts to access and write your code. You should use your <b>school email</b> for these. </p>
 
-To **write code** on your computer and run it to see what it does, you'll need to:
+    <ol>
+      <li>Create a <a href="https://github.com/">GitHub account</a></li>
+      <li>Create a <a href="https://gitpod.io/">Gitpod account</a></li>
+    </ol>
 
- 1. Install [Node.js](https://nodejs.org/)
- 1. Install [Visual Studio Code](https://code.visualstudio.com/)
+    <div class="is-flex is-justify-content-right">
+      <div class="dropdown is-hoverable is-right">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+          <span>On your laptop instead</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item">
+              <p>
+                If you'd prefer not to rely on the Internet and instead write code using apps installed on your computer, you'll need to:
+              </p>
+            
+              <ol>
+                <li>Install <a href="https://nodejs.org/">Node.js</a></li>
+                <li>Install <a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+              </ol>
+            
+              <p>
+                To save and backup code to the cloud, you'll also need to:
+              </p>
+            
+              <ol>
+                <li>Install Git (<a href="https://sourceforge.net/projects/git-osx-installer/">Mac</a> or <a href="https://git-scm.com/download/win">Windows</a>)</li>
+                <li>Create a <a href="https://github.com/">GitHub account</a></li>
+                <li>Install <a href="https://desktop.github.com/">GitHub Desktop</a></li>
+              </ol>
 
-</Box>
+              <p>
+                When everything is installed, login to both VS Code and GitHub Desktop with your GitHub account.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<Box title="Save">
+    <p>
+      Gitpod is a website that gives you a modern coding environment, where you can write and run code to get your projects completed. It even connects with GitHub to save your code to the cloud.
+    </p>
 
-To **save and backup code** to the cloud, you'll also need to:
+    <p>
+      To open a GitHub project with Gitpod, there are a few ways:
+    </p>
 
- 1. Install Git ([Mac](https://sourceforge.net/projects/git-osx-installer/) or [Windows](https://git-scm.com/download/win))
- 1. Create a [GitHub account](https://github.com/)
- 1. Install [GitHub Desktop](https://desktop.github.com/)
+    <ol>
+      <li>Add <code>gitpod.io/#</code> to the start of your GitHub URL</li>
+      <li>Use the <a href="https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki">Chrome extension</a></li>
+      <li>Open your Gitpod Dashboard, start a new Workspace, and enter your GitHub URL</li>
+    </ol>
 
-</Box>
+  </Box>
 
-When everything is installed, login to both VS Code and GitHub Desktop with your GitHub account.
 
-## VS Code Extensions
+  <h2> VS Code Extensions </h2>
 
-Extensions are helpful extras that can customise your VS Code and make writing code a lot easier. You can add extensions by clicking on the ![Extensions icon](/images/vs-code-extensions.png) **Extensions** icon on the left of VS Code and then searching for the Extension you want, or you can follow the links below and click the `Install` button.
+  In Gitpod, you can install a range of extensions.
 
-<Box title="Look and Feel">
+  Extensions are helpful extras that can customise your VS Code and make writing code a lot easier. You can add extensions by clicking on the ![Extensions icon](/images/vs-code-extensions.png) **Extensions** icon on the left of VS Code and then searching for the Extension you want, or you can follow the links below and click the `Install` button.
+
+  <Box title="Look and Feel">
 
 - ![Material Theme icon](https://equinusocio.gallerycdn.vsassets.io/extensions/equinusocio/vsc-material-theme/33.2.2/1615830724784/Microsoft.VisualStudio.Services.Icons.Default) [Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme)
   - Gives you lots of colour and font options for the background and the text, including dark and light themes.
@@ -42,9 +88,9 @@ Extensions are helpful extras that can customise your VS Code and make writing c
 - ![Material Theme Icons icon](https://equinusocio.gallerycdn.vsassets.io/extensions/equinusocio/vsc-material-theme-icons/2.2.1/1633451317132/Microsoft.VisualStudio.Services.Icons.Default) [Material Theme Icons](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)
   - Adds new and interesting icons for every different file type.
 
-</Box>
+  </Box>
 
-<Box title="Reading Code">
+  <Box title="Reading Code">
 
 - ![Blockman icon](https://leodevbro.gallerycdn.vsassets.io/extensions/leodevbro/blockman/1.3.3/1637003744468/Microsoft.VisualStudio.Services.Icons.Default) [Blockman](https://marketplace.visualstudio.com/items?itemName=leodevbro.blockman)
   - Draws boxes around HTML elements and bracketed code to help you see where it starts and ends.
@@ -64,14 +110,14 @@ Extensions are helpful extras that can customise your VS Code and make writing c
 - ![Svelte for VS Code icon](https://svelte.gallerycdn.vsassets.io/extensions/svelte/svelte-vscode/105.5.3/1637157536523/Microsoft.VisualStudio.Services.Icons.Default) [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
   - Allows VS Code to understand and highlight Svelte files to make reading them easier, and lets you do `Alt` + `Shift` + `F` in them.
 
-</Box>
+  </Box>
 
-<Box title="Running Code">
+  <Box title="Running Code">
 
 - ![Live Preview icon](https://ms-vscode.gallerycdn.vsassets.io/extensions/ms-vscode/live-server/0.2.11/1638450464864/Microsoft.VisualStudio.Services.Icons.Default) [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
   - You can view the website you're building as you go - every time you save it'll get updated in the browser. You can either use the VS Code browser or your computer's normal browser.
 
-</Box>
+  </Box>
 
 <!--
 
@@ -90,11 +136,20 @@ Extensions are helpful extras that can customise your VS Code and make writing c
 
 With your GitHub account setup, VS Code and GitHub Desktop logged in, and your VS Code customised just the way you want it, you're ready to go!
 
-Check out some of the [Projects](/projects) that you can start coding right away, and remember to regularly practice your [Vocabulary](/code/vocabulary) and [Flow](/code/flow) skills so you can talk the talk as well as walk the walk.
+Check out some of the [projects](/projects) that you can start coding right away, and remember to regularly practice your [Vocabulary](/code/vocabulary) and [Flow](/code/flow) skills so you can talk the talk as well as walk the walk.
 
-</section>
+</main>
+
 
 <style>
+  main h1 {
+    display: none;
+  }
+
+  .dropdown-content {
+    width: 20rem;
+  }
+
   img {
     position: relative;
     height: 1.25rem;

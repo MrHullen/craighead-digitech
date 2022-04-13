@@ -65,6 +65,16 @@
             <i class="fas fa-keyboard"></i>
             <span> Input </span>
           </a>
+
+          <a
+          class="navbar-item"
+          class:is-active={$page.url.pathname.includes('/vocabulary')}
+          on:click={toggle}
+          aria-current="{$page.url.pathname.includes('/vocabulary') ? 'page' : undefined}"
+          href="/vocabulary">
+            <i class="fas fa-comment-dots"></i>
+            <span> Vocabulary </span>
+          </a>
           
           <a
           class="navbar-item"
@@ -84,6 +94,16 @@
         </a>
       
         <div class="navbar-dropdown">
+          <a
+          class="navbar-item"
+          class:is-active={$page.url.pathname.includes('/stack')}
+          on:click={toggle}
+          aria-current="{$page.url.pathname.includes('/stack') ? 'page' : undefined}"
+          href="/stack">
+            <i class="fa-solid fa-layer-group"></i>
+            <span> Tech Stack </span>
+          </a>
+        
           <a
           class="navbar-item"
           class:is-active={$page.url.pathname.includes('/shop')}
