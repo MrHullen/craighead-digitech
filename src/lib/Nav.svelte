@@ -15,9 +15,7 @@
     on:click={() => { active = false }}
     aria-current="{$page.url.pathname == '/' ? 'page' : undefined}"
     href="/">
-      <figure class="image">
-        <img src="/logo.png" alt="Craighead logo">
-      </figure>
+      <img src="/logo.png" alt="Craighead logo">
       <span> Craighead Digital Technology </span>
     </a>
 

@@ -3,56 +3,51 @@
 </script>
 
 <nav class="menu">
+
   <p class="menu-label">
     <a
     class="menu-link"
-    class:has-text-primary={!$page.url.pathname.includes('/empathise')}
-    class:has-text-dark={$page.url.pathname == '/empathise'}
-    href="/empathise">
-      <i class="icon fa-solid fa-comments fa-2x" />
-      <span class="link-text"> Empathise </span>
+    class:has-text-primary={!$page.url.pathname.includes('/design')}
+    class:has-text-dark={$page.url.pathname == '/design'}
+    href="/design">
+      <i class="icon fa-solid fa-compass-drafting fa-2x" />
+      <span class="link-text"> Design </span>
     </a>
   </p>
+
   <p class="menu-label">
     <a
     class="menu-link"
-    class:has-text-primary={!$page.url.pathname.includes('/ideate')}
-    class:has-text-dark={$page.url.pathname.includes('/ideate')}
-    href="/ideate">
-      <i class="icon fa-solid fa-lightbulb fa-2x" />
-      <span class="link-text"> Ideate </span>
+    class:has-text-primary={!$page.url.pathname.includes('/html-css')}
+    class:has-text-dark={$page.url.pathname == '/html-css'}
+    href="/html-css">
+      <i class="icon fa-solid fa-code fa-2x" />
+      <span class="link-text"> HTML & CSS </span>
     </a>
   </p>
+
   <p class="menu-label">
     <a
     class="menu-link"
-    class:has-text-primary={!$page.url.pathname.includes('/prototype')}
-    class:has-text-dark={$page.url.pathname.includes('/prototype')}
-    href="/prototype">
-      <i class="icon fa-solid fa-hammer fa-2x" />
-      <span class="link-text"> Prototype </span>
+    class:has-text-primary={!$page.url.pathname.includes('/javascript')}
+    class:has-text-dark={$page.url.pathname == '/javascript'}
+    href="/javascript">
+      <i class="icon fa-brands fa-js fa-2x" />
+      <span class="link-text"> JavaScript </span>
     </a>
   </p>
+
   <p class="menu-label">
     <a
     class="menu-link"
-    class:has-text-primary={!$page.url.pathname.includes('/iterate')}
-    class:has-text-dark={$page.url.pathname.includes('/iterate')}
-    href="/iterate">
-      <i class="icon fa-solid fa-arrows-rotate fa-2x" />
-      <span class="link-text"> Iterate </span>
+    class:has-text-primary={!$page.url.pathname.includes('/svelte')}
+    class:has-text-dark={$page.url.pathname == '/svelte'}
+    href="/svelte">
+      <img class="icon" src="/icons/svelte-icon.png" alt="Svelte icon" />
+      <span class="link-text"> Svelte </span>
     </a>
   </p>
-  <p class="menu-label">
-    <a
-    class="menu-link"
-    class:has-text-primary={!$page.url.pathname.includes('/reflect')}
-    class:has-text-dark={$page.url.pathname.includes('/reflect')}
-    href="/reflect">
-      <i class="icon fa-solid fa-magnifying-glass fa-2x" />
-      <span class="link-text"> Reflect </span>
-    </a>
-  </p>
+
 </nav>
 
 <style>

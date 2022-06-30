@@ -31,12 +31,41 @@
 
   ---
 
+
+- What the programmer assumes the user will be inputting when using the program correctly.
+
+- Input that the user puts in when they follow all of the rules and assumptions that the programmer has made.
+
+
+  </Box>
+
+  <Box title="Boundary">
+
+- Inputs from the user that are on the extreme ends of valid input.
+
+- Is usually acceptable input.
+
+- Tested because it often highlights very subtle errors in code.
+
+
+  </Box>
+
+  <Box title="Invalid">
+
+- Inputs from the user that are not acceptable for continuation of the program.
+
+- User should be warned that they have input an invalid value and prompted to try or start again.
+
+
+
 <!-- 
   <h2 id="console">console.log</h2>
 
   ---
 
   <h2 id="testing-types">Testing types</h2>
+
+  
 
   <Box title="Expected" />
 
