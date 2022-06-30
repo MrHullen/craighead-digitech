@@ -31,6 +31,7 @@
 
   ---
 
+  <Box title="Expected">
 
 - What the programmer assumes the user will be inputting when using the program correctly.
 
@@ -57,6 +58,7 @@
 - User should be warned that they have input an invalid value and prompted to try or start again.
 
 
+  </Box>
 
 <!-- 
   <h2 id="console">console.log</h2>
@@ -79,4 +81,5 @@
 
   ---
  -->
+
 </section>
