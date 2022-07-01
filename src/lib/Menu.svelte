@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores'
+  import SvelteIcon from '$lib/SvelteIcon.svelte'
 </script>
 
 <nav class="menu">
@@ -43,7 +44,9 @@
     class:has-text-primary={!$page.url.pathname.includes('/svelte')}
     class:has-text-dark={$page.url.pathname == '/svelte'}
     href="/svelte">
-      <img class="icon" src="/icons/svelte-icon.png" alt="Svelte icon" />
+      <i class="icon">
+        <SvelteIcon active={$page.url.pathname == '/svelte'} />
+      </i>
       <span class="link-text"> Svelte </span>
     </a>
   </p>

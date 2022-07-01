@@ -1,16 +1,30 @@
 <script>
-  export let title = 'Title' // default title
+  import IconColumn from '$lib/BoxHelpers/IconColumn.svelte'
+  import TextColumn from '$lib/BoxHelpers/TextColumn.svelte'
+
+  export let link
+  export let icon
+  export let title
+  export let text
 </script>
 
-<section class="box">
-  {#if title != 'Title'}
-    <h2>{title}</h2>
-  {/if}
-  <slot>
-    <!-- text to display is none provided. -->
-    <p><em>TODO: body text</em></p>
-  </slot>
-</section>
+{#if link}
+  <a href={link}>
+    <section class="columns box">
+      {#if icon}
+      <IconColumn {icon} />
+      {/if}
+      <TextColumn {title} {text} />
+    </section>
+  </a>
+{:else}
+  <section class="columns box">
+    {#if icon}
+    <IconColumn {icon} />
+    {/if}
+    <TextColumn {title} {text} />
+  </section>
+{/if}
 
 <style>
 	/* Large screens */
@@ -20,4 +34,9 @@
       margin-right: 2rem;
     }
 	}
+
+  a:not(:last-child) {
+    display: block;
+    margin-bottom: 2em;
+  }
 </style>
