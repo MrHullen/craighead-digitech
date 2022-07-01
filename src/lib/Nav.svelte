@@ -16,7 +16,7 @@
     aria-current="{$page.url.pathname == '/' ? 'page' : undefined}"
     href="/">
       <img src="/logo.png" alt="Craighead logo">
-      <span> Craighead Digital Technology </span>
+      <span class="has-text-dark"> Craighead Digital Technology </span>
     </a>
 
     
