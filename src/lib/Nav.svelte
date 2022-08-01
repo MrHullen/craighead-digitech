@@ -39,12 +39,15 @@
     <div class="navbar-end">
 			
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="/">
+        <a
+        class="navbar-link"
+        on:click={toggle}
+        href="/">
           Students
         </a>
 
         <div class="navbar-dropdown">
-          <a
+          <!-- <a
           class="navbar-item"
           class:is-active={$page.url.pathname.includes('/setup')}
           on:click={toggle}
@@ -52,7 +55,7 @@
           href="/setup">
             <i class="fas fa-laptop-code"></i>
             <span> Setup </span>
-          </a>
+          </a> -->
       
           <a
           class="navbar-item"
@@ -66,9 +69,9 @@
 
           <a
           class="navbar-item"
-          class:is-active={$page.url.pathname.includes('/vocabulary')}
+          class:is-active={$page.url.pathname.includes('/code')}
           on:click={toggle}
-          aria-current="{$page.url.pathname.includes('/vocabulary') ? 'page' : undefined}"
+          aria-current="{$page.url.pathname.includes('/code') ? 'page' : undefined}"
           href="/vocabulary">
             <i class="fas fa-comment-dots"></i>
             <span> Vocabulary </span>
@@ -87,7 +90,10 @@
       </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="/">
+        <a
+        class="navbar-link"
+        on:click={toggle}
+        href="/">
           Teachers
         </a>
       

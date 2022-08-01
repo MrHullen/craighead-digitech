@@ -8,21 +8,22 @@
   export let text
 </script>
 
-{#if link}
+{#if link && icon}
   <a href={link}>
     <section class="columns box">
-      {#if icon}
       <IconColumn {icon} />
-      {/if}
       <TextColumn {title} {text} />
     </section>
   </a>
-{:else}
+{:else if !link && icon}
   <section class="columns box">
-    {#if icon}
     <IconColumn {icon} />
-    {/if}
     <TextColumn {title} {text} />
+  </section>
+{:else}
+  <section class="box">
+    <h2>{title}</h2>
+    {@html text}
   </section>
 {/if}
 

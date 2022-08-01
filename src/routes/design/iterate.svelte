@@ -12,13 +12,14 @@
     Iterate <em class="has-text-info">- Te Whakaahua</em>
   </h2>
 
-  <Box>
-    <h2> Test </h2>
-
+  <Box
+    title="Test"
+    text="
     <p>
-      Testing goes in hand with <a href="/design/iterate">Iterate</a>
-    </p>
-  </Box>
+      Testing goes in hand with <a href=&quot;/design/iterate&quot;>Iterate</a>
+    </p>"
+  />
+
 </main>
 
 <style>
