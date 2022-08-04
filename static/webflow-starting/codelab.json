@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-08-04T08:50:54Z",
+  "id": "webflow-starting",
+  "duration": 5,
+  "title": "Webflow - Starting",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to use Webflow.",
+  "source": "1IrL8xvq14-1ME06MP6yiNwLW__TyTimkR3aQVI_oM7A",
+  "theme": "film",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "film"
+  ],
+  "tags": [],
+  "url": "webflow-starting"
+}

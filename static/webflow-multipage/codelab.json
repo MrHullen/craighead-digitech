@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-08-04T08:48:48Z",
+  "id": "webflow-multipage",
+  "duration": 5,
+  "title": "Webflow - Multipage",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to use Webflow.",
+  "source": "1hyi_MpgjBrJI0n9e8MeZys4QXZbL1aOGyRz69-wFHi8",
+  "theme": "webdev",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "webdev"
+  ],
+  "tags": [],
+  "url": "webflow-multipage"
+}
