@@ -27,6 +27,12 @@
       title: `Project 04 - Props`,
       text:  `The fourth part of the <b>Summer Gallery</b> project will introduce you to customising your components with <b>props</b>.`,
     },
+    {
+      link:  `/svelte/firebase-database/index.html`,
+      icon:  `fa-solid fa-database`,
+      title: `Project 05 - Data`,
+      text:  `This project is a one-off that shows how you can use a database to store your data, and connect your web app to it.`,
+    },
   ]
 </script>
 

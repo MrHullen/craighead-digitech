@@ -31,13 +31,13 @@
       link:  `/javascript/`,
       icon:  ``,
       title: `Project 05 - Collections`,
-      text:  ``,
+      text:  `Projects that use <code>arrays</code> and <code>objects</code> to store <b>groups</b> of things together.`,
     },
     {
       link:  `/javascript/`,
       icon:  ``,
-      title: `Project 03 - Improvements`,
-      text:  ``,
+      title: `Project 06 - Improvements`,
+      text:  `Revisiting previous projects to improve their <b>readability</b>, <b>efficiency</b>, and overall <b>quality</b>.`,
     },
   ]
 </script>
