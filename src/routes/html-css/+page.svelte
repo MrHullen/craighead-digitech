@@ -2,6 +2,14 @@
   import Hero from '$lib/Hero.svelte'
   import Box from '$lib/Box.svelte'
 
+  export let data
+
+  console.log(JSON.stringify(data))
+
+  data.sort((p1, p2) => {
+    return p1.number - p2.number;
+  })
+
   const projects = [
     {
       link:  `/html-css/introduction/index.html`,
@@ -49,6 +57,10 @@
 
 <main class="content section">
   <h1> HTML & CSS </h1>
+
+  {#each data as project}
+    <p>{project.name}</p>
+  {/each}
 
   {#each projects as project}
     <Box {...project} />
