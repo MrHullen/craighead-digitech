@@ -2,11 +2,11 @@
   import Hero from '$lib/Hero.svelte'
   import Box from '$lib/Box.svelte'
 
-  export let data
+  export let projects2
 
-  console.log(JSON.stringify(data))
+  console.log(JSON.stringify(projects2))
 
-  data.sort((p1, p2) => {
+  projects2.sort((p1, p2) => {
     return p1.number - p2.number;
   })
 
@@ -58,7 +58,7 @@
 <main class="content section">
   <h1> HTML & CSS </h1>
 
-  {#each data as project}
+  {#each projects2 as project}
     <p>{project.name}</p>
   {/each}
 

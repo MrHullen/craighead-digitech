@@ -10,5 +10,16 @@ const client = sanityClient({
 export async function load() {
   const data = await client.fetch(`*[_type == "project"]`);
 
-  if (data) return data
+  if (data) {
+    return {
+      status: 200,
+      body: {
+        projects2: data
+      }
+    };
+  }
+  return {
+    status: 500,
+    body: new Error("Internal Server Error")
+  };
 }
