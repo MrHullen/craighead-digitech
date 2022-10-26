@@ -14,7 +14,7 @@
 <!-- HTML       -->
 <!-- ########## -->
 
-<div class="box">
+<a class="box" href={item.link}>
   <iframe src="{item.link}/preview" title="{item.name}" />
   <p class="has-text-centered"><strong>{item.name}</strong></p>
   <div class="tags">
@@ -22,7 +22,7 @@
       <span class="tag is-link is-light">{tag}</span>
     {/each}
   </div>
-</div>
+</a>
 
 <!-- ########## -->
 <!-- CSS        -->
