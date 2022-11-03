@@ -1,9 +1,9 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "https://storage.googleapis.com",
+  "prefix": "/codelabs",
   "mainga": "UA-49880327-14",
-  "updated": "2022-09-22T23:53:00Z",
+  "updated": "2022-11-02T23:15:44Z",
   "id": "firebase-database",
   "duration": 0,
   "title": "Firebase database",

@@ -1,9 +1,9 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "https://storage.googleapis.com",
+  "prefix": "/codelabs",
   "mainga": "UA-49880327-14",
-  "updated": "2022-02-28T20:58:12Z",
+  "updated": "2022-02-28T21:00:23Z",
   "id": "why-web-dev-continued",
   "duration": 31,
   "title": "Why Web Dev continued",

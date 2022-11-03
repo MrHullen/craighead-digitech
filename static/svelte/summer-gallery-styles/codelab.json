@@ -1,9 +1,9 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "https://storage.googleapis.com",
+  "prefix": "/codelabs",
   "mainga": "UA-49880327-14",
-  "updated": "2022-02-14T02:26:48Z",
+  "updated": "2022-02-21T01:40:35Z",
   "id": "summer-gallery-styles",
   "duration": 30,
   "title": "Summer Gallery Styles",

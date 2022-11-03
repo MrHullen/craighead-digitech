@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "/codelabs",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-02-22T19:27:45Z",
+  "id": "summer-gallery-layout",
+  "duration": 25,
+  "title": "Summer Gallery Layout",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab you'll learn to use Bulma's columns and tiles to lay out your page.",
+  "source": "1ocy-0CkYvtm3PdEcCg2Gfxa60SZCoidF0p8oD8AwIIk",
+  "theme": "html",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "html"
+  ],
+  "tags": [],
+  "url": "summer-gallery-layout"
+}

@@ -1,9 +1,9 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "https://storage.googleapis.com",
+  "prefix": "/codelabs",
   "mainga": "UA-49880327-14",
-  "updated": "2022-02-10T02:40:47Z",
+  "updated": "2022-02-10T02:41:22Z",
   "id": "summer-gallery-links",
   "duration": 20,
   "title": "Summer Gallery Links",

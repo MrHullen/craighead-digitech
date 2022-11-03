@@ -3,13 +3,13 @@
   "format": "html",
   "prefix": "/codelabs",
   "mainga": "UA-49880327-14",
-  "updated": "2022-02-08T19:37:30Z",
+  "updated": "2022-02-06T02:16:21Z",
   "id": "why-web-dev",
-  "duration": 50,
+  "duration": 25,
   "title": "Why Web Dev",
   "authors": "Dave Hullen",
-  "summary": "In this codelab, you'll learn how to create a multipage website by writing HTML code.",
-  "source": "11eIXeOu4__CPFsyQB7n7JS903OCcgsr5EPK2_KCBq5M",
+  "summary": "What you'll learn and do.",
+  "source": "1tVp2Xs5ohTi8Il3WWH2a55m69wM1_PVTJTUo_iWQGOs",
   "theme": "html",
   "status": [
     "draft"

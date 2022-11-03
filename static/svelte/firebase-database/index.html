@@ -9,7 +9,7 @@
   <title>Firebase database</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="/codelabs/codelab-elements/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -385,9 +385,9 @@ export async function getPeople() {
       </google-codelab-step>
     
       <google-codelab-step label="Get more data" duration="0">
-        <p>Your database isn&#39;t just static - you can add to it directly from your web app! We&#39;ll create a person object from information the user puts in, then send it to the database to be saved.</p>
+        <p>Your database isn&#39;t just static - you can add to it directly from your web app! We&#39;ll create a new person object from information the user puts in, then send it to the database to be saved.</p>
 <ol type="1" start="1">
-<li>Create an empty <code>person</code> <strong>object</strong>.</li>
+<li>Create an empty <code>newPerson</code> <strong>object</strong>.</li>
 </ol>
 <h3 is-upgraded>+page.svelte</h3>
 <pre><code>&lt;script&gt;
@@ -395,7 +395,7 @@ export async function getPeople() {
 
   let people = getPeople()
 
-  let person = {}
+  let newPerson = {}
 &lt;/script&gt;
 
 {#await people}
@@ -414,7 +414,7 @@ export async function getPeople() {
 
   let people = getPeople()
 
-  let person = {}
+  let newPerson = {}
 &lt;/script&gt;
 
 {#await people}
@@ -426,15 +426,15 @@ export async function getPeople() {
 {/await}
 
 &lt;label&gt;
-  First name: &lt;input bind:value={person.firstName} /&gt;
+  First name: &lt;input bind:value={newPerson.firstName} /&gt;
 &lt;/label&gt;
 
 &lt;label&gt;
-  Last name: &lt;input bind:value={person.lastName} /&gt;
+  Last name: &lt;input bind:value={newPerson.lastName} /&gt;
 &lt;/label&gt;
 
 &lt;label&gt;
-  Age: &lt;input bind:value={person.age} /&gt;
+  Age: &lt;input bind:value={newPerson.age} /&gt;
 &lt;/label&gt;</code></pre>
 <aside class="special"><p><strong>Tip</strong></p>
 <p>We&#39;ve <strong>reused</strong> the variable name <code>person</code> on the page, but <strong>remember</strong>: the person variable <strong>inside</strong> the <code>{#each ...}</code> block <strong>doesn&#39;t exist outside that block</strong>, so the app will treat them as <strong>different variables</strong>.</p>
@@ -448,7 +448,7 @@ export async function getPeople() {
 
   let people = getPeople()
 
-  let person = {}
+  let newPerson = {}
 &lt;/script&gt;
 
 {#await people}
@@ -460,18 +460,18 @@ export async function getPeople() {
 {/await}
 
 &lt;label&gt;
-  First name: &lt;input bind:value={person.firstName} /&gt;
+  First name: &lt;input bind:value={newPerson.firstName} /&gt;
 &lt;/label&gt;
 
 &lt;label&gt;
-  Last name: &lt;input bind:value={person.lastName} /&gt;
+  Last name: &lt;input bind:value={newPerson.lastName} /&gt;
 &lt;/label&gt;
 
 &lt;label&gt;
-  Age: &lt;input bind:value={person.age} /&gt;
+  Age: &lt;input bind:value={newPerson.age} /&gt;
 &lt;/label&gt;
 
-&lt;button on:click={addPerson(person)}&gt; Save &lt;/button&gt;</code></pre>
+&lt;button on:click={addPerson(newPerson)}&gt; Save &lt;/button&gt;</code></pre>
 <aside class="special"><p><strong>Tip</strong></p>
 <p>You&#39;ll probably notice that <code>addPerson</code> isn&#39;t a <strong>function</strong> and that you&#39;ve got some <strong>error messages</strong>. We&#39;ll sort that out <strong>right now</strong>.</p>
 </aside>
@@ -574,10 +574,10 @@ export async function addPerson(person) {
     
   </google-codelab>
 
-  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="/codelabs/codelab-elements/native-shim.js"></script>
+  <script src="/codelabs/codelab-elements/custom-elements.min.js"></script>
+  <script src="/codelabs/codelab-elements/prettify.js"></script>
+  <script src="/codelabs/codelab-elements/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>
