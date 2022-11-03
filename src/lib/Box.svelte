@@ -1,6 +1,7 @@
 <script>
   import IconColumn from '$lib/BoxHelpers/IconColumn.svelte'
   import TextColumn from '$lib/BoxHelpers/TextColumn.svelte'
+  import { PortableText } from '@portabletext/svelte'
 
   export let link
   export let icon
@@ -26,7 +27,7 @@
 {:else}
   <section class="box">
     <h2>{title}</h2>
-    <p>{@html text} </p>
+    <PortableText value={text} />
   </section>
 {/if}
 
