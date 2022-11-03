@@ -5,7 +5,10 @@
   export let link
   export let icon
   export let title
+  export let description
   export let text
+
+  if (description) text = description
 </script>
 
 {#if link && icon}
