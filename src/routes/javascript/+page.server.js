@@ -9,7 +9,7 @@ const client = sanityClient({
 
 /** @type {import('./$types').PageLoad} */
 export async function load() {
-  const data = await client.fetch(`*[_type == 'tutorial' && topic == 'html-css']`)
+  const data = await client.fetch(`*[_type == 'tutorial' && topic == 'javascript']`)
 
   if (data) {
     return data

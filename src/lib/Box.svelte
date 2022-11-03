@@ -26,7 +26,7 @@
 {:else}
   <section class="box">
     <h2>{title}</h2>
-    {@html text}
+    <p>{@html text} </p>
   </section>
 {/if}
 

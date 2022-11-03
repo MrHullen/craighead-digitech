@@ -1,14 +1,13 @@
 <script>
   import Hero from '$lib/Hero.svelte'
   import Box from '$lib/Box.svelte'
-  import Nav from '../../lib/Nav.svelte'
 
   export let data
 
-  let projects = Object.values(data)
+  let tutorials = Object.values(data)
   
-  projects.sort((p1, p2) => {
-    return p1.number - p2.number;
+  tutorials.sort((t1, t2) => {
+    return t1.number - t2.number
   })
 
   // const projects = [
@@ -52,20 +51,20 @@
 </script>
 
 <Hero
-  title="HTML and CSS Projects"
+  title="HTML and CSS"
   subtitle="Build with the fundamentals of the web"
 />
 
 <main class="content section">
-  <h1> HTML & CSS </h1>
+  <h2> HTML & CSS </h2>
 
-  {#each projects as project}
-    <Box {...project} />
+  {#each tutorials as tutorial}
+    <Box {...tutorial} />
   {/each}
 </main>
 
 <style>
-  main h1 {
+  main h2 {
     display: none;
   }
 </style>
