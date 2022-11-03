@@ -3,7 +3,7 @@
   import SvelteIcon from '$lib/SvelteIcon.svelte'
 </script>
 
-<nav class="menu">
+<nav class="menu" data-sveltekit-prefetch>
 
   <p class="menu-label">
     <a
