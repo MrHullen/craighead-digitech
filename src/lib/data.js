@@ -126,16 +126,5 @@ export const data = [
   },
 ]
 
-// import { initializeApp } from "firebase/app"
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBgzxRhzcIvnpneO3mKI3J3ow6TbqLwGA0",
-//   authDomain: "craighead-digitech-bfb37.firebaseapp.com",
-//   projectId: "craighead-digitech-bfb37",
-//   storageBucket: "craighead-digitech-bfb37.appspot.com",
-//   messagingSenderId: "755351330847",
-//   appId: "1:755351330847:web:53cec85a2e3cc40952752a"
-// }
-
-// const app = initializeApp(firebaseConfig)
 
