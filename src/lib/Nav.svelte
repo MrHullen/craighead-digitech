@@ -1,5 +1,7 @@
 <script>
 	import { page } from '$app/stores'
+  import { login, logout } from '$lib/auth'
+  import { user } from '$lib/stores'
 
 	// Boolean value for burger menu on mobile
   // toggled off whenever $page changes
@@ -120,15 +122,34 @@
         </div>
       </div>
 
-      <a
-        class="navbar-item"
-        class:is-active={$page.url.pathname.includes('/login')}
-        on:click={toggle}
-        aria-current="{$page.url.pathname.includes('/login') ? 'page' : undefined}"
-        href="/login">
+      {#if $user == undefined}
+      <div class="navbar-item">
+        <button
+          class="button is-primary"
+          on:click={toggle, login}>
           <i class="fa-solid fa-arrow-right-to-bracket"></i>
           <span> Login </span>
-      </a>
+        </button>
+      </div>
+      {:else}
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link"
+        on:click={toggle}
+        href="/">
+          <img class="icon" src="{$user.photoURL}" alt="Profile" />
+          <span>{$user.displayName}</span>
+        </a>
+
+        <div class="navbar-dropdown">
+          <a
+            class="navbar-item"
+            on:click={toggle, logout}>
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <span> Logout </span>
+          </a>
+        </div>
+      </div>
+      {/if}
     </div>
   </div>
 </nav>

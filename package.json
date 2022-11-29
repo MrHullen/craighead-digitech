@@ -12,6 +12,7 @@
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "bulma": "^0.9.4",
+    "firebase": "^9.14.0",
     "sass": "^1.53.0",
     "svelte": "^3.44.0",
     "svelte-preprocess": "^4.10.7",
