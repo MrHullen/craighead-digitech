@@ -33,7 +33,10 @@
 <p>It&#39;ll have the following features:</p>
 <aside class="special"><p><strong>Features</strong></p>
 <ul>
+<li>Images</li>
+<li>Multiple pages</li>
 <li>A header</li>
+<li>A nav menu</li>
 <li>A main section</li>
 <li>A footer</li>
 </ul>
@@ -45,25 +48,121 @@
 </ul>
 <h2 is-upgraded>What you&#39;ll need</h2>
 <ul>
-<li>A <a href="https://github.com/" target="_blank">GitHub</a> account and <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
-<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most common)</li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+</ul>
+<p>and either</p>
+<ul>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
+</ul>
+<p>or</p>
+<ul>
+<li><a href="https://github.com/features/codespaces" target="_blank">GitHub Codespaces</a></li>
 </ul>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Resume your project" duration="1">
-        <h2 is-upgraded>Select your repository</h2>
+        <h2 is-upgraded>Local</h2>
 <ol type="1" start="1">
 <li>Open <strong>GitHub Desktop</strong></li>
 <li>Choose the <strong>Introduction</strong> repository from the menu in the <strong>top left</strong></li>
-</ol>
-<h2 is-upgraded>Open VS Code</h2>
-<ol type="1" start="3">
 <li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
 </ol>
+<h2 is-upgraded>Codespaces</h2>
+<ol type="1" start="1">
+<li>Login to <a href="https://github.com/" target="_blank">GitHub.com</a> and find your <strong>Introduction</strong> repository</li>
+<li>Click on the green <strong>Code</strong> button, change the tab to <strong>Codespaces</strong>, and choose the workspace under <strong>On current branch </strong>(it will have a randomly generated name)</li>
+</ol>
 <p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Recap: Images" duration="5">
+        <p>Create another file called <code>bff.html</code> then copy and paste the code below into your new file.</p>
+<pre><code>&lt;h1&gt; Introduce Yourself &lt;/h1&gt;
+
+&lt;h2&gt; My Best Friend(s) &lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;img src=&#34;...&#34;&gt;
+    &lt;p&gt; Name... &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src=&#34;...&#34;&gt;
+    &lt;p&gt; Name... &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src=&#34;...&#34;&gt;
+    &lt;p&gt; Name... &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h2 is-upgraded>Customise</h2>
+<ol type="1" start="1">
+<li>Find image(s) that you want to use.</li>
+<li>Add them to your project&#39;s folder.</li>
+<li>Update the image element&#39;s <code>src</code> attribute to the name of the image file.</li>
+<li>Update the paragraph element to the person&#39;s name.</li>
+</ol>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Images</p>
+<ul>
+<li>Multiple pages</li>
+<li>A header</li>
+<li>A nav menu</li>
+<li>A main section</li>
+<li>A footer</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Recap: Linking" duration="5">
+        <p>Create a link to <code>bff.html</code> in your <code>index.html</code> file, and another link to <code>index.html</code> in your <code>bff.html</code> file. This way, visitors can go back and forward between the pages on your site.</p>
+<p>Usually, links to other pages are somewhere near the top of a web page, like this.</p>
+<pre><code>&lt;h1&gt;
+  Introduce Yourself
+&lt;/h1&gt;
+
+&lt;a href=&#34;bff.html&#34;&gt;
+  My Friend(s)
+&lt;/a&gt;
+    
+&lt;h2&gt;
+  About Me
+&lt;/h2&gt;
+
+&lt;p&gt;
+  A paragraph about me.
+&lt;/p&gt;
+
+&lt;p&gt;
+  My interests include:
+&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt; Thing 1 &lt;/li&gt;
+  &lt;li&gt; Thing 2 &lt;/li&gt;
+  &lt;li&gt; Thing 3 &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Images</p>
+<p>✅ Multiple pages</p>
+<ul>
+<li>A header</li>
+<li>A nav menu</li>
+<li>A main section</li>
+<li>A footer</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
 
 
       </google-codelab-step>
@@ -71,7 +170,7 @@
       <google-codelab-step label="Add your header" duration="5">
         <p>The <code>header</code> element is a section, usually at the <strong>top</strong> of the page, that contains the <strong>name</strong> of the website, a <strong>logo</strong>, and other things that are the same on every page.</p>
 <p>Usually, the <code>header</code> is the <strong>same</strong> or <strong>similar</strong> on every page.</p>
-<p>Try putting your main heading inside a <code>header</code> element.</p>
+<p>Try putting your <strong>main heading</strong> inside a <code>header</code> element.</p>
 <pre><code>&lt;header&gt;
   &lt;h1&gt; Introduce Yourself &lt;/h1&gt;
 &lt;/header&gt;</code></pre>
@@ -81,7 +180,32 @@
 <li>Add an image of yourself in your header</li>
 </ul>
 <aside class="special"><p><strong>Features</strong></p>
+<p>✅ Images</p>
+<p>✅ Multiple pages</p>
 <p>✅ A header</p>
+<ul>
+<li>A nav menu</li>
+<li>A main section</li>
+<li>A footer</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add your nav" duration="2">
+        <p>The <code>nav</code> element contains all the navigation links for your page. The navigation menu is usually the <strong>same</strong> on every page, so that visitors can move around however they want.</p>
+<p>Add a <code>nav</code> element around the link on your page so that it&#39;s contained inside.</p>
+<pre><code>&lt;nav&gt;
+  &lt;a href=&#34;bff.html&#34;&gt; My Friend(s) &lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Images</p>
+<p>✅ Multiple pages</p>
+<p>✅ A header</p>
+<p>✅ A nav menu</p>
 <ul>
 <li>A main section</li>
 <li>A footer</li>
@@ -95,7 +219,7 @@
     
       <google-codelab-step label="Add your main" duration="2">
         <p>The <code>main</code> element is the... <strong>main</strong> part of your page. It contains all the content that&#39;s specific to this page, so it should be <strong>different</strong> on every page.</p>
-<p>Add a <code>main</code> element around the main content of your page.</p>
+<p>Add a <code>main</code> element around the main content of your page so that it&#39;s contained inside.</p>
 <pre><code>&lt;main&gt;
   &lt;h2&gt; About Me &lt;/h2&gt;
 
@@ -114,7 +238,10 @@
   &lt;/ul&gt;
 &lt;/main&gt;</code></pre>
 <aside class="special"><p><strong>Features</strong></p>
+<p>✅ Images</p>
+<p>✅ Multiple pages</p>
 <p>✅ A header</p>
+<p>✅ A nav menu</p>
 <p>✅ A main section</p>
 <ul>
 <li>A footer</li>
@@ -131,7 +258,7 @@
 <p>Add a <code>footer</code> element at the <strong>bottom</strong> of your page with as much of this information as you want to include. You at least need to claim <strong>copyright</strong> on the work you&#39;ve done.</p>
 <pre><code>&lt;footer&gt;
   &lt;p&gt;
-    &amp;copy; Your Name 2022
+    &amp;copy; Your Name 2023
   &lt;/p&gt;
 &lt;/footer&gt;</code></pre>
 <aside class="special"><p><code>&copy;</code> is the code for the copyright symbol.</p>
@@ -143,7 +270,10 @@
 <li>Add as much additional detail as you like</li>
 </ul>
 <aside class="special"><p><strong>Features</strong></p>
+<p>✅ Images</p>
+<p>✅ Multiple pages</p>
 <p>✅ A header</p>
+<p>✅ A nav menu</p>
 <p>✅ A main section</p>
 <p>✅ A footer</p>
 </aside>
@@ -153,10 +283,13 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Next iteration done" duration="0">
-        <p>Congratulations, the next iteration of your web page is complete.</p>
+      <google-codelab-step label="Second iteration done" duration="0">
+        <p>Congratulations, the second iteration of your web page is complete.</p>
 <aside class="special"><p><strong>Features</strong></p>
+<p>✅ Images</p>
+<p>✅ Multiple pages</p>
 <p>✅ A header</p>
+<p>✅ A nav menu</p>
 <p>✅ A main section</p>
 <p>✅ A footer</p>
 </aside>

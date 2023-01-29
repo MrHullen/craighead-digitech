@@ -16,6 +16,8 @@
   <Box
     title="Legal"
     text="
+    <p>Copyright law recognises that most digital media (images, illustrations, movies and other media) are likely to be protected by copyright. This means that a user will need the permission of the copyright owner to be able to copy the media or share it on the internet. </p>
+    <p>A Creative Commons license is one of several copyright licenses that allow the distribution of copyrighted works. Creative commons licences make it easy for a copyright owner to share their original works. They ensure that others can copy and distribute original work, provided they give the owner credit and only on the conditions specified by the owner.</p>
     <p>
       Consider whether your design abides by the <a href=&quot;https://www.justice.govt.nz/justice-sector-policy/key-initiatives/harmful-digital-communications/&quot;>NetSafe</a> and <a href=&quot;https://www.consumerprotection.govt.nz/general-help/consumer-laws/online-safety-laws-and-rules/#harmful-digital-communications&quot;>Consumer Protection</a>). If there is any personal information included, or images of people, consider if you have ensured their permission has been provided and their personal data is kept private.
     </p>"
@@ -40,6 +42,7 @@
   <Box
     title="Cultural"
     text="
+    <p>Making sure to get the names and spelling correctly adheres to social and cultural responsibility. If facing names or place names that include macrons or a specific spelling, then spelling these incorrectly can be seen as culturally insensitive and/or offensive to the person/culture they belong to.</p>
     <p>
       Any cultures depicted in your outcome need to be shown fairly and accurately. Enure that you've included any alternative names for organisations, any mottos, etc. and that the spelling and macrons are correct. 
     </p>"
