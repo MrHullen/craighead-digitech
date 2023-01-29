@@ -37,7 +37,7 @@
 <li>Multiple HTML pages linked together</li>
 <li>Links styled with CSS</li>
 <li>Images</li>
-<li>Image styles with CSS</li>
+<li>Images styled with CSS</li>
 </ul>
 </aside>
 <p>Here&#39;s what it might look like:</p>
@@ -50,8 +50,16 @@
 </ul>
 <h2 is-upgraded>What you&#39;ll need</h2>
 <ul>
-<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it is the most common)</li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+</ul>
+<p>and either</p>
+<ul>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
+</ul>
+<p>or</p>
+<ul>
+<li><a href="https://github.com/features/codespaces" target="_blank">GitHub Codespaces</a></li>
 </ul>
 
 
@@ -60,7 +68,7 @@
       <google-codelab-step label="Start your project" duration="5">
         <h2 is-upgraded>Open the assignment</h2>
 <ol type="1" start="1">
-<li>Open the <a href="https://classroom.github.com/a/PiDwCc5P" target="_blank">GitHub Classroom assignment</a></li>
+<li>Open the <a href="https://classroom.github.com/a/00MRbJLK" target="_blank">GitHub Classroom assignment</a></li>
 <li>Check that you&#39;re logged in with your GitHub account</li>
 <li>Check the name of the assignment is correct and then accept it. GitHub will make a copy of the template for you.</li>
 <li>Click on the link to your repository</li>
@@ -70,9 +78,19 @@
 <li>Click on the green <strong>Code</strong> button and choose <strong>Open with GitHub Desktop</strong></li>
 <li>Choose a place (such as Documents) to download your code to</li>
 </ol>
-<h2 is-upgraded>Open VS Code</h2>
-<ol type="1" start="7">
+<h2 is-upgraded>Get ready to code</h2>
+<p>If you&#39;re working on GitHub Desktop and Visual Studio Code on your own laptop, follow the steps in the <strong>Local</strong> section.</p>
+<p>If instead you&#39;re using GitHub Codespaces, follow the steps in the <strong>Codespaces</strong> section.</p>
+<h3 is-upgraded>Local</h3>
+<ol type="1" start="1">
+<li>Click on the green <strong>Code</strong> button and choose <strong>Open with GitHub Desktop</strong></li>
+<li>If you&#39;re working locally (on your own device), choose a place (such as Documents) to download your code to</li>
 <li>Once it has cloned to your computer, click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+<li>Open the file called <code>index.html</code></li>
+</ol>
+<h3 is-upgraded>Codespace</h3>
+<ol type="1" start="5">
+<li>Click on the green <strong>Code</strong> button, change the tab to <strong>Codespaces</strong>, and choose <strong>Create codespace on main</strong></li>
 <li>Open the file called <code>index.html</code></li>
 </ol>
 <p>Now you&#39;re ready to get coding!</p>
@@ -100,7 +118,7 @@
 <li><em>Cyber security consultant (hacker)</em></li>
 </ul>
 <p>and this is what the page should look like in the browser:</p>
-<p class="image-container"><img style="width: 624.00px" src="img/f99c1af7d03b9206.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img/c05e190724b785d9.png"></p>
 <aside class="special"><p><strong>Reminder</strong></p>
 <p>An <strong>unordered list element</strong> is a group of <strong>list item elements</strong>. Like this:</p>
 <p><code>ul</code></p>
@@ -114,7 +132,7 @@
 <li>Multiple HTML pages linked together</li>
 <li>Links styled with CSS</li>
 <li>Images</li>
-<li>Image styles with CSS</li>
+<li>Images styled with CSS</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -147,7 +165,7 @@
 <ul>
 <li>Links styled with CSS</li>
 <li>Images</li>
-<li>Image styles with CSS</li>
+<li>Images styled with CSS</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -177,7 +195,7 @@
 <ul>
 <li>Links styled with CSS</li>
 <li>Images</li>
-<li>Image styles with CSS</li>
+<li>Images styled with CSS</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -226,7 +244,7 @@
 <p>✅ Links styled with CSS</p>
 <ul>
 <li>Images</li>
-<li>Image styles with CSS</li>
+<li>Images styled with CSS</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -265,7 +283,7 @@
 <p>✅ Links styled with CSS</p>
 <p>✅ Images</p>
 <ul>
-<li>Image styles with CSS</li>
+<li>Images styled with CSS</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -278,7 +296,7 @@
         <p>Often, images aren&#39;t the right size and need to be styled to fit into the web page.</p>
 <p>First, we&#39;ll change the size of your image. Copy and paste this code into your <code>style</code> element:</p>
 <pre><code>img {
-  width: 50em;
+  width: 50rem;
 }</code></pre>
 <aside class="special"><p>You&#39;ll notice that we didn&#39;t change the height, but it changed anyway. The browser will keep your image in proportion. If you also change the height, it&#39;s possible to get the proportions wrong and make your image look strange.</p>
 </aside>
@@ -293,7 +311,7 @@
 <p>✅ Multiple HTML pages linked together</p>
 <p>✅ Links styled with CSS</p>
 <p>✅ Images</p>
-<p>✅ Image styles with CSS</p>
+<p>✅ Images styled with CSS</p>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
 </aside>
@@ -309,7 +327,7 @@
 <p>✅ Multiple HTML pages linked together</p>
 <p>✅ Links styled with CSS</p>
 <p>✅ Images</p>
-<p>✅ Image styles with CSS</p>
+<p>✅ Images styled with CSS</p>
 </aside>
 <p>Along the way, you&#39;ve learnt about these parts of coding.</p>
 <p><strong>(</strong>➕ <em>means new things in this project)</em></p>

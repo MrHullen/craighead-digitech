@@ -47,31 +47,61 @@
 </ul>
 <h2 is-upgraded>What you&#39;ll need</h2>
 <ul>
-<li>A <a href="https://github.com/" target="_blank">GitHub</a> account and <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
-<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most common)</li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+</ul>
+<p>and either</p>
+<ul>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
+</ul>
+<p>or</p>
+<ul>
+<li><a href="https://github.com/features/codespaces" target="_blank">GitHub Codespaces</a></li>
 </ul>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Resume your project" duration="1">
-        <h2 is-upgraded>Select your repository</h2>
+        <h2 is-upgraded>Local</h2>
 <ol type="1" start="1">
 <li>Open <strong>GitHub Desktop</strong></li>
 <li>Choose the <strong>Why Web Dev</strong> repository from the menu in the <strong>top left</strong></li>
-</ol>
-<h2 is-upgraded>Open VS Code</h2>
-<ol type="1" start="3">
 <li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+</ol>
+<h2 is-upgraded>Codespaces</h2>
+<ol type="1" start="1">
+<li>Login to <a href="https://github.com/" target="_blank">GitHub.com</a> and find your <strong>Why Web Dev</strong> repository</li>
+<li>Click on the green <strong>Code</strong> button, change the tab to <strong>Codespaces</strong>, and choose the workspace under <strong>On current branch </strong>(it will have a randomly generated name)</li>
 </ol>
 <p>Now you&#39;re ready to get coding!</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add a body and semantic elements" duration="5">
+      <google-codelab-step label="Recap: add a body and semantic elements" duration="5">
         <p>Remember what you learned in the semantic tags and layout projects about using <code>body</code>, <code>header</code>, <code>nav</code>, <code>main</code>, and <code>footer</code>.</p>
+<pre><code>&lt;body&gt;
+  &lt;header&gt;
+    ...
+  &lt;/header&gt;
+
+  &lt;nav&gt;
+    ...
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    ...
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    ...
+  &lt;/footer&gt;
+
+  &lt;style&gt;
+    ...
+  &lt;/style&gt;
+&lt;/body&gt;</code></pre>
 <p>On each of your 3 pages, add the semantic elements, and then wrap everything in a <code>body</code> element.</p>
 <p>In general, every page should look like this:</p>
 <pre><code>&lt;body&gt;
@@ -251,9 +281,9 @@
     &lt;style&gt;
       body {
         display: grid;
-        grid: &#34; h    h    h  &#34; 3em
+        grid: &#34; h    h    h  &#34; 3rem
               &#34; .    m    .  &#34; auto
-              &#34; f    f    f  &#34; 5em
+              &#34; f    f    f  &#34; 5rem
               / 1fr  5fr  1fr;
       }
 
@@ -279,8 +309,8 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Next iteration done" duration="0">
-        <p>Congratulations, the first iteration of your web page is complete.</p>
+      <google-codelab-step label="Second iteration done" duration="0">
+        <p>Congratulations, the second iteration of your web page is complete.</p>
 <aside class="special"><p><strong>Features</strong></p>
 <p>✅ A body element and semantic HTML elements</p>
 <p>✅ A style element and layout with CSS Grid</p>
