@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "/codelabs",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-02-06T02:16:21Z",
+  "id": "why-web-dev",
+  "duration": 25,
+  "title": "Why Web Dev",
+  "authors": "Dave Hullen",
+  "summary": "What you'll learn and do.",
+  "source": "1tVp2Xs5ohTi8Il3WWH2a55m69wM1_PVTJTUo_iWQGOs",
+  "theme": "html",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "html"
+  ],
+  "tags": [],
+  "url": "why-web-dev"
+}
