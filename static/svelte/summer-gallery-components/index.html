@@ -9,7 +9,7 @@
   <title>Summer Gallery Components</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="/codelabs/codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -45,9 +45,17 @@
 </ul>
 <h2 is-upgraded>What you&#39;ll need</h2>
 <ul>
-<li>A <a href="https://github.com/" target="_blank">GitHub</a> account and <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
-<li><a href="https://nodejs.org/en/download/" target="_blank">Node.js</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most common)</li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+</ul>
+<p>and either</p>
+<ul>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
+</ul>
+<p>or</p>
+<ul>
+<li><a href="https://github.com/features/codespaces" target="_blank">GitHub Codespaces</a></li>
 </ul>
 
 
@@ -56,7 +64,7 @@
       <google-codelab-step label="Start your project" duration="5">
         <h2 is-upgraded>Open the assignment</h2>
 <ol type="1" start="1">
-<li>Open your <a href="https://classroom.github.com/a/5zEqvwTf" target="_blank">GitHub Classroom assignment</a></li>
+<li>Open your <a href="https://classroom.github.com/a/52OHDYwA" target="_blank">GitHub Classroom assignment</a></li>
 <li>Check that you&#39;re logged in with your GitHub account</li>
 </ol>
 <aside class="special"><p>First time in GitHub Classroom? You&#39;ll need to choose your name from the class list.</p>
@@ -67,21 +75,26 @@
 </ol>
 <aside class="special"><p>A GitHub repository is an online copy of your code and the changes that you&#39;ve made.</p>
 </aside>
-<h2 is-upgraded>Clone your repository</h2>
+<h2 is-upgraded>Get ready to code</h2>
+<p>If you&#39;re working on GitHub Desktop and Visual Studio Code on your own laptop, follow the steps in the <strong>Local</strong> section.</p>
+<p>If instead you&#39;re using GitHub Codespaces, follow the steps in the <strong>Codespaces</strong> section.</p>
+<h3 is-upgraded>Local</h3>
 <ol type="1" start="5">
 <li>Click on the green <strong>Code</strong> button and choose <strong>Open with GitHub Desktop</strong></li>
-<li>Choose a place (such as Documents) to download your code to</li>
+<li>If you&#39;re working locally (on your own device), choose a place (such as Documents) to download your code to</li>
 </ol>
 <aside class="special"><p>Keeping all your projects labelled in one folder will help you find stuff you&#39;ve done before. No one remembers absolutely everything about coding so it&#39;s best to be able to find when you did that one thing.</p>
 </aside>
-<h2 is-upgraded>Open VS Code</h2>
 <ol type="1" start="7">
 <li>Once it has cloned to your computer, click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
-<li>Open the file called <code>index.svelte</code> in the <code>src</code> folder</li>
+</ol>
+<h3 is-upgraded>Codespace</h3>
+<ol type="1" start="5">
+<li>Click on the green <strong>Code</strong> button, change the tab to <strong>Codespaces</strong>, and choose <strong>Create codespace on main</strong></li>
 </ol>
 <h2 is-upgraded>Start your dev server</h2>
-<ol type="1" start="9">
-<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>Shift</code> + <code>`</code></li>
+<ol type="1" start="1">
+<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>`</code></li>
 <li>Install all the dependencies by entering the command <code>npm install</code></li>
 <li>Start the server on your laptop by entering the command <code>npm run dev</code></li>
 <li>Open the link that it creates to view your site</li>
@@ -93,27 +106,32 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Change the header" duration="5">
-        <p>Currently, the header HTML and CSS is all mixed in with the rest of the page. This makes it difficult if you wanted to update the header specifically, or you wanted to re-use it on other pages.</p>
-<p>We&#39;re going to put all of the code for the header into its own <strong>file</strong>, called a <strong>component</strong>. Then, we can add this component to the page without seeing all of its details. This will make our page much easier to understand, update, improve, and maintain.</p>
-<h2 is-upgraded>Create the component</h2>
-<ol type="1" start="1">
-<li>Create a new file in your <code>lib</code> folder called <code>Header.svelte</code></li>
-<li>Copy and paste the header HTML and CSS from <code>index.svelte</code> to <code>Header.svelte</code></li>
-</ol>
-<h2 is-upgraded>Use the component</h2>
-<ol type="1" start="3">
-<li>Add the script code below to the top of your <code>index.svelte</code> file</li>
-</ol>
+      <google-codelab-step label="Header Component" duration="5">
+        <p>Look through each file in the <code>src</code> folder, which is where all the code you write will live.</p>
+<p>You&#39;ll notice that there is no <code>index.html</code>, instead, there&#39;s <code>+page.svelte</code> that acts as the landing page. SvelteKit makes creating multi page websites very easy, but to do so you need to get used to some unusually named files. Just remember: <code>+page</code> is an individual web page.</p>
+<p>In <code>+page.svelte</code> there are some familiar things, and some new things. The first thing that might strike you is the <code>script</code> section at the top. In Svelte, all the JavaScript, HTML, and CSS for a page is stored together. This makes it easier to work on individual chunks of your website.</p>
+<p>In the <code>script</code> section it imports a <code>Header</code> from a different file, and lower down on the page it uses that header.</p>
 <pre><code>&lt;script&gt;
   import Header from &#39;$lib/Header.svelte&#39;
-&lt;/script&gt;</code></pre>
-<ol type="1" start="4">
-<li>Add the <code><Header /></code> component into your HTML where you want the header to be</li>
-</ol>
-<aside class="special"><p><strong>Components</strong></p>
-<p>A web app is made up of one or more components. A component is a reusable, self-contained block of code that includes HTML, CSS, and JavaScript that belong together, written into one file. That file can then be included with other components to create the page.</p>
-<p><em>New vocabulary: </em><strong><em>component</em></strong></p>
+&lt;/script&gt;
+
+&lt;Header /&gt;</code></pre>
+<p>This is an example of a <strong>component</strong>. The <code>Header.svelte</code> file has all the code for the header, and you can import it and use it on any page. Whenever you update <code>Header.svelte</code>, it will update on every page - no more copy and pasting when you want to make a small change!</p>
+<aside class="special"><p><strong>Discussion</strong></p>
+<p>What does <code>$lib</code> do?</p>
+</aside>
+<p>In Header.svelte you can write any CSS you want inside a style section, which goes at the bottom.</p>
+<pre><code>&lt;header&gt;
+  &lt;h1 class=&#34;title&#34;&gt;Welcome&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;style&gt;
+  header {
+    background-color: blue;
+  }
+&lt;/style&gt;</code></pre>
+<aside class="special"><p><strong>Discussion</strong></p>
+<p>What is <code>class="title"</code> doing?</p>
 </aside>
 <h2 is-upgraded>Customise</h2>
 <p>Change your header to personalise your web page.</p>
@@ -128,21 +146,39 @@
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
 <p>Now that you&#39;ve added a feature to your website, you should <strong>commit</strong> it to your GitHub repository! Committing creates a full <strong>backup</strong> and a <strong>snapshot</strong> of the code at this point.</p>
-<p>Open GitHub Desktop and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made. <strong>Green</strong> indicates code that you&#39;ve <strong>added</strong> since your last commit, and <strong>red</strong> is code you&#39;ve <strong>deleted</strong>.</p>
-<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your message could be <code>Created header component.</code></p>
+<p><em>Local - </em>Open GitHub Desktop and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made.</p>
+<p><em>Codespaces - </em>Switch to the GitHub tab on the left.</p>
+<p><strong>Green</strong> indicates code that you&#39;ve <strong>added</strong> since your last commit, and <strong>red</strong> is code you&#39;ve <strong>deleted</strong>.</p>
+<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your message could be <code>Customised header component.</code></p>
 </aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add a footer" duration="5">
-        <p>Each part of the page can be its own component. Try applying the same steps you did with the header, but now create a footer.</p>
+      <google-codelab-step label="Footer component" duration="5">
+        <p>Currently, the footer HTML and CSS is all mixed in with the rest of the page. This makes it difficult if you wanted to update the footer specifically, or you wanted to re-use it on other pages.</p>
+<p>We&#39;re going to put all of the code for the footer into its own <strong>file</strong>, called a <strong>component</strong>. Then, we can add this component to the page without seeing all of its details. This will make our page much easier to understand, update, improve, and maintain.</p>
+<h2 is-upgraded>Create the component</h2>
 <ol type="1" start="1">
-<li>Create your <code>Footer</code> component file</li>
-<li>Write your HTML and CSS for your <code>Footer</code> into that file</li>
-<li>Import your <code>Footer</code> file into your page</li>
-<li>Insert your <code>Footer</code> element where you want it to appear</li>
+<li>Open the <code>src</code> folder, which contains all the code that you write</li>
+<li>Create a new file in your <code>lib</code> folder called <code>Footer.svelte</code></li>
+<li>Copy and paste the footer HTML and CSS from <code>+page.svelte</code> to <code>Footer.svelte</code></li>
 </ol>
+<h2 is-upgraded>Use the component</h2>
+<ol type="1" start="4">
+<li>Import your new Footer at the top of your <code>+page.svelte</code> file</li>
+</ol>
+<pre><code>&lt;script&gt;
+  import Header from &#39;$lib/Header.svelte&#39;
+  import Footer from &#39;$lib/Footer.svelte&#39;
+&lt;/script&gt;</code></pre>
+<ol type="1" start="5">
+<li>Add the <code><Footer /></code> component into your HTML where you want the header to be</li>
+</ol>
+<aside class="special"><p><strong>Components</strong></p>
+<p>A web app is made up of one or more components. A component is a reusable, self-contained block of code that includes HTML, CSS, and JavaScript that belong together, written into one file. That file can then be included with other components to create the page.</p>
+<p><em>New vocabulary: </em><strong><em>component</em></strong></p>
+</aside>
 <h2 is-upgraded>Customise</h2>
 <p>Spend some time to improve the look and feel of your site by tweaking your CSS.</p>
 <aside class="special"><p><strong>Features</strong></p>
@@ -151,7 +187,8 @@
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
 <p>Another feature, another commit!</p>
-<p>Open GitHub Desktop and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made.</p>
+<p><em>Local - </em>Open GitHub Desktop and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made.</p>
+<p><em>Codespaces - </em>Switch to the GitHub tab on the left.</p>
 <p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your message could be <code>Added footer component.</code></p>
 </aside>
 
@@ -189,10 +226,10 @@
     
   </google-codelab>
 
-  <script src="/codelabs/codelab-elements/native-shim.js"></script>
-  <script src="/codelabs/codelab-elements/custom-elements.min.js"></script>
-  <script src="/codelabs/codelab-elements/prettify.js"></script>
-  <script src="/codelabs/codelab-elements/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

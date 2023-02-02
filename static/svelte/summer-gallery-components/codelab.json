@@ -1,9 +1,9 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "/codelabs",
+  "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2022-02-10T02:36:55Z",
+  "updated": "2023-01-30T01:34:23Z",
   "id": "summer-gallery-components",
   "duration": 20,
   "title": "Summer Gallery Components",
