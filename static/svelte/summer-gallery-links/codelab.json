@@ -1,7 +1,7 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "https://storage.googleapis.com",
+  "prefix": "https://digitech.craighead.school.nz/codelabs/",
   "mainga": "UA-49880327-14",
   "updated": "2023-01-30T01:49:24Z",
   "id": "summer-gallery-links",
