@@ -9,7 +9,7 @@
   <title>Summer Gallery Styles</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="/codelabs/codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://digitech.craighead.school.nz/codelabs//codelab-elements/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -47,31 +47,42 @@
 </ul>
 <h2 is-upgraded>What you&#39;ll need</h2>
 <ul>
-<li>A <a href="https://github.com/" target="_blank">GitHub</a> account and <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
-<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most common)</li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+</ul>
+<p>and either</p>
+<ul>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
+</ul>
+<p>or</p>
+<ul>
+<li><a href="https://github.com/features/codespaces" target="_blank">GitHub Codespaces</a></li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Start your project" duration="5">
-        <h2 is-upgraded>Open your repository</h2>
+      <google-codelab-step label="Resume your project" duration="5">
+        <h2 is-upgraded>Local</h2>
 <ol type="1" start="1">
 <li>Open <strong>GitHub Desktop</strong></li>
 <li>Check the <strong>Current Repository</strong> in the top left is your project</li>
-</ol>
-<h2 is-upgraded>Open VS Code</h2>
-<ol type="1" start="3">
 <li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
-<li>Open the file called <code>index.svelte</code> in the <code>src</code> folder</li>
+</ol>
+<h2 is-upgraded>Codespaces</h2>
+<ol type="1" start="1">
+<li>Login to <a href="https://github.com/" target="_blank">GitHub.com</a> and find your <strong>Introduction</strong> repository</li>
+<li>Click on the green <strong>Code</strong> button, change the tab to <strong>Codespaces</strong>, and choose the workspace under <strong>On current branch </strong>(it will have a randomly generated name)</li>
 </ol>
 <h2 is-upgraded>Start your dev server</h2>
-<ol type="1" start="5">
-<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>Shift</code> + <code>`</code></li>
+<ol type="1" start="1">
+<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>`</code></li>
 <li>Start the server on your laptop by entering the command <code>npm run dev</code></li>
 <li>Open the link that it creates to view your site</li>
 </ol>
+<aside class="special"><p>The server will update the site in your browser every time you save a file, so that you can easily see the changes as you make them.</p>
+</aside>
 <p>Now you&#39;re ready to get coding!</p>
 
 
@@ -101,7 +112,7 @@
 </aside>
 <pre><code>.title {
   font-weight: bold;
-  Font-size: xx-large;
+  font-size: xx-large;
 }</code></pre>
 <p>View your new header in your browser. It might seem a bit plain but it&#39;s now much more robust and will display nicely on mobile and desktop browsers.</p>
 <h2 is-upgraded>Customise</h2>
@@ -142,7 +153,7 @@
       <google-codelab-step label="Style your footer" duration="5">
         <p>All of your components can benefit from the Bulma framework&#39;s classes.</p>
 <p>Try using <a href="https://bulma.io/documentation/layout/footer/" target="_blank">Bulma&#39;s Footer documentation</a> to style your own Footer component.</p>
-<p>Remember to delete your own <code>style</code> element first.</p>
+<p>Remember to comment out your own <code>style</code> element first. You can do this by highlighting it and pressing <code>Command</code> + <code>/</code> or <code>Ctrl</code> + <code>/</code></p>
 <h2 is-upgraded>Customise</h2>
 <p>Change your things to personalise your web page.</p>
 <aside class="special"><p><strong>Features</strong></p>
@@ -161,7 +172,7 @@
       <google-codelab-step label="Style your sections" duration="5">
         <p>Every page can use Bulma, and if you get familiar with it, a CSS framework can save you hours of coding and testing.</p>
 <ol type="1" start="1">
-<li>Delete the <code>style</code> element on your home page</li>
+<li>Comment out the <code>style</code> element on your home page</li>
 <li>Add the <a href="https://bulma.io/documentation/layout/section/" target="_blank">section</a> class to your <code>main</code> element</li>
 <li>Add the <a href="https://bulma.io/documentation/elements/content/" target="_blank">content</a> class to your <code>main</code> element</li>
 </ol>
@@ -185,7 +196,7 @@
       <google-codelab-step label="Style your nav" duration="5">
         <p>The <a href="https://bulma.io/documentation/components/navbar/" target="_blank">documentation page for the Navbar</a> goes into a lot of detail very quickly, but we&#39;ll work through it a little at the time.</p>
 <ol type="1" start="1">
-<li>Delete any <code>style</code> you&#39;ve written for your <code>Nav</code> component</li>
+<li>Comment out any <code>style</code> you&#39;ve written for your <code>Nav</code> component</li>
 <li>Add the <code>navbar</code> class to your <code>nav</code> element</li>
 <li>Add the <code>navbar-item</code> class to your link (<code>a</code>) elements</li>
 </ol>
@@ -194,7 +205,7 @@
   &lt;a class=&#34;navbar-item&#34; href=&#34;/page-2&#34;&gt; Page 2 &lt;/a&gt;
 &lt;/nav&gt;</code></pre>
 <h2 is-upgraded>Customise</h2>
-<p>You can change your <code>hero</code> <code>header</code> by adding more classes.</p>
+<p>You can change your <code>navbar</code> by adding more classes.</p>
 <ul>
 <li>Change the colour by adding one of these:</li>
 </ul>
@@ -228,6 +239,44 @@
 
       </google-codelab-step>
     
+      <google-codelab-step label="Create a column layout" duration="5">
+        <p>A common web page layout uses multiple columns to show information. Bulma makes creating columns easy - you just need <code>div</code>s and a couple of CSS classes.</p>
+<p>When you&#39;re developing any kind of software - whether it&#39;s for web, mobile, or anything else - you&#39;ll often need to refer to <strong>documentation</strong>. When you learn to read the docs, the possibilities of what you can build expand greatly.</p>
+<p>Read the docs on <a href="https://bulma.io/documentation/columns/" target="_blank">Bulma columns</a>, then see if you can implement them yourself to create this layout:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create a card" duration="5">
+        <pre><code>&lt;div class=&#34;card&#34;&gt;
+  &lt;div class=&#34;card-image&#34;&gt;
+    &lt;figure class=&#34;image is-4by3&#34;&gt;
+      &lt;img src=&#34;https://bulma.io/images/placeholders/1280x960.png&#34;&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;card-content&#34;&gt;
+    &lt;div class=&#34;media&#34;&gt;
+      &lt;div class=&#34;media-left&#34;&gt;
+        &lt;figure class=&#34;image is-48x48&#34;&gt;
+          &lt;img src=&#34;https://bulma.io/images/placeholders/96x96.png&#34;&gt;
+        &lt;/figure&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;media-content&#34;&gt;
+        &lt;p class=&#34;title is-4&#34;&gt;Jane Smith&lt;/p&gt;
+        &lt;p class=&#34;subtitle is-6&#34;&gt;@janesmith&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;content&#34;&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris. &lt;a&gt;@bulmaio&lt;/a&gt;.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
       <google-codelab-step label="Third iteration done" duration="0">
         <p>Congratulations, the third iteration of your web page is complete.</p>
 <aside class="special"><p><strong>Features</strong></p>
@@ -257,10 +306,10 @@
     
   </google-codelab>
 
-  <script src="/codelabs/codelab-elements/native-shim.js"></script>
-  <script src="/codelabs/codelab-elements/custom-elements.min.js"></script>
-  <script src="/codelabs/codelab-elements/prettify.js"></script>
-  <script src="/codelabs/codelab-elements/codelab-elements.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/native-shim.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/custom-elements.min.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/prettify.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>
