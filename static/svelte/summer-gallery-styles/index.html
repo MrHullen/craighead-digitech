@@ -37,6 +37,8 @@
 <li>A styled footer</li>
 <li>Section and content styles</li>
 <li>A styled navbar</li>
+<li>Column layout</li>
+<li>Personal card</li>
 </ul>
 </aside>
 <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
@@ -142,6 +144,8 @@
 <li>A styled footer</li>
 <li>Section and content styles</li>
 <li>A styled navbar</li>
+<li>Column layout</li>
+<li>Personal card</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -161,6 +165,8 @@
 <p>✅ A styled footer</p>
 <ul>
 <li>Section and content styles</li>
+<li>Column layout</li>
+<li>Personal card</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -185,6 +191,8 @@
 <p>✅ Section and content styles</p>
 <ul>
 <li>A styled navbar</li>
+<li>Column layout</li>
+<li>Personal card</li>
 </ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
@@ -232,6 +240,10 @@
 <p>✅ A styled footer</p>
 <p>✅ Section and content styles</p>
 <p>✅ A styled navbar</p>
+<ul>
+<li>Column layout</li>
+<li>Personal card</li>
+</ul>
 </aside>
 <aside class="warning"><p><strong>Commit point</strong></p>
 </aside>
@@ -243,36 +255,68 @@
         <p>A common web page layout uses multiple columns to show information. Bulma makes creating columns easy - you just need <code>div</code>s and a couple of CSS classes.</p>
 <p>When you&#39;re developing any kind of software - whether it&#39;s for web, mobile, or anything else - you&#39;ll often need to refer to <strong>documentation</strong>. When you learn to read the docs, the possibilities of what you can build expand greatly.</p>
 <p>Read the docs on <a href="https://bulma.io/documentation/columns/" target="_blank">Bulma columns</a>, then see if you can implement them yourself to create this layout:</p>
+<p class="image-container"><img style="width: 624.00px" src="img/7919bade23215e0e.png"></p>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A styled hero header</p>
+<p>✅ A styled footer</p>
+<p>✅ Section and content styles</p>
+<p>✅ A styled navbar</p>
+<p>✅ Column layout</p>
+<ul>
+<li>Personal card</li>
+</ul>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Create a card" duration="5">
-        <pre><code>&lt;div class=&#34;card&#34;&gt;
+        <p>Using <a href="https://bulma.io/documentation/components/card/" target="_blank">Bulma&#39;s media card component</a>, try creating a short profile for yourself that you can put on the main page, or in your footer.</p>
+<p>You should create this as its own component in a file called <code>Card.svelte</code> or similar. You can then <code>import</code> and use the component wherever you want in your project.</p>
+<pre><code>&lt;div class=&#34;card&#34;&gt;
+
   &lt;div class=&#34;card-image&#34;&gt;
     &lt;figure class=&#34;image is-4by3&#34;&gt;
       &lt;img src=&#34;https://bulma.io/images/placeholders/1280x960.png&#34;&gt;
     &lt;/figure&gt;
-  &lt;/div&gt;
+  &lt;/div&gt; &lt;!-- .card-image –&gt;
+
   &lt;div class=&#34;card-content&#34;&gt;
+
     &lt;div class=&#34;media&#34;&gt;
+
       &lt;div class=&#34;media-left&#34;&gt;
         &lt;figure class=&#34;image is-48x48&#34;&gt;
           &lt;img src=&#34;https://bulma.io/images/placeholders/96x96.png&#34;&gt;
         &lt;/figure&gt;
       &lt;/div&gt;
+
       &lt;div class=&#34;media-content&#34;&gt;
         &lt;p class=&#34;title is-4&#34;&gt;Jane Smith&lt;/p&gt;
         &lt;p class=&#34;subtitle is-6&#34;&gt;@janesmith&lt;/p&gt;
       &lt;/div&gt;
-    &lt;/div&gt;
+
+    &lt;/div&gt; &lt;!-- .media –&gt;
 
     &lt;div class=&#34;content&#34;&gt;
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Phasellus nec iaculis mauris. &lt;a&gt;@bulmaio&lt;/a&gt;.
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    &lt;/div&gt; &lt;!-- .content –&gt;
+
+  &lt;/div&gt; &lt;!-- .card-content –&gt;
+&lt;/div&gt; &lt;!-- .card –&gt;</code></pre>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ A styled hero header</p>
+<p>✅ A styled footer</p>
+<p>✅ Section and content styles</p>
+<p>✅ A styled navbar</p>
+<p>✅ Column layout</p>
+<p>✅ Personal card</p>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+</aside>
 
 
       </google-codelab-step>
@@ -291,6 +335,10 @@
 <p><strong>Svelte</strong></p>
 <ul>
 <li><code>components</code> for reusable blocks of code</li>
+</ul>
+<p><strong>Bulma</strong></p>
+<ul>
+<li><code>classes</code> for using Bulma&#39;s pre-written CSS</li>
 </ul>
 <p>From here, you can take your page further, if you like, by adding images from your summer, links to your social media, YouTube channel, blog, or whatever you like.</p>
 
