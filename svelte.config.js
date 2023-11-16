@@ -1,19 +1,11 @@
-import preprocess from "svelte-preprocess"
-import adapter from "@sveltejs/adapter-auto"
+import { vitePreprocess } from '@sveltejs/kit/vite'
+import adapter from '@sveltejs/adapter-auto'
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter()
+    adapter: adapter(),
   },
-
-  preprocess: [
-    preprocess({
-      scss: {
-        prependData: '@use "src/variables.scss" as *;',
-      },
-    }),
-  ],
+  preprocess: [vitePreprocess({})],
 }
 
 export default config

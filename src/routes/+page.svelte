@@ -5,11 +5,7 @@
 <Hero title="Digital Technology" subtitle="A collection of guides and resources" />
 
 <main class="content section">
-  <h2> Welcome </h2>
-
-  <p> ...to Digital Technology at  <a href="https://craighead.school.nz/">Craighead Diocesan School</a>!  </p>
-
-  <figure class="image">
+  <figure class="image section">
     <img src="/images/drawings/lifestyle.svg" alt="Design lifestyle">
   </figure>
 

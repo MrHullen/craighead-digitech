@@ -7,7 +7,7 @@
       [<a href="https://github.com/MrHullen/craighead-digitech/tree/master/src/routes" target="_blank">read the code</a>]
     </p>
     <p>
-      &copy; <a href="https://craighead.school.nz" target="_blank">Craighead Diocesan School</a> 2022
+      &copy; <a href="https://craighead.school.nz" target="_blank">Craighead Diocesan School</a> 2024
     </p>
   </div>
 </footer>

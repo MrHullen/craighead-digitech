@@ -3,31 +3,25 @@
   import TextColumn from '$lib/BoxHelpers/TextColumn.svelte'
   import { PortableText } from '@portabletext/svelte'
 
-  export let link
-  export let icon
-  export let title
-  export let description
-  export let text
-
-  if (description) text = description
+  export let tutorial
 </script>
 
-{#if link && icon}
-  <a href={link}>
+{#if tutorial.link && tutorial.icon}
+  <a href={tutorial.link}>
     <section class="columns box">
-      <IconColumn {icon} />
-      <TextColumn {title} {text} />
+      <IconColumn icon={tutorial.icon} />
+      <TextColumn title={tutorial.title} text={tutorial.description} />
     </section>
   </a>
-{:else if !link && icon}
+{:else if !tutorial.link && tutorial.icon}
   <section class="columns box">
-    <IconColumn {icon} />
-    <TextColumn {title} {text} />
+    <IconColumn icon={tutorial.icon} />
+    <TextColumn title={tutorial.title} text={tutorial.description} />
   </section>
 {:else}
   <section class="box">
-    <h2>{title}</h2>
-    <PortableText value={text} />
+    <h2>{tutorial.title}</h2>
+    <PortableText value={tutorial.description} />
   </section>
 {/if}
 

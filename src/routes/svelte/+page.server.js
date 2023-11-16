@@ -1,22 +1,14 @@
-import sanityClient from "@sanity/client"
+import client from '$lib/client'
 
-const client = sanityClient({
-  projectId: "mowf6uky",
-  dataset: "production",
-  apiVersion: "2022-10-13",
-  useCdn: false
-})
-
-/** @type {import('./$types').PageLoad} */
-export async function load() {
-  const data = await client.fetch(`*[_type == 'tutorial' && topic == 'svelte']`)
+export async function load({ params }) {
+  const data = await client.fetch(`*[_type == 'course' && title == 'SvelteKit'][0]`)
 
   if (data) {
     return data
-  } else {
-    return {
-      status: 500,
-      body: new Error("Internal Server Error")
-    }
+  }
+
+  return {
+    status: 500,
+    body: new Error('Internal Server Error'),
   }
 }

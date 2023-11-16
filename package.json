@@ -6,17 +6,16 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.0.0-beta3",
-    "@portabletext/svelte": "^1.0.1",
-    "@sanity/client": "^3.4.1",
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "next",
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@portabletext/svelte": "^2.1.4",
+    "@sanity/client": "^6.8.6",
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/kit": "^1.20.4",
     "bulma": "^0.9.4",
-    "firebase": "^9.14.0",
-    "sass": "^1.53.0",
-    "svelte": "^3.44.0",
-    "svelte-preprocess": "^4.10.7",
-    "vite": "^3.0.0"
+    "firebase": "^10.6.0",
+    "sass": "^1.63.6",
+    "svelte": "^4.0.5",
+    "vite": "^4.4.2"
   },
   "type": "module"
 }
