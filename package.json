@@ -11,8 +11,11 @@
     "@sanity/client": "^6.8.6",
     "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/kit": "^1.20.4",
+    "ai": "^2.2.31",
     "bulma": "^0.9.4",
+    "dotenv": "^16.3.1",
     "firebase": "^10.6.0",
+    "openai": "^4.24.1",
     "sass": "^1.63.6",
     "svelte": "^4.0.5",
     "vite": "^4.4.2"
