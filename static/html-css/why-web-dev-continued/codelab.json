@@ -1,9 +1,9 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "https://digitech.craighead.school.nz/codelabs/",
+  "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2024-01-22T01:41:12Z",
+  "updated": "2024-01-22T01:42:55Z",
   "id": "why-web-dev-continued",
   "duration": 0,
   "title": "Why Web Dev continued",

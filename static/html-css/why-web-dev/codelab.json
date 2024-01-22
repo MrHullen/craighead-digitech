@@ -1,7 +1,7 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "https://digitech.craighead.school.nz/codelabs/",
+  "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
   "updated": "2024-01-22T01:33:45Z",
   "id": "why-web-dev",
