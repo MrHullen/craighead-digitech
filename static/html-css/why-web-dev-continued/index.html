@@ -9,7 +9,7 @@
   <title>Why Web Dev continued</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://digitech.craighead.school.nz/codelabs//codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://digitech.craighead.school.nz/codelabs//claat-public/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -20,14 +20,15 @@
   </style>
 </head>
 <body>
-  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
   <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
                   id="why-web-dev-continued"
                   title="Why Web Dev continued"
                   environment="web"
                   feedback-link="">
     
-      <google-codelab-step label="Introduction" duration="5">
+      <google-codelab-step label="Introduction" duration="0">
         <h2 is-upgraded>What you&#39;ll build</h2>
 <p>You&#39;ll build a multipage website that includes everything needed for a valid HTML file.</p>
 <p>It&#39;ll have the following features:</p>
@@ -49,37 +50,24 @@
 <ul>
 <li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
 <li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
-</ul>
-<p>and either</p>
-<ul>
-<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
-</ul>
-<p>or</p>
-<ul>
-<li><a href="https://github.com/features/codespaces" target="_blank">GitHub Codespaces</a></li>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Resume your project" duration="1">
-        <h2 is-upgraded>Local</h2>
-<ol type="1" start="1">
+      <google-codelab-step label="Resume your project" duration="0">
+        <ol type="1" start="1">
 <li>Open <strong>GitHub Desktop</strong></li>
 <li>Choose the <strong>Why Web Dev</strong> repository from the menu in the <strong>top left</strong></li>
 <li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
-</ol>
-<h2 is-upgraded>Codespaces</h2>
-<ol type="1" start="1">
-<li>Login to <a href="https://github.com/" target="_blank">GitHub.com</a> and find your <strong>Why Web Dev</strong> repository</li>
-<li>Click on the green <strong>Code</strong> button, change the tab to <strong>Codespaces</strong>, and choose the workspace under <strong>On current branch </strong>(it will have a randomly generated name)</li>
 </ol>
 <p>Now you&#39;re ready to get coding!</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Recap: add a body and semantic elements" duration="5">
+      <google-codelab-step label="Recap: add a body and semantic elements" duration="0">
         <p>Remember what you learned in the semantic tags and layout projects about using <code>body</code>, <code>header</code>, <code>nav</code>, <code>main</code>, and <code>footer</code>.</p>
 <pre><code>&lt;body&gt;
   &lt;header&gt;
@@ -143,7 +131,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Layout the page with CSS Grid" duration="5">
+      <google-codelab-step label="Layout the page with CSS Grid" duration="0">
         <p>Remember what you learned in the layout project about positioning the semantic elements (<code>header</code>, <code>nav</code>, <code>main</code>, and <code>footer</code>) and using the <code>body</code> as a container.</p>
 <p>On each of your 3 pages, lay out the semantic elements using CSS Grid.</p>
 <p><em>Note: your layout should be the same on every page to make it easier for the user, so copy/paste is your friend!</em></p>
@@ -180,7 +168,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add a doctype" duration="5">
+      <google-codelab-step label="Add a doctype" duration="0">
         <p>Up until now, we&#39;ve actually been relying on the browser (such as Chrome or Safari) to assume some stuff about our site. We&#39;ve let it assume:</p>
 <ul>
 <li>that the site is written in HTML</li>
@@ -209,7 +197,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add a head element" duration="5">
+      <google-codelab-step label="Add a head element" duration="0">
         <p>The <code>body</code> element contains all the stuff that will appear on the page. However, the extra information <em>about</em> the page needs to go in a different place, where it won&#39;t be shown to the user. This is where the <code>head</code> element comes in.</p>
 <p>The <code>head</code> element sits between the <code>doctype</code> and the <code>body</code>, and contains information for the browser about the page, but isn&#39;t shown to the user.</p>
 <p>On each of your 3 pages, add a <code>head</code> element between the <code>doctype</code> and the <code>body</code>.</p>
@@ -245,7 +233,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Validate your code" duration="5">
+      <google-codelab-step label="Validate your code" duration="0">
         <p>Online validators check that your code has everything that the browser is expecting it to have. Making sure your code passes validation means that it&#39;s high quality, and will display the way you want it to in every browser.</p>
 <p>Copy and paste all of the code from your index.html into the <a href="https://validator.w3.org/#validate_by_input" target="_blank">Markup Validation Service</a> site.</p>
 <p>Scroll down and you might notice a few errors listed in red! It&#39;s ok if you&#39;re intimidated by the technical language they use - we&#39;ll work through them together and just look at them one at a time.</p>
@@ -348,7 +336,7 @@
 </ul>
 <p><strong>CSS code</strong></p>
 <ul>
-<li><code>background-color:</code> to change the background colour of an element</li>
+<li><code>background:</code> to change the background colour of an element</li>
 <li><code>font-family:</code> to change what letters look like</li>
 <li><code>font-size:</code> to change the size of text</li>
 <li><code>color:</code> to change the colour of text</li>
@@ -378,7 +366,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Take it further:" duration="0">
+      <google-codelab-step label="Take it further" duration="0">
         <p>In your coding career you will often need to look up how to do things. In this section are a couple of websites to help you find information online about how to do what you want to do.</p>
 <p>Most frequently, a good <strong>Google search</strong> will be the best option. Remember to include the keywords &#34;HTML&#34; and the thing you want to do, so that Google will give you the best results (skip past the ads though!).</p>
 
@@ -387,10 +375,10 @@
     
   </google-codelab>
 
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/native-shim.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/custom-elements.min.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/prettify.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/codelab-elements.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//claat-public/native-shim.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//claat-public/custom-elements.min.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//claat-public/prettify.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

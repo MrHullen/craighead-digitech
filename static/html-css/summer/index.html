@@ -9,7 +9,7 @@
   <title>Summer</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://digitech.craighead.school.nz/codelabs//codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://digitech.craighead.school.nz/codelabs//claat-public/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -20,21 +20,22 @@
   </style>
 </head>
 <body>
-  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
   <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
                   id="summer"
                   title="Summer"
                   environment="web"
                   feedback-link="">
     
-      <google-codelab-step label="Introduction" duration="5">
+      <google-codelab-step label="Introduction" duration="0">
         <h2 is-upgraded>What you&#39;ll build</h2>
 <p>You&#39;ll build a web page about your summer that is styled with CSS.</p>
 <p>It&#39;ll have the following features:</p>
 <aside class="special"><p><strong>Features</strong></p>
 <ul>
 <li>A style section</li>
-<li>Background colors</li>
+<li>Background colours</li>
 <li>Text colours</li>
 <li>Aesthetic spacing</li>
 </ul>
@@ -50,31 +51,21 @@
 <ul>
 <li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
 <li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
-</ul>
-<p>and either</p>
-<ul>
 <li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
-</ul>
-<p>or</p>
-<ul>
-<li><a href="https://github.com/features/codespaces" target="_blank">GitHub Codespaces</a></li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Start your project" duration="5">
+      <google-codelab-step label="Start your project" duration="0">
         <h2 is-upgraded>Open the assignment</h2>
 <ol type="1" start="1">
-<li>Open the <a href="https://classroom.github.com/a/8dzJZIe3" target="_blank">GitHub Classroom assignment</a></li>
+<li>Open your <strong>GitHub Classroom</strong> assignment from the link in Google Classroom</li>
 <li>Check that you&#39;re logged in with your GitHub account</li>
 <li>Check the name of the assignment is correct and then accept it. GitHub will make a copy of the template for you.</li>
 <li>Click on the link to your repository</li>
 </ol>
 <h2 is-upgraded>Get ready to code</h2>
-<p>If you&#39;re working on GitHub Desktop and Visual Studio Code on your own laptop, follow the steps in the <strong>Local</strong> section.</p>
-<p>If instead you&#39;re using GitHub Codespaces, follow the steps in the <strong>Codespaces</strong> section.</p>
-<h3 is-upgraded>Local</h3>
 <ol type="1" start="1">
 <li>Click on the green <strong>Code</strong> button and choose <strong>Open with GitHub Desktop</strong></li>
 <li>If you&#39;re working locally (on your own device), choose a place (such as Documents) to download your code to</li>
@@ -85,11 +76,6 @@
 <li>Once it has cloned to your computer, click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
 <li>Open the file called <code>index.html</code></li>
 </ol>
-<h3 is-upgraded>Codespace</h3>
-<ol type="1" start="5">
-<li>Click on the green <strong>Code</strong> button, change the tab to <strong>Codespaces</strong>, and choose <strong>Create codespace on main</strong></li>
-<li>Open the file called <code>index.html</code></li>
-</ol>
 <aside class="special"><p><strong>Discussion</strong></p>
 <p>Why does the file have to be called <code>index.html</code>?</p>
 </aside>
@@ -98,9 +84,9 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Recap: headings and paragraphs" duration="5">
+      <google-codelab-step label="Recap: headings and paragraphs" duration="0">
         <p>Read over your code in the template, and then add <strong>opening</strong> and <strong>closing</strong> HTML <strong>tags</strong> to create heading <strong>elements</strong> and a paragraph <strong>element</strong>.</p>
-<p class="image-container"><img style="width: 624.00px" src="img/67febd14028d0702.jpeg"></p>
+<p class="image-container"><img style="width: 624.00px" src="img/828565ea5a0675d5.jpeg"></p>
 <aside class="special"><p><strong>Reminder</strong></p>
 <p><code>h1</code> stands for <strong>heading 1</strong>, which is the biggest heading. It shows where the heading <strong>starts</strong>, and <code>/h1</code> shows where the heading <strong>ends</strong>.</p>
 <p><code>h1</code> is a heading <strong>opening tag</strong> and <code>/h1</code> is a heading <strong>closing tag</strong>.</p>
@@ -116,8 +102,7 @@
 </ul>
 <aside class="warning"><p><strong>Commit point</strong></p>
 <p>Now that you&#39;ve added a feature to your website, you should <strong>commit</strong> it to your GitHub repository! Committing creates a full <strong>backup</strong> and a <strong>snapshot</strong> of the code at this point.</p>
-<p><em>Local - </em>Open GitHub Desktop and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made.</p>
-<p><em>Codespaces - </em>Switch to the GitHub tab on the left.</p>
+<p>Open GitHub Desktop and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made.</p>
 <p><strong>Green</strong> indicates code that you&#39;ve <strong>added</strong> since your last commit, and <strong>red</strong> is code you&#39;ve <strong>deleted</strong>.</p>
 <p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your message could be <code>Added heading and paragraph elements.</code></p>
 </aside>
@@ -125,9 +110,9 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Recap: lists" duration="5">
+      <google-codelab-step label="Recap: lists" duration="0">
         <p>Write some HTML code to add a list of the things you did over the summer. The elements are shown in this screenshot to help guide you.</p>
-<p class="image-container"><img style="width: 624.00px" src="img/dc3cbbb7a566e135.jpeg"></p>
+<p class="image-container"><img style="width: 624.00px" src="img/2e88867d99c026d9.jpeg"></p>
 <aside class="special"><p><strong>Reminder</strong></p>
 <p><code>ul</code> stands for <strong>unordered list</strong>, which is a list of items with bullet points. This <strong>opening tag</strong> shows where the list <strong>starts</strong>. At the end, the <code>/ul</code> <strong>closing tag</strong> shows where the list <strong>ends</strong>.</p>
 <p>The <code>ul</code> and <code>/ul</code> <strong>tags</strong> together make a list <strong>element</strong>.</p>
@@ -148,7 +133,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add your style element" duration="1">
+      <google-codelab-step label="Add your style element" duration="0">
         <aside class="special"><p>Styles are written in a language called <strong>CSS</strong>. CSS is different to HTML but they both </p>
 <p>work together to make a web page.</p>
 <p>CSS can be written inside a specific HTML element called <code>style</code> and this is where we&#39;ll put your CSS today.</p>
@@ -162,11 +147,11 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Style your background" duration="10">
+      <google-codelab-step label="Style your background" duration="0">
         <p>Copy and paste the rule below for the heading 1 element into your style element.</p>
 <pre><code>&lt;style&gt;
   h1 {
-    background-color: blue;
+    background: blue;
   }
 &lt;/style&gt;</code></pre>
 <aside class="special"><p>CSS is written like a set of rules for how the HTML should look.</p>
@@ -174,17 +159,17 @@
 <p>Then, the rules for that element are inside curly brackets <code>{</code> and <code>}</code></p>
 <p>Each rule is in two parts: the thing you want to change, and what you want to change it to. These are called the <strong>property </strong>and the <strong>value</strong>.</p>
 <p>We&#39;ve set one rule for the <code>h1</code> element: the background needs to be blue.</p>
-<p>In other words, we&#39;ve set the <code>background-color</code><strong> property</strong> to the <strong>value </strong><code>blue</code>.</p>
+<p>In other words, we&#39;ve set the <code>background</code><strong> property</strong> to the <strong>value </strong><code>blue</code>.</p>
 <p>New vocabulary: <strong>selector</strong>, <strong>property</strong>, <strong>value</strong></p>
 </aside>
 <p>You can add background colours to any of the other elements on your page, for example:</p>
 <pre><code>&lt;style&gt;
   h1 {
-    background-color: blue;
+    background: blue;
   }
 
   h2 {
-    background-color: green;
+    background: green;
   }
 &lt;/style&gt;</code></pre>
 <h2 is-upgraded>Customise</h2>
@@ -196,7 +181,7 @@
 <p>We&#39;ve completed half of the features we planned at the beginning!</p>
 <aside class="special"><p><strong>Features</strong></p>
 <p>✅ A style section</p>
-<p>✅ Background colors</p>
+<p>✅ Background colours</p>
 <ul>
 <li>Text colours</li>
 <li>Aesthetic spacing</li>
@@ -209,11 +194,11 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Style your text" duration="15">
+      <google-codelab-step label="Style your text" duration="0">
         <p>Each element isn&#39;t limited to just one rule. You can add as many rules for as many elements as you wish.</p>
 <p>Add the new code below to your <code>h1</code> CSS.</p>
 <pre><code>h1 {
-  background-color: blue;
+  background: blue;
   font-family: sans-serif;
   font-size: 3em;
   color: orange;
@@ -245,7 +230,7 @@
 <p><code>text-shadow: 2px 2px orange;</code></p>
 <aside class="special"><p><strong>Features</strong></p>
 <p>✅ A style section</p>
-<p>✅ Background colors</p>
+<p>✅ Background colours</p>
 <p>✅ Text colours</p>
 <ul>
 <li>Aesthetic spacing</li>
@@ -257,7 +242,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Space your elements" duration="5">
+      <google-codelab-step label="Space your elements" duration="0">
         <p>In design, it&#39;s important to give space between the things your audience is looking at. This helps make it less busy and cluttered, and more pleasant to use.</p>
 <p>Add this CSS rule to your <code>h2</code>:</p>
 <pre><code>margin-left: 10%;</code></pre>
@@ -279,7 +264,7 @@
 <p><code>padding-right</code></p>
 <aside class="special"><p><strong>Features</strong></p>
 <p>✅ A style section</p>
-<p>✅ Background colors</p>
+<p>✅ Background colours</p>
 <p>✅ Text colours</p>
 <p>✅ Aesthetic spacing</p>
 </aside>
@@ -293,7 +278,7 @@
         <p>Congratulations, the first iteration of your web page is complete.</p>
 <aside class="special"><p><strong>Features</strong></p>
 <p>✅ A style section</p>
-<p>✅ Background colors</p>
+<p>✅ Background colours</p>
 <p>✅ Text colours</p>
 <p>✅ Aesthetic spacing</p>
 </aside>
@@ -315,11 +300,11 @@
 <li><em>element</em> - a component of the webpage, such as a heading or paragraph, inside an opening tag and a closing tag</li>
 </ul>
 <p><strong>CSS code</strong></p>
-<p>➕ <code>background-color:</code> to change the background colour of an element</p>
+<p>➕ <code>background:</code> to change the background colour of an element</p>
 <p>➕ <code>font-family:</code> to change what letters look like</p>
 <p>➕ <code>font-size:</code> to change the size of text</p>
 <p>➕ <code>color:</code> to change the colour of text</p>
-<p>➕ <code>text-align:</code> to move text to the left, center, or right</p>
+<p>➕ <code>text-align:</code> to move text to the left, centre, or right</p>
 <p>➕ <code>text-decoration:</code> to add or remove underlines and line-throughs</p>
 <p>➕ <code>text-transform:</code> to change text to all uppercase or lowercase</p>
 <p>➕ <code>text-shadow:</code> to add a shadow to text</p>
@@ -354,7 +339,7 @@
         <p>Elements on a web page can be in different states, such as being hovered over.</p>
 <p>Copy and paste this code into your <code>style</code> element:</p>
 <pre><code>h1:hover {
-  background-color: yellow;
+  background: yellow;
 }</code></pre>
 <p>Open your page in the browser and hover over your heading with your cursor.</p>
 <p>Experiment with <code>:hover</code></p>
@@ -371,10 +356,10 @@
     
   </google-codelab>
 
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/native-shim.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/custom-elements.min.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/prettify.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/codelab-elements.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//claat-public/native-shim.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//claat-public/custom-elements.min.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//claat-public/prettify.js"></script>
+  <script src="https://digitech.craighead.school.nz/codelabs//claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>
