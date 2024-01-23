@@ -5,21 +5,15 @@
 
 <Hero title="Iterate" subtitle="Question, explore, adjust, refine, and improve" />
 
-
 <main class="content section" id="test">
-
   <h2>
     Iterate <em class="has-text-info">- Te Whakaahua</em>
   </h2>
 
-  <Box
-    title="Test"
-    text="
-    <p>
-      Testing goes in hand with <a href=&quot;/design/iterate&quot;>Iterate</a>
-    </p>"
-  />
-
+  <h3>Testing</h3>
+  <p>
+    Testing is good.
+  </p>
 </main>
 
 <style>

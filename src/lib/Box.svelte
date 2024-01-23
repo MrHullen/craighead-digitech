@@ -18,6 +18,13 @@
     <IconColumn icon={tutorial.icon} />
     <TextColumn title={tutorial.title} text={tutorial.description} />
   </section>
+{:else if tutorial.link && !tutorial.icon}
+  <a href={tutorial.link}>
+    <section class="box">
+      <h2>{tutorial.title}</h2>
+      <PortableText value={tutorial.description} />
+    </section>
+  </a>
 {:else}
   <section class="box">
     <h2>{tutorial.title}</h2>

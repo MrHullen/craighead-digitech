@@ -9,7 +9,7 @@
   <title>Summer Gallery Styles</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://digitech.craighead.school.nz/codelabs//codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -20,14 +20,15 @@
   </style>
 </head>
 <body>
-  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
   <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
                   id="summer-gallery-styles"
                   title="Summer Gallery Styles"
                   environment="web"
                   feedback-link="">
     
-      <google-codelab-step label="Introduction" duration="5">
+      <google-codelab-step label="Introduction" duration="0">
         <h2 is-upgraded>What you&#39;ll build</h2>
 <p>You&#39;ll build a styled web app that uses Bulma&#39;s CSS framework.</p>
 <p>It&#39;ll have the following features:</p>
@@ -52,30 +53,18 @@
 <li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
 <li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
 <li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
-</ul>
-<p>and either</p>
-<ul>
-<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
-</ul>
-<p>or</p>
-<ul>
-<li><a href="https://github.com/features/codespaces" target="_blank">GitHub Codespaces</a></li>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Resume your project" duration="5">
-        <h2 is-upgraded>Local</h2>
+      <google-codelab-step label="Resume your project" duration="0">
+        <h2 is-upgraded>Open your code</h2>
 <ol type="1" start="1">
 <li>Open <strong>GitHub Desktop</strong></li>
 <li>Check the <strong>Current Repository</strong> in the top left is your project</li>
 <li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
-</ol>
-<h2 is-upgraded>Codespaces</h2>
-<ol type="1" start="1">
-<li>Login to <a href="https://github.com/" target="_blank">GitHub.com</a> and find your <strong>Introduction</strong> repository</li>
-<li>Click on the green <strong>Code</strong> button, change the tab to <strong>Codespaces</strong>, and choose the workspace under <strong>On current branch </strong>(it will have a randomly generated name)</li>
 </ol>
 <h2 is-upgraded>Start your dev server</h2>
 <ol type="1" start="1">
@@ -90,7 +79,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Style your header" duration="5">
+      <google-codelab-step label="Style your header" duration="0">
         <p>CSS frameworks are collections of CSS code that you can use and reuse to build your site quickly, and know that it will work.</p>
 <p>CSS can be tricky to write because you need to test on multiple browsers, devices, and screen sizes. CSS frameworks have already done this testing for you, so you can be confident that your site will look good no matter where it&#39;s being accessed from.</p>
 <p>Bulma is one of many CSS frameworks, and the one we&#39;ll be using for this project. Bulma is easy to use, and is already built into the project you&#39;re working on. It exclusively uses <strong>classes</strong> - add the class to the HTML and it&#39;ll get styled.</p>
@@ -154,7 +143,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Style your footer" duration="5">
+      <google-codelab-step label="Style your footer" duration="0">
         <p>All of your components can benefit from the Bulma framework&#39;s classes.</p>
 <p>Try using <a href="https://bulma.io/documentation/layout/footer/" target="_blank">Bulma&#39;s Footer documentation</a> to style your own Footer component.</p>
 <p>Remember to comment out your own <code>style</code> element first. You can do this by highlighting it and pressing <code>Command</code> + <code>/</code> or <code>Ctrl</code> + <code>/</code></p>
@@ -175,7 +164,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Style your sections" duration="5">
+      <google-codelab-step label="Style your sections" duration="0">
         <p>Every page can use Bulma, and if you get familiar with it, a CSS framework can save you hours of coding and testing.</p>
 <ol type="1" start="1">
 <li>Comment out the <code>style</code> element on your home page</li>
@@ -201,7 +190,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Style your nav" duration="5">
+      <google-codelab-step label="Style your nav" duration="0">
         <p>The <a href="https://bulma.io/documentation/components/navbar/" target="_blank">documentation page for the Navbar</a> goes into a lot of detail very quickly, but we&#39;ll work through it a little at the time.</p>
 <ol type="1" start="1">
 <li>Comment out any <code>style</code> you&#39;ve written for your <code>Nav</code> component</li>
@@ -251,7 +240,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Create a column layout" duration="5">
+      <google-codelab-step label="Create a column layout" duration="0">
         <p>A common web page layout uses multiple columns to show information. Bulma makes creating columns easy - you just need <code>div</code>s and a couple of CSS classes.</p>
 <p>When you&#39;re developing any kind of software - whether it&#39;s for web, mobile, or anything else - you&#39;ll often need to refer to <strong>documentation</strong>. When you learn to read the docs, the possibilities of what you can build expand greatly.</p>
 <p>Read the docs on <a href="https://bulma.io/documentation/columns/" target="_blank">Bulma columns</a>, then see if you can implement them yourself to create this layout:</p>
@@ -272,7 +261,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Create a card" duration="5">
+      <google-codelab-step label="Create a card" duration="0">
         <p>Using <a href="https://bulma.io/documentation/components/card/" target="_blank">Bulma&#39;s media card component</a>, try creating a short profile for yourself that you can put on the main page, or in your footer.</p>
 <p>You should create this as its own component in a file called <code>Card.svelte</code> or similar. You can then <code>import</code> and use the component wherever you want in your project.</p>
 <pre><code>&lt;div class=&#34;card&#34;&gt;
@@ -354,10 +343,10 @@
     
   </google-codelab>
 
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/native-shim.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/custom-elements.min.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/prettify.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

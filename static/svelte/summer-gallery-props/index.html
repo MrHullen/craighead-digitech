@@ -9,7 +9,7 @@
   <title>Summer Gallery Props</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="/codelabs/codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -20,14 +20,15 @@
   </style>
 </head>
 <body>
-  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
   <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
                   id="summer-gallery-props"
                   title="Summer Gallery Props"
                   environment="web"
                   feedback-link="">
     
-      <google-codelab-step label="Introduction" duration="5">
+      <google-codelab-step label="Introduction" duration="0">
         <h2 is-upgraded>What you&#39;ll build</h2>
 <p>You&#39;ll build a site from several reusable components that utilise props for customisation.</p>
 <p>It&#39;ll have the following features:</p>
@@ -46,37 +47,41 @@
 </ul>
 <h2 is-upgraded>What you&#39;ll need</h2>
 <ul>
-<li>A <a href="https://github.com/" target="_blank">GitHub</a> account and <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
-<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most common)</li>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Start your project" duration="5">
-        <h2 is-upgraded>Open your repository</h2>
+      <google-codelab-step label="Resume your project" duration="0">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Resume your project" duration="0">
+        <h2 is-upgraded>Open your code</h2>
 <ol type="1" start="1">
 <li>Open <strong>GitHub Desktop</strong></li>
 <li>Check the <strong>Current Repository</strong> in the top left is your project</li>
-</ol>
-<h2 is-upgraded>Open VS Code</h2>
-<ol type="1" start="3">
 <li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
-<li>Open the file called <code>index.svelte</code> in the <code>src</code> folder</li>
 </ol>
 <h2 is-upgraded>Start your dev server</h2>
-<ol type="1" start="5">
-<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>Shift</code> + <code>`</code></li>
+<ol type="1" start="1">
+<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>`</code></li>
 <li>Start the server on your laptop by entering the command <code>npm run dev</code></li>
 <li>Open the link that it creates to view your site</li>
 </ol>
+<aside class="special"><p>The server will update the site in your browser every time you save a file, so that you can easily see the changes as you make them.</p>
+</aside>
 <p>Now you&#39;re ready to get coding!</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add props to your Header" duration="15">
+      <google-codelab-step label="Add props to your Header" duration="0">
         <p>Props are bits of extra information that you can send to a component. They can be anything, and we&#39;ll be using them firstly to send some text to display inside the component.</p>
 <p>The first step is to make the Header component truly reusable, by making it take props for the title and subtitle, instead of them being hard-coded in.</p>
 <ol type="1" start="1">
@@ -116,7 +121,7 @@
   &lt;/div&gt;
 &lt;/header&gt;</code></pre>
 <p>In the browser, you should now see your default values in the header. This is a good safety net, but not great for the user.</p>
-<p>The last step is to update everywhere you use the <code>Header</code> component with attributes for each prop. Start with your home page, <code>index.svelte</code>.</p>
+<p>The last step is to update everywhere you use the <code>Header</code> component with attributes for each prop. Start with your home page.</p>
 <ol type="1" start="6">
 <li>Add an attribute for the <code>title</code> and <code>subtitle</code> props into your <code>Header</code></li>
 </ol>
@@ -140,7 +145,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add props to your Footer" duration="5">
+      <google-codelab-step label="Add props to your Footer" duration="0">
         <p>Your Footer is a fairly simple component, and may only take a couple of bits of information.</p>
 <p>Update it with some props for <code>author</code>, <code>date</code>, and <code>organisation</code>. Use the same process as you did for the <code>Header</code>.</p>
 <aside class="special"><p><strong>Features</strong></p>
@@ -156,7 +161,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Create an Image component" duration="10">
+      <google-codelab-step label="Create an Image component" duration="0">
         <p>An component that&#39;s an image with a caption underneath will be very useful on a gallery website.</p>
 <ol type="1" start="1">
 <li>Create a new <code>Image.svelte</code> component in your <code>lib</code> folder</li>
@@ -165,12 +170,12 @@
 <pre><code>&lt;script&gt;
         export let src = &#39;&#39;
         export let alt = &#39;&#39;
-        export let cap = &#39;&#39;
+        export let caption = &#39;&#39;
 &lt;/script&gt;
 
 &lt;figure&gt;
         &lt;img src=&#34;{src}&#34; alt=&#34;{alt}&#34;&gt;
-        &lt;figcaption&gt; {cap} &lt;/figcaption&gt;
+        &lt;figcaption&gt; {caption} &lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
 <ol type="1" start="3">
 <li>Use the <code>Image</code> component with the appropriate props on your front page to display the images from your summer</li>
@@ -187,7 +192,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="First iteration done" duration="0">
+      <google-codelab-step label="Fourth iteration done" duration="0">
         <p>Congratulations, the fourth iteration of your web page is complete.</p>
 <aside class="special"><p><strong>Features</strong></p>
 <p>✅ Header component with title and subtitle props</p>
@@ -202,12 +207,16 @@
 <li><code>components</code> for reusable blocks of code</li>
 </ul>
 <p>➕ <code>props</code> for making customisable components</p>
+<p><strong>Bulma</strong></p>
+<ul>
+<li><code>classes</code> for using Bulma&#39;s pre-written CSS</li>
+</ul>
 <p>From here, you can take your page further, if you like, by adding images from your summer, links to your social media, YouTube channel, blog, or whatever you like.</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Take it further:" duration="0">
+      <google-codelab-step label="Take it further" duration="0">
         <p>In your coding career you will often need to look up how to do things. In this section are a couple of websites to help you find information online about how to do what you want to do.</p>
 <p>Most frequently, a good <strong>Google search</strong> will be the best option. Remember to include the keywords &#34;HTML&#34; and the thing you want to do, so that Google will give you the best results (skip past the ads though!).</p>
 
@@ -216,10 +225,10 @@
     
   </google-codelab>
 
-  <script src="/codelabs/codelab-elements/native-shim.js"></script>
-  <script src="/codelabs/codelab-elements/custom-elements.min.js"></script>
-  <script src="/codelabs/codelab-elements/prettify.js"></script>
-  <script src="/codelabs/codelab-elements/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

@@ -1,24 +1,20 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "https://digitech.craighead.school.nz/codelabs/",
+  "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2023-01-30T01:49:24Z",
+  "updated": "2024-01-22T21:28:05Z",
   "id": "summer-gallery-links",
-  "duration": 20,
+  "duration": 5,
   "title": "Summer Gallery Links",
   "authors": "Dave Hullen",
   "summary": "In this codelab, you'll learn to create a web site by building and linking pages with components.",
   "source": "1IlXguiRr86bavcsdcK7RjxTRLI9yUbflAnw2H7lwzuk",
-  "theme": "web",
+  "theme": "",
   "status": [
     "draft"
   ],
-  "category": [
-    "web",
-    "html",
-    "svelte"
-  ],
+  "category": null,
   "tags": [],
   "url": "summer-gallery-links"
 }

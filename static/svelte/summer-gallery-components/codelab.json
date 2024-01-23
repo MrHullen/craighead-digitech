@@ -1,24 +1,20 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "https://digitech.craighead.school.nz/codelabs/",
+  "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2023-01-30T01:34:23Z",
+  "updated": "2024-01-22T21:23:10Z",
   "id": "summer-gallery-components",
-  "duration": 20,
+  "duration": 5,
   "title": "Summer Gallery Components",
   "authors": "Dave Hullen",
   "summary": "In this codelab, you'll learn to create a web page from components in different files.",
   "source": "1kO24AErZjEfoubgAuq9LoPgLFPGuYPOYY3JgPc8fleo",
-  "theme": "web",
+  "theme": "",
   "status": [
     "draft"
   ],
-  "category": [
-    "web",
-    "html",
-    "svelte"
-  ],
+  "category": null,
   "tags": [],
   "url": "summer-gallery-components"
 }

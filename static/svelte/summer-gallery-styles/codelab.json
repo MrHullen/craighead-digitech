@@ -1,23 +1,20 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "https://digitech.craighead.school.nz/codelabs/",
+  "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2023-02-12T22:06:57Z",
+  "updated": "2024-01-22T21:32:13Z",
   "id": "summer-gallery-styles",
-  "duration": 40,
+  "duration": 0,
   "title": "Summer Gallery Styles",
   "authors": "Dave Hullen",
   "summary": "In this codelab, you'll learn to style HTML using Bulma classes.",
   "source": "1m4ZyJ4yenEZPAkfT9VuYhDm97c4wMN5cXFLz8DSbpfU",
-  "theme": "html",
+  "theme": "",
   "status": [
     "draft"
   ],
-  "category": [
-    "html",
-    "svelte"
-  ],
+  "category": null,
   "tags": [],
   "url": "summer-gallery-styles"
 }

@@ -9,7 +9,7 @@
   <title>Summer Gallery Links</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://digitech.craighead.school.nz/codelabs//codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -20,8 +20,9 @@
   </style>
 </head>
 <body>
-  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
   <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
                   id="summer-gallery-links"
                   title="Summer Gallery Links"
                   environment="web"
@@ -47,30 +48,18 @@
 <li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
 <li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
 <li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
-</ul>
-<p>and either</p>
-<ul>
 <li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
-</ul>
-<p>or</p>
-<ul>
-<li><a href="https://github.com/features/codespaces" target="_blank">GitHub Codespaces</a></li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Resume your project" duration="5">
-        <h2 is-upgraded>Local</h2>
+      <google-codelab-step label="Resume your project" duration="0">
+        <h2 is-upgraded>Open your code</h2>
 <ol type="1" start="1">
 <li>Open <strong>GitHub Desktop</strong></li>
 <li>Check the <strong>Current Repository</strong> in the top left is your project</li>
 <li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
-</ol>
-<h2 is-upgraded>Codespaces</h2>
-<ol type="1" start="1">
-<li>Login to <a href="https://github.com/" target="_blank">GitHub.com</a> and find your <strong>Introduction</strong> repository</li>
-<li>Click on the green <strong>Code</strong> button, change the tab to <strong>Codespaces</strong>, and choose the workspace under <strong>On current branch </strong>(it will have a randomly generated name)</li>
 </ol>
 <h2 is-upgraded>Start your dev server</h2>
 <ol type="1" start="1">
@@ -85,16 +74,16 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add an About Me page" duration="5">
-        <p>Creating new pages in Svelte is as easy as creating a new file in your <code>routes</code> folder. We&#39;re going to create a second page so that you can practice reusing <strong>components</strong>, and learn how to create a reusable <strong>nav menu</strong>.</p>
+      <google-codelab-step label="Add an About Me page" duration="0">
+        <p>Creating new pages in Svelte is as easy as creating a new folder in your <code>routes</code> folder. We&#39;re going to create a second page so that you can practise reusing <strong>components</strong>, and learn how to create a reusable <strong>nav menu</strong>.</p>
 <ol type="1" start="1">
 <li>Create a new <strong>page</strong> by creating a new <strong>folder</strong> in your <code>routes</code> folder, and call it <code>about-me</code></li>
-<li>Create a new file insite <code>about-me</code> called <code>+page.svelte</code></li>
-<li><code>Import</code> and add your <code>Header</code> and <code>Footer</code> components to the page</li>
-<li>Add in a <code>main</code> section with some information about yourself</li>
+<li>Create a new file inside <code>about-me</code> called <code>+page.svelte</code></li>
+<li><code>import</code> and add your <code>Header</code> and <code>Footer</code> components to the page</li>
+<li>Add in a <code>main</code> section between the <code>Header</code> and <code>Footer</code> with some information about yourself</li>
 </ol>
 <pre><code>&lt;script&gt;
-  import ComponentName from &#39;ComponentName.svelte&#39;
+  import ComponentName from &#39;$lib/ComponentName.svelte&#39;
 &lt;/script&gt;
 
 &lt;ComponentName /&gt;</code></pre>
@@ -114,7 +103,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add a nav component" duration="5">
+      <google-codelab-step label="Add a nav component" duration="0">
         <p>Navigation menus can quickly become unwieldy when your site gets large enough - update one page name and you have to go through every nav menu and update them accordingly.</p>
 <p>In modern websites, developers create one reusable nav menu.</p>
 <ol type="1" start="1">
@@ -126,7 +115,7 @@
   &lt;a href=&#34;/about-me&#34;&gt; About Me &lt;/a&gt;
 &lt;/nav&gt;</code></pre>
 <ol type="1" start="3">
-<li><code>Import</code> and add your <code>Nav</code> component to both pages</li>
+<li><code>import</code> and add your <code>Nav</code> component to both pages</li>
 </ol>
 <aside class="special"><p><strong>Links</strong></p>
 <p>You&#39;ll notice that your links start with <code>/</code> and then the name of your page, or just <code>/</code> for your home page. You might also notice that it does <strong>not</strong> include the file extension <code>.svelte</code>.</p>
@@ -173,10 +162,10 @@
     
   </google-codelab>
 
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/native-shim.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/custom-elements.min.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/prettify.js"></script>
-  <script src="https://digitech.craighead.school.nz/codelabs//codelab-elements/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>
