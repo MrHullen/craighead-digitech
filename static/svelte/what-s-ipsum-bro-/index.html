@@ -1,0 +1,389 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>What&#39;s Ipsum, Bro?</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="what-s-ipsum-bro-"
+                  title="What&#39;s Ipsum, Bro?"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<p>You&#39;ll build a modern web site using the SvelteKit framework. The website will showcase some non-standard versions of the classic Lorem Ipsum filler text.</p>
+<p>By the end of this guide, the landing page will look something like this:</p>
+<p class="image-container"><img style="width: 697.70px" src="img/76608173fe8a56f8.png"></p>
+<p>It&#39;ll have the following features:</p>
+<aside class="special"><p><strong>Features</strong></p>
+<ul>
+<li>Fonts available throughout the site</li>
+<li>A header component stored in its own file with associated styles</li>
+<li>Box-based links laid out using Flexbox</li>
+<li>Column-based layout using Flexbox</li>
+<li>Mobile friendly design</li>
+<li>Graphics generated using CSS</li>
+<li>Motion effects to add interest</li>
+</ul>
+</aside>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>How to specify global CSS styles that apply to every page and component.</li>
+<li>How to use CSS and Flexbox to create and arrange boxes and columns</li>
+<li>How to adjust Flexbox-based designs to work on mobile devices</li>
+<li>How to add CSS generated externally into your site</li>
+<li>How to use basic motion and transition effects</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Start your project" duration="0">
+        <h2 is-upgraded>Open the assignment</h2>
+<ol type="1" start="1">
+<li>Open your <strong>GitHub Classroom</strong> assignment from the link in Google Classroom</li>
+<li>Check that you&#39;re logged in with your GitHub account</li>
+</ol>
+<aside class="special"><p>First time in GitHub Classroom? You&#39;ll need to choose your name from the class list.</p>
+</aside>
+<ol type="1" start="3">
+<li>Check the name of your assignment is correct and then accept it. GitHub will make a copy of the template for you.</li>
+<li>Click on the link to your repository</li>
+</ol>
+<aside class="special"><p>A GitHub repository is an online copy of your code and the changes that you&#39;ve made.</p>
+</aside>
+<h2 is-upgraded>Get ready to code</h2>
+<ol type="1" start="5">
+<li>Click on the green <strong>Code</strong> button and choose <strong>Open with GitHub Desktop</strong></li>
+<li>Choose a place (such as Documents) to download your code to</li>
+</ol>
+<aside class="special"><p>Keeping all your projects labelled in one folder will help you find stuff you&#39;ve done before. No one remembers absolutely everything about coding so it&#39;s best to be able to find when you did that one thing.</p>
+</aside>
+<ol type="1" start="7">
+<li>Once it has cloned to your computer, click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+</ol>
+<h2 is-upgraded>Start your dev server</h2>
+<ol type="1" start="1">
+<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>`</code></li>
+<li>Install all the dependencies by entering the command <code>npm install</code></li>
+<li>Start the server on your laptop by entering the command <code>npm run dev</code></li>
+<li>Open the link that it creates to view your site</li>
+</ol>
+<aside class="special"><p>The server will update the site in your browser every time you save a file, so that you can easily see the changes as you make them.</p>
+</aside>
+<p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Recap" duration="0">
+        <p>Look through each file in the <code>src</code> folder, which is where all the code you write will live.</p>
+<p>There&#39;s no <code>index.html</code>, instead there&#39;s <code>+page.svelte</code> in the <code>routes</code> folder. This file acts as the landing page.</p>
+<p>There are several folders inside routes, and each one has its own <code>+page.svelte</code> file. The name of the folder is the name of the web page, and the <code>+page.svelte</code> is that individual web page.</p>
+<p><code>+page.svelte</code> files have a <code>script</code> section at the top for JavaScript, the middle can contain HTML, and the bottom has a <code>style</code> section for CSS. All the JavaScript, HTML, and CSS for a page is stored together, which makes it easier to work on individual chunks of your website.</p>
+<p><code>Header.svelte</code>, <code>Nav.svelte</code>, and <code>Footer.svelte</code> in the <code>lib</code> folder are examples of components. They&#39;re reusable chunks of your website that you can use on any <code>+page.svelte</code> by importing them in the <code>script</code> section, and then adding the element in the HTML section.</p>
+<h3 is-upgraded>+page.svelte</h3>
+<pre><code>&lt;script&gt;
+  import Header from &#39;$lib/Header.svelte&#39;
+&lt;/script&gt;
+
+&lt;Header /&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Header" duration="0">
+        <p>To create the header, we are going to add some style to the header component that&#39;s already in the code.</p>
+<p>We&#39;re going to add two main things:</p>
+<ul>
+<li>a new font from Google Fonts</li>
+<li>placement and colour styles</li>
+</ul>
+<h2 is-upgraded>Font</h2>
+<p>To link to a Google Font that you want to use on your site, we simply add the <code>@import</code> line to the <code>+layout.svelte</code> file, at the top of the style section (where the comments say to add global styles). This makes the font available everywhere on the site.</p>
+<p>To get the <code>@import</code>, select the option when you&#39;ve chosen the font you want.</p>
+<p class="image-container"><img style="width: 320.73px" src="img/9429253e2d43934b.png"></p>
+<p>In your <code>+layout.svelte</code> file, paste the <code>@import</code> line below the comment about global styles.</p>
+<h3 is-upgraded>+layout.svelte</h3>
+<pre><code>@import url(&#39;https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap&#39;);</code></pre>
+<p>Now in your <code>Header.svelte</code> file, you can add the colours, spacing, and the font as CSS rules in the <code>style</code> section at the bottom. If there isn&#39;t a <code>style</code> section, you can create one simply by adding a style element.</p>
+<h3 is-upgraded>+Header.svelte</h3>
+<pre><code>&lt;style&gt;
+  header {
+    background: lavender;
+  }
+
+  h1 {
+    font-family: &#39;Patrick Hand&#39;, cursive;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+&lt;/style&gt;</code></pre>
+<aside class="warning"><p><strong>Commit point</strong></p>
+<p>Now that you&#39;ve added a feature to your website, you should <strong>commit</strong> it to your GitHub repository! Committing creates a full <strong>backup</strong> and a <strong>snapshot</strong> of the code at this point.</p>
+<p>Open <strong>GitHub Desktop</strong> and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made.</p>
+<p><strong>Green</strong> indicates code that you&#39;ve <strong>added</strong> since your last commit, and <strong>red</strong> is code you&#39;ve <strong>deleted</strong>.</p>
+<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your summary could be:</p>
+<p><code>Styled Header component.</code></p>
+<p>You should add a short description as well, which goes into a little more detail. You could write:</p>
+<p><code>The Header component now uses a global font and CSS styles.</code></p>
+</aside>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Fonts available throughout the site</p>
+<p>✅ A header component stored in its own file with associated styles</p>
+<ul>
+<li>Box-based links laid out using Flexbox</li>
+<li>Column-based layout using Flexbox</li>
+<li>Mobile friendly design</li>
+<li>Graphics generated using CSS</li>
+<li>Motion effects to add interest</li>
+</ul>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Box image links" duration="0">
+        <p>In the final design, we have all the image links in aesthetic boxes, with a particular colour, shape, and shadow.</p>
+<p>Give all the <code>img</code> elements the <code>box</code> class, and then add a <code>.box</code> class in your <code>style</code> section with the rules for the box. You can use the rules below, modify them, or create your own.</p>
+<h3 is-upgraded>+page.svelte</h3>
+<pre><code>/*  individual box */
+.box {
+  width: 125px;
+  height: 125px;
+  border-radius: 5%;
+  padding: 25px;
+  background: ivory;
+  box-shadow: 15px 15px lightblue;
+}</code></pre>
+<aside class="warning"><p><strong>Commit point</strong></p>
+<p>Another feature, another commit!</p>
+<p>In <strong>GitHub Desktop</strong>, briefly review the changes you&#39;ve made.</p>
+<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your summary could be:</p>
+<p><code>Styled the image links.</code></p>
+<p>Then, in the Description box you can add some more detail:</p>
+<p><code>The image links are now styled as boxes with rounded edges and drop-shadows.</code></p>
+</aside>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Fonts available throughout the site</p>
+<p>✅ A header component stored in its own file with associated styles</p>
+<p>✅ Box-based links laid out using Flexbox</p>
+<ul>
+<li>Column-based layout using Flexbox</li>
+<li>Mobile friendly design</li>
+<li>Graphics generated using CSS</li>
+<li>Motion effects to add interest</li>
+</ul>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Column layout" duration="0">
+        <p>In the final design, we are going for a two-column layout with text in one column, and the images in the other.</p>
+<p>We&#39;ll achieve this in 3 steps:</p>
+<ol type="1" start="1">
+<li>Group the boxes together</li>
+<li>Group the text together</li>
+<li>Wrap the two groups in a container and make them sit side-by-side</li>
+</ol>
+<h2 is-upgraded>Group the boxes</h2>
+<p>Put a <code>div</code> element around the <code>a</code>s that make up the boxes, and give it the <code>boxes</code> class. We need some layout CSS to get the boxes to sit in a nice 2x2 arrangement, and Flexbox is perfect for this.</p>
+<p>Write CSS Flexbox rules for the <code>boxes</code> class that makes the boxes arrange themselves into two rows of two, with even space between them. You can use the rules below, modify them, or create your own.</p>
+<h3 is-upgraded>+page.svelte</h3>
+<pre><code>/* container for all the boxes */
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  width: 400px;
+}</code></pre>
+<h2 is-upgraded>Group the text</h2>
+<p>Put a <code>div</code> element around the text, and give it the <code>text</code> class, then add a rule to use the new font and reduce the width so that the text isn&#39;t so greedy on page space.</p>
+<p>Remember to centre the <code>h2</code> element somehow.</p>
+<h3 is-upgraded>+page.svelte</h3>
+<pre><code>.text {
+  font-family: &#39;Patrick Hand&#39;, cursive;
+  width: 30%;
+}</code></pre>
+<h2 is-upgraded>Put the groups into columns</h2>
+<p>Put a <code>div</code> element around the <code>text</code> and <code>boxes</code> elements, and give it the <code>columns</code> class.</p>
+<p>In your CSS, create a <code>.columns</code> class and use Flexbox again to get the contents of the <code>columns</code> container to sit side-by-side.</p>
+<p>We&#39;re also going to tell the contents to vertically align themselves in the middle of the <code>columns</code> container, and divide any remaining horizontal space evenly around themselves.</p>
+<h3 is-upgraded>+page.svelte</h3>
+<pre><code>.columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: lavender;
+  padding: 5rem 10rem;
+}</code></pre>
+<h2 is-upgraded>Make it mobile friendly</h2>
+<p>Press <code>Command</code> + <code>Option</code> + <code>I</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>I</code> on Windows to open the Developer Tools in Chrome and look for the device icon in the top left. Use it to switch between desktop and mobile views.</p>
+<p class="image-container"><img style="width: 311.50px" src="img/ca57ab8ac29f47f.png"></p>
+<p>You&#39;ll notice that the mobile version currently has far too much padding to look nice.</p>
+<p>Add some rules to put the contents of the <code>columns</code> vertically on mobile, and remove some of the extra space. You can use the rules below, modify them, or create your own.</p>
+<h3 is-upgraded>+page.svelte</h3>
+<pre><code>/* adjustments for mobile */
+@media screen and (max-width: 600px) {
+  .columns {
+    flex-direction: column;
+    padding: 2rem 3rem;
+  }
+    
+  .text {
+    width: 100%;
+  }
+}</code></pre>
+<aside class="warning"><p><strong>Commit point</strong></p>
+<p>Another feature, another commit!</p>
+<p>In <strong>GitHub Desktop</strong>, briefly review the changes you&#39;ve made.</p>
+<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your summary could be:</p>
+<p><code>Column layout on landing page.</code></p>
+<p>Then, in the Description box you can add some more detail:</p>
+<p><code>Home page now has a side-by-side layout using Flexbox, which changes to vertical on mobile.</code></p>
+</aside>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Fonts available throughout the site</p>
+<p>✅ A header component stored in its own file with associated styles</p>
+<p>✅ Box-based links laid out using Flexbox</p>
+<p>✅ Column-based layout using Flexbox</p>
+<p>✅ Mobile friendly design</p>
+<ul>
+<li>Graphics generated using CSS</li>
+<li>Motion effects to add interest</li>
+</ul>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create the wave" duration="0">
+        <p>The wave graphic at the bottom adds some visual interest and breaks up the page. There are several ways to achieve the effect, but we&#39;re going to use CSS generated by <a href="https://css-generators.com/custom-borders/" target="_blank">a website</a>. The CSS creates the wave effect completely from code, which makes the page very fast to load because it&#39;s just a few words, instead of a whole image.</p>
+<p>Add a <code>div</code> with the class <code>wave</code>, below your columns (not inside them). This will get transformed into the wave by the CSS.</p>
+<p>Paste the CSS below into your <code>style</code> section. It includes some colour for the <code>main</code> element so that the wave will be visible against it as a background.</p>
+<p>Don&#39;t worry if you don&#39;t understand the code that makes the wave - neither do I. It works though.</p>
+<h3 is-upgraded><br>+page.svelte</h3>
+<pre><code>main {
+  background: lightblue;
+  padding-bottom: 3rem;
+}
+
+/* wave effect generated at https://css-generators.com/custom-borders/ */
+.wave {
+  --mask: radial-gradient(52.5px at 50% calc(100% - 74px), #000 99%, #0000 101%) calc(50% - 80px) 0/160px 100%, radial-gradient(52.5px at 50% calc(100% + 34px), #0000 99%, #000 101%) 50% calc(100% - 40px) / 160px 100% repeat-x;
+  mask: var(--mask);
+  background: lavender;
+  height: 70px;
+}</code></pre>
+<aside class="warning"><p><strong>Commit point</strong></p>
+<p>Another feature, another commit!</p>
+<p>In <strong>GitHub Desktop</strong>, briefly review the changes you&#39;ve made.</p>
+<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your summary could be:</p>
+<p><code>Added a wave graphic.</code></p>
+<p>Then, in the Description box you can add some more detail:</p>
+<p><code>Added generated CSS to create a wave effect at the bottom of the page.</code></p>
+</aside>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Fonts available throughout the site</p>
+<p>✅ A header component stored in its own file with associated styles</p>
+<p>✅ Box-based links laid out using Flexbox</p>
+<p>✅ Column-based layout using Flexbox</p>
+<p>✅ Mobile friendly design</p>
+<p>✅ Graphics generated using CSS</p>
+<ul>
+<li>Motion effects to add interest</li>
+</ul>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add some motion" duration="0">
+        <p>A little bit of motion can make your page feel more alive (too much can make people feel motion sick, though). We&#39;re going to add two bits of motion to the page:</p>
+<ul>
+<li>a hover effect on the boxes to help identify them as links</li>
+<li>a hover effect on the wave for reasons</li>
+</ul>
+<h2 is-upgraded>Scale the boxes on hover</h2>
+<p>Add the CSS below to transform the scale of the boxes to 10% bigger (1.1 times normal size) when they&#39;re hovered over.</p>
+<pre><code>.box:hover {
+  transform: scale(1.1);
+  transition: 0.25s;
+}</code></pre>
+<p>Add the same <code>transition</code> rule to the <code>box</code> class so that it takes 0.25s to go back to its normal size.</p>
+<h2 is-upgraded>Scale the wave on hover</h2>
+<p>Add the CSS below to transform the scale of the wave to 10% taller and 50% wider when it&#39;s hovered over.</p>
+<pre><code>.wave:hover {
+  transform: scale(1.1, 1.5);
+  transition: 0.5s;
+}</code></pre>
+<p>Add the same <code>transition</code> rule to the <code>wave</code> class so that it takes 0.5s to go back to its normal size.</p>
+<aside class="warning"><p><strong>Commit point</strong></p>
+<p>Another feature, another commit!</p>
+<p>In <strong>GitHub Desktop</strong>, briefly review the changes you&#39;ve made.</p>
+<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your summary could be:</p>
+<p><code>Added motion effects on the landing page.</code></p>
+<p>Then, in the Description box you can add some more detail:</p>
+<p><code>The boxes now grow on hover to help identify them as links, and the wave also grows on hover.</code></p>
+</aside>
+<aside class="special"><p><strong>Features</strong></p>
+<p>✅ Fonts available throughout the site</p>
+<p>✅ A header component stored in its own file with associated styles</p>
+<p>✅ Box-based links laid out using Flexbox</p>
+<p>✅ Column-based layout using Flexbox</p>
+<p>✅ Mobile friendly design</p>
+<p>✅ Graphics generated using CSS</p>
+<p>✅ Motion effects to add interest</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="The other pages" duration="0">
+        <p>You&#39;ve successfully styled the landing page of this website, but there are four other pages that need their own styles.</p>
+<p>Your task now is to style each page so that it&#39;s themed for the type of Ipsum it&#39;s about. This is your chance to play and experiment with CSS styles, and really try to push what you can do.</p>
+<p>Ask each other and your teacher for advice, and remember to commit as you go.</p>
+<p>Good luck!</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
