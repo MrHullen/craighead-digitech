@@ -1,9 +1,9 @@
 {
   "environment": "web",
   "format": "html",
-  "prefix": "/codelabs",
+  "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2022-02-01T02:42:18Z",
+  "updated": "2024-01-30T21:34:16Z",
   "id": "digital-induction",
   "duration": 30,
   "title": "Digital Induction",
