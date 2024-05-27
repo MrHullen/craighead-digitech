@@ -19,7 +19,7 @@ export async function POST({ request }) {
 
     // Ask OpenAI for a streaming chat completion given the prompt
     const response = await openai.chat.completions.create({
-      model: 'gpt-4-vision-preview',
+      model: 'gpt-4o',
       stream: true,
       max_tokens: 2000,
       messages: messages.map((message) => ({
@@ -32,10 +32,10 @@ export async function POST({ request }) {
     const stream = OpenAIStream(response)
     // Respond with the stream
     return new StreamingTextResponse(stream)
-  } catch (error) {
+  } catch (err) {
     // Check if the error is an APIError
-    if (error instanceof OpenAI.APIError) {
-      const { name, status, headers, message } = error
+    if (err instanceof OpenAI.APIError) {
+      const { name, status, headers, message } = err
       throw error(420, 'Your AI had this to say: ' + 'Status: ' + status + ' | Message: ' + message)
     } else {
       throw error
