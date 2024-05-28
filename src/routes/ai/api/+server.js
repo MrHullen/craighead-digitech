@@ -11,7 +11,7 @@ const openai = createOpenAI({
 })
 
 // IMPORTANT! Set the runtime to edge
-export const runtime = 'edge'
+// export const runtime = 'edge'
 
 export const POST = async ({ request }) => {
   try {
