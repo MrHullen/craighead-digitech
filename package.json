@@ -6,12 +6,13 @@
     "build": "vite build"
   },
   "devDependencies": {
+    "@ai-sdk/openai": "^0.0.16",
     "@fortawesome/fontawesome-free": "^6.4.2",
     "@portabletext/svelte": "^2.1.4",
     "@sanity/client": "^6.8.6",
     "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/kit": "^1.20.4",
-    "ai": "^2.2.31",
+    "ai": "^3.1.15",
     "bulma": "^0.9.4",
     "dotenv": "^16.3.1",
     "firebase": "^10.6.0",
