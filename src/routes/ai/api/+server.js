@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit'
-import { createOpenAI } from '@ai-sdk/openai'
 import OpenAI from 'openai'
+import { createOpenAI } from '@ai-sdk/openai'
 import { StreamingTextResponse, streamText } from 'ai'
 
 import { env } from '$env/dynamic/private'
@@ -12,6 +12,9 @@ const openai = createOpenAI({
 
 // IMPORTANT! Set the runtime to edge
 // export const runtime = 'edge'
+export const config = {
+  runtime: 'edge',
+}
 
 export const POST = async ({ request }) => {
   try {
