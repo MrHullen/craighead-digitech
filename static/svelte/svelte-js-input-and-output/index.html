@@ -71,7 +71,7 @@
 
 &lt;h1&gt;Hello {name}!&lt;/h1&gt;</code></pre>
 <h2 is-upgraded>Explanation</h2>
-<p><strong>Script Tag</strong>: The <code><script></code> tag is used to define JavaScript variables and functions that you want to use in your component. Here, we declare a variable <code>name</code> and assign it the value <code>'world'</code>.</p>
+<p><strong>Script Tag</strong>: The <code>script</code> tag is used to define JavaScript variables and functions that you want to use in your component. Here, we declare a variable <code>name</code> and assign it the value <code>'world'</code>.</p>
 <pre><code>&lt;script&gt;
   let name = &#39;world&#39;
 &lt;/script&gt;</code></pre>
@@ -100,7 +100,7 @@
 <pre><code>&lt;script&gt;
   let imageUrl = &#39;https://picsum.photos/200&#39;
 &lt;/script&gt;</code></pre>
-<p><strong>Curly Brackets in Attributes</strong>: To set the <code>src</code> attribute of the <code>img</code> element using the <code>imageUrl</code> variable, we place the variable inside curly brackets <code>{}</code> within the attribute. This tells SvelteKit to evaluate the <code>imageUrl</code> variable and use its value as the <code>src</code> attribute of the &lt;img&gt; element.<br></p>
+<p><strong>Curly Brackets in Attributes</strong>: To set the <code>src</code> attribute of the <code>img</code> element using the <code>imageUrl</code> variable, we place the variable inside curly brackets <code>{}</code> within the attribute. This tells SvelteKit to evaluate the <code>imageUrl</code> variable and use its value as the <code>src</code> attribute of the img element.<br></p>
 <pre><code>&lt;img src={imageUrl} alt=&#34;Example image&#34;&gt;</code></pre>
 <p>When your app runs, wherever it finds <code>{imageUrl}</code> in the <code>src</code> attribute, it replaces it with the value of the <code>imageUrl</code> variable. In this example, it changes <code>img src={imageUrl} alt="Example image"</code> to <code>img src="https://picsum.photos/200" alt="Example image"</code>.</p>
 
