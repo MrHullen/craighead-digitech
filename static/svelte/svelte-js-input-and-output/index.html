@@ -1,0 +1,308 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Svelte JS - Input and Output</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="svelte-js-input-and-output"
+                  title="Svelte JS - Input and Output"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Get started" duration="0">
+        <h2 is-upgraded>Open your code</h2>
+<ol type="1" start="1">
+<li>Open <strong>GitHub Desktop</strong></li>
+<li>Check the <strong>Current Repository</strong> in the top left is your project</li>
+<li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+</ol>
+<h2 is-upgraded>Start your dev server</h2>
+<ol type="1" start="1">
+<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>`</code></li>
+<li>Start the server on your laptop by entering the command <code>npm run dev</code></li>
+<li>Open the link that it creates to view your site</li>
+</ol>
+<aside class="special"><p>The server will update the site in your browser every time you save a file, so that you can easily see the changes as you make them.</p>
+</aside>
+<p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Output text" duration="0">
+        <p>Welcome to your introductory guide to SvelteKit! If you already have a grasp of basic HTML, CSS, and JavaScript, you&#39;re well on your way to mastering SvelteKit. In this guide, we&#39;ll start with one of the most fundamental concepts in SvelteKit: outputting variables into HTML.</p>
+<p>In SvelteKit, you can easily insert the value of a JavaScript variable into your HTML using curly brackets <code>{}</code>. Let&#39;s go through a simple example to see how this works.</p>
+<pre><code>&lt;script&gt;
+  let name = &#39;world&#39;
+&lt;/script&gt;
+
+&lt;h1&gt;Hello {name}!&lt;/h1&gt;</code></pre>
+<h2 is-upgraded>Explanation</h2>
+<p><strong>Script Tag</strong>: The <code><script></code> tag is used to define JavaScript variables and functions that you want to use in your component. Here, we declare a variable <code>name</code> and assign it the value <code>'world'</code>.</p>
+<pre><code>&lt;script&gt;
+  let name = &#39;world&#39;
+&lt;/script&gt;</code></pre>
+<p><strong>Curly Brackets</strong>: To output the value of the <code>name</code> variable in your HTML, you simply wrap the variable in curly brackets <code>{}</code>. This line will show as an HTML <code>h1</code> element with the text content <code>Hello world!</code>.</p>
+<pre><code>&lt;h1&gt;Hello {name}!&lt;/h1&gt;</code></pre>
+<p>When the app runs, it processes the code, and wherever it finds <code>{name}</code> in the HTML, it replaces it with the value of the <code>name</code> variable. In this example, it changes <code>Hello {name}!</code> to <code>Hello world!</code>.</p>
+<h2 is-upgraded>Try It Yourself</h2>
+<ol type="1" start="1">
+<li>Open your SvelteKit project.</li>
+<li>Add the example code above to one of your Svelte files (e.g., <code>src/routes/+page.svelte</code>).</li>
+<li>Run your SvelteKit project and open it in your browser to see the result.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Output attributes" duration="0">
+        <p>In addition to outputting variables into text content, SvelteKit allows you to use variables for HTML attributes, such as the <code>src</code> attribute of <code>img</code> elements. This is very useful for dynamically setting attributes based on your JavaScript code.</p>
+<pre><code>&lt;script&gt;
+  let imageUrl = &#39;https://picsum.photos/200&#39;
+&lt;/script&gt;
+
+&lt;img src={imageUrl} alt=&#34;Example image&#34;&gt;</code></pre>
+<h2 is-upgraded>Explanation</h2>
+<p><strong>Script Tag</strong>: Just like before, we start by defining our JavaScript variable within a &lt;script&gt; tag. Here, <code>imageUrl</code> is a variable holding the URL of an image.<br></p>
+<pre><code>&lt;script&gt;
+  let imageUrl = &#39;https://picsum.photos/200&#39;
+&lt;/script&gt;</code></pre>
+<p><strong>Curly Brackets in Attributes</strong>: To set the <code>src</code> attribute of the <code>img</code> element using the <code>imageUrl</code> variable, we place the variable inside curly brackets <code>{}</code> within the attribute. This tells SvelteKit to evaluate the <code>imageUrl</code> variable and use its value as the <code>src</code> attribute of the &lt;img&gt; element.<br></p>
+<pre><code>&lt;img src={imageUrl} alt=&#34;Example image&#34;&gt;</code></pre>
+<p>When your app runs, wherever it finds <code>{imageUrl}</code> in the <code>src</code> attribute, it replaces it with the value of the <code>imageUrl</code> variable. In this example, it changes <code>img src={imageUrl} alt="Example image"</code> to <code>img src="https://picsum.photos/200" alt="Example image"</code>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Practice: Image Card" duration="0">
+        <p>In this exercise, you will practise using SvelteKit to set HTML attributes and text using JavaScript variables. You will create a simple image card component that includes an image, a caption, and a link, all using variables.</p>
+<ol type="1" start="1">
+<li><strong>Create a New Svelte Component</strong>: Create a new Svelte file (e.g., <code>ImageCard.svelte</code>) in your <code>lib/</code> folder.</li>
+<li><strong>Define the Variables</strong>: In the <code>script</code> tag, define three variables:</li>
+</ol>
+<ul>
+<li><code>imageUrl</code>: The URL of the image (you can use <a href="https://picsum.photos/200" target="_blank">https://picsum.photos/200</a> to get a 200px square image).</li>
+<li><code>caption</code>: The caption text for the image.</li>
+<li><code>linkUrl</code>: The URL that the image will link to.</li>
+</ul>
+<ol type="1" start="3">
+<li><strong>Structure the HTML: </strong>Create a <code>figure</code> element with two child elements: an <code>a</code> link wrapping an <code>img</code>, and a <code>figcaption</code>.</li>
+<li><strong>Use the Variables in HTML</strong>: Use these variables to dynamically set the <code>src</code> attribute of an <code>img</code> element, the text content of the <code>figcaption</code> and <code>alt</code>, and the <code>href</code> attribute of a link.</li>
+<li><strong>Style the Component</strong>: Add some basic CSS to style your image card. You can use the code below to achieve the effect in the example.</li>
+</ol>
+<p class="image-container"><img style="width: 536.45px" src="img/b677fe19804e31ad.png"></p>
+<pre><code>&lt;style&gt;
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    background: rgba(98, 217, 255, 0.25);
+  }
+&lt;/style&gt;</code></pre>
+<p><strong>Extra: </strong>The provided CSS is an example of glass morphism - try adding a background behind the card and see what happens.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Input text" duration="0">
+        <p>You can easily bind HTML inputs to JavaScript variables to get better interactions and real-time updates in your app. This is particularly useful for creating interactive user interfaces. In this section, we will see how to use an <code>input</code> element to assign a value to a variable.</p>
+<p>SvelteKit provides a feature called <strong>binding</strong>, which allows an input field to display a variable&#39;s value and update the variable when the user types into the input. This is done using <code>bind:value</code>.</p>
+<pre><code>&lt;script&gt;
+  let name = &#39;world&#39;
+&lt;/script&gt;
+
+&lt;input bind:value={name} placeholder=&#34;Enter your name&#34;&gt;
+
+&lt;h1&gt;Hello {name}!&lt;/h1&gt;</code></pre>
+<h2 is-upgraded>Explanation</h2>
+<p><strong>Script Tag</strong>: As before, we define a variable within the <code>script</code> tag.</p>
+<pre><code>&lt;script&gt;
+  let name = &#39;world&#39;
+&lt;/script&gt;</code></pre>
+<p><strong>Input Element with Binding</strong>: The <code>input</code> element uses <code>bind:value</code> to connect the <code>value</code> attribute of the input to the <code>name</code> variable. When the user types in the input field, the <code>name</code> variable is automatically updated with the new value.</p>
+<pre><code>&lt;input bind:value={name} placeholder=&#34;Enter your name&#34;&gt;</code></pre>
+<p><strong>Using the Variable in HTML</strong>: The value of the <code>name</code> variable is then used in the HTML, just as before. This line will update to show the value of the <code>name</code> variable as the user types.<br></p>
+<pre><code>&lt;h1&gt;Hello {name}!&lt;/h1&gt;</code></pre>
+<h2 is-upgraded>Try It Yourself</h2>
+<ol type="1" start="1">
+<li>Open your SvelteKit project.</li>
+<li>Add the example code above to one of your Svelte files (e.g., <code>src/routes/+page.svelte</code>).</li>
+<li>Run your SvelteKit project and open it in your browser to see the result.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Input Other" duration="0">
+        <p>You can do this for other types of input elements such as checkboxes, radio buttons, and select dropdowns. Here are a few more examples:</p>
+<h2 is-upgraded>Example with a Checkbox</h2>
+<pre><code>&lt;script&gt;
+  let isChecked = false
+&lt;/script&gt;
+
+&lt;input type=&#34;checkbox&#34; bind:checked={isChecked}&gt;
+
+&lt;p&gt;The checkbox is {isChecked}.&lt;/p&gt;</code></pre>
+<h2 is-upgraded>Example with a Select Dropdown</h2>
+<pre><code>&lt;script&gt;
+  let selectedOption = &#39;Option 1&#39;
+&lt;/script&gt;
+
+&lt;select bind:value={selectedOption}&gt;
+  &lt;option value=&#34;Option 1&#34;&gt;Option 1&lt;/option&gt;
+  &lt;option value=&#34;Option 2&#34;&gt;Option 2&lt;/option&gt;
+  &lt;option value=&#34;Option 3&#34;&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;p&gt;You selected: {selectedOption}&lt;/p&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Button Inputs" duration="0">
+        <p>You can use a button to update the value of a variable by saying what function to run when it&#39;s clicked. This allows you to perform actions, such as updating variables.</p>
+<p>Here&#39;s a simple example where a button click updates a variable value:</p>
+<pre><code>&lt;script&gt;
+  let count = 0
+
+  function increment() {
+    count = count + 1
+  }
+&lt;/script&gt;
+
+&lt;p&gt;Count: {count}&lt;/p&gt;
+&lt;button on:click={increment}&gt;Increment&lt;/button&gt;</code></pre>
+<h2 is-upgraded>Explanation</h2>
+<p><strong>Script Tag</strong>: The variable and the function are defined inside the <code>script</code> tag. <code>count</code> is a variable initialised to 0 and <code>increment</code> is a function that increases the value of <code>count</code> by 1.<br></p>
+<pre><code>&lt;script&gt;
+  let count = 0
+
+  function increment() {
+    count = count + 1
+  }
+&lt;/script&gt;</code></pre>
+<p><strong>Display the Variable</strong>: Curly brackets <code>{}</code> display the <code>count</code> variable in the HTML.</p>
+<pre><code>&lt;p&gt;Count: {count}&lt;/p&gt;</code></pre>
+<p><strong>Button connected to a function</strong>: <code>on:click={increment}</code> connects the <code>increment</code> function to the button&#39;s click event. When the button is clicked, the <code>increment</code> function is called, updating the <code>count</code> variable.</p>
+<pre><code>&lt;button on:click={increment}&gt;Increment&lt;/button&gt;</code></pre>
+<h2 is-upgraded>Try It Yourself</h2>
+<ol type="1" start="1">
+<li>Open your SvelteKit project.</li>
+<li>Add the example code above to one of your Svelte files (e.g., <code>src/routes/+page.svelte</code>).</li>
+<li>Run your SvelteKit project and open it in your browser to see the result.</li>
+</ol>
+<h2 is-upgraded>Updating Multiple Variables</h2>
+<p>You can use buttons to update multiple variables or trigger more complex functions. Here&#39;s an example where two buttons increase and decrease a count variable:</p>
+<pre><code>&lt;script&gt;
+  let count = 0
+
+  function increment() {
+    count = count + 1
+  }
+
+  function decrement() {
+    count = count - 1
+  }
+&lt;/script&gt;
+
+&lt;p&gt;Count: {count}&lt;/p&gt;
+&lt;button on:click={increment}&gt;Increment&lt;/button&gt;
+&lt;button on:click={decrement}&gt;Decrement&lt;/button&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Practice: Hi! Button" duration="0">
+        <p>In this exercise, you will practise using buttons linked with functions to change JavaScript variables. You will create a simple button that outputs &#34;Hi!&#34; onto the page when it&#39;s pressed.</p>
+<ol type="1" start="6">
+<li><strong>Create a New Svelte Component</strong>: Create a new Svelte file (e.g., <code>HiButton.svelte</code>) in your <code>lib/</code> folder.</li>
+<li><strong>Define the Variables</strong>: In the <code>script</code> tag, define a variable and a function:</li>
+</ol>
+<ul>
+<li><code>welcomeMessage</code>: The text, which initially starts blank.</li>
+<li><code>sayHi</code>: The function that changes the <code>welcomeMessage</code> to &#34;Hi!&#34;.</li>
+</ul>
+<ol type="1" start="8">
+<li><strong>Structure the HTML: </strong>Create a <code>p</code> element and put <code>welcomeMessage</code> as its text content, and a button linked to <code>sayHi</code>.</li>
+<li><strong>Style the Component</strong>: Add some basic CSS to style your page. You can use the code below to achieve the effect in the example.</li>
+</ol>
+<p class="image-container"><img style="width: 493.94px" src="img/b4f758daa40e75f1.png"></p>
+<pre><code>&lt;style&gt;
+  button {
+    width: 10rem;
+    height: 10rem;
+    margin: 3rem 3rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+  }
+
+  button:active {
+    box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+  }
+
+  :global(*) {
+    background: #e0e0e0;
+  }
+&lt;/style&gt;</code></pre>
+<p><strong>Extra: </strong>The provided CSS is an example of neumorphism - you can find a more sophisticated version <a href="https://svelte.dev/repl/1515b9b07b11467690adbc5d06cb960a?version=4.2.18" target="_blank">here</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Practice: Currency Converter" duration="0">
+        <p>Create a component that allows the user to enter a price in USD, and press a button to see the price in NZD.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

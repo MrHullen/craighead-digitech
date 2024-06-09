@@ -1,0 +1,20 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-06-09T09:24:20Z",
+  "id": "svelte-js-input-and-output",
+  "duration": 0,
+  "title": "Svelte JS - Input and Output",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab you'll learn to create customisable, reusable components by adding props.",
+  "source": "1RT9ExR3SYGC5hKIOtiB5C-MIClhTDtDHXOS3S7dbZS0",
+  "theme": "",
+  "status": [
+    "draft"
+  ],
+  "category": null,
+  "tags": [],
+  "url": "svelte-js-input-and-output"
+}
