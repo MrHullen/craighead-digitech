@@ -1,0 +1,20 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-06-11T00:16:33Z",
+  "id": "svelte-js-selection",
+  "duration": 0,
+  "title": "Svelte JS - Selection",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab you'll learn to create customisable, reusable components by adding props.",
+  "source": "1-FMY2aqUC5WZWtv3GCIGXw93QuvxplgVVgCX5PaeVrA",
+  "theme": "",
+  "status": [
+    "draft"
+  ],
+  "category": null,
+  "tags": [],
+  "url": "svelte-js-selection"
+}

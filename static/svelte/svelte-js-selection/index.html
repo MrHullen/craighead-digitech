@@ -1,0 +1,212 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Svelte JS - Selection</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="svelte-js-selection"
+                  title="Svelte JS - Selection"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Get started" duration="0">
+        <h2 is-upgraded>Open your code</h2>
+<ol type="1" start="1">
+<li>Open <strong>GitHub Desktop</strong></li>
+<li>Check the <strong>Current Repository</strong> in the top left is your project</li>
+<li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+</ol>
+<h2 is-upgraded>Start your dev server</h2>
+<ol type="1" start="1">
+<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>`</code></li>
+<li>Start the server on your laptop by entering the command <code>npm run dev</code></li>
+<li>Open the link that it creates to view your site</li>
+</ol>
+<aside class="special"><p>The server will update the site in your browser every time you save a file, so that you can easily see the changes as you make them.</p>
+</aside>
+<p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Recap: Vanilla JavaScript if Statements" duration="0">
+        <p>Before we get into Svelte&#39;s <code>{#if}</code> statements, let&#39;s quickly review how <code>if</code> statements work in vanilla JavaScript.</p>
+<pre><code>&lt;script&gt;
+  let name = &#39;Alice&#39;
+
+  if (name) {
+    alert(&#39;Hello, &#39; + name + &#39;!&#39;)
+  } else {
+    alert(&#39;Hello, stranger!&#39;)
+  }
+&lt;/script&gt;</code></pre>
+<p>In this example, the <code>if</code> statement checks if the variable <code>name</code> is true (has a real value). If it does, it outputs a personalised greeting. If <code>name</code> is false (e.g. an empty string, <code>null</code>, or <code>undefined</code>), it outputs a generic greeting.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="{#if} in Svelte" duration="0">
+        <p>In Svelte, you can use <code>{#if}</code> statements to show or not show content based on a variable. Here&#39;s the same example from before, but now using the page instead of <code>alert</code>. </p>
+<pre><code>&lt;script&gt;
+  let name = &#39;Alice&#39;
+&lt;/script&gt;
+
+{#if name}
+  &lt;h1&gt;Hello, {name}!&lt;/h1&gt;
+{:else}
+  &lt;h1&gt;Hello, stranger!&lt;/h1&gt;
+{/if}</code></pre>
+<h2 is-upgraded>Explanation</h2>
+<p><strong>Script Tag</strong>: Define the <code>name</code> variable inside the <code>script</code> tag.<br></p>
+<pre><code>&lt;script&gt;
+  let name = &#39;Alice&#39;;
+&lt;/script&gt;</code></pre>
+<p><strong>Conditional Rendering</strong>: Use the <code>{#if}</code> block to show different HTML based on the value of the <code>name</code> variable.<br></p>
+<pre><code>{#if name}
+  &lt;h1&gt;Hello, {name}!&lt;/h1&gt;
+{:else}
+  &lt;h1&gt;Hello, stranger!&lt;/h1&gt;
+{/if}</code></pre>
+<ul>
+<li><code>{#if name}</code>: This block checks if the <code>name</code> variable has a truthy value.</li>
+<li><code> h1 Hello, {name}! /h1</code> : If <code>name</code> is truthy, this line renders an <code>h1</code> element with the personalised greeting.</li>
+<li><code>{:else}</code>: This block specifies the content to render if the <code>if</code> condition is not met.</li>
+<li><code> h1 Hello, stranger! /h1</code> : If <code>name</code> is falsy, this line renders an <code>h1</code> element with the generic greeting.</li>
+<li><code>{/if}</code>: This closes the <code>if</code> block.</li>
+</ul>
+<h2 is-upgraded>Try It Yourself</h2>
+<ol type="1" start="1">
+<li>Open your SvelteKit project.</li>
+<li>Add the example code above to one of your Svelte files (e.g., <code>src/routes/+page.svelte</code>).</li>
+<li>Try changing the value of <code>name</code> to an empty string and see what happens.</li>
+<li>Run your SvelteKit project and open it in your browser to see the result.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="== with {#if} in Svelte" duration="0">
+        <p>In Svelte, you can do comparisons inside <code>{#if}</code> statements, just like with regular <code>if</code> statements. Here&#39;s an example where we check if the <code>name</code> variable is equal to a specific value using the <code>==</code> operator.</p>
+<p>In this example, we will check if the <code>name</code> variable is equal to the string <code>'Alice'</code> and render different content based on this condition.</p>
+<pre><code>&lt;script&gt;
+  let name = &#39;Alice&#39;
+&lt;/script&gt;
+
+{#if name == &#39;Alice&#39;}
+  &lt;h1&gt;Welcome back, Alice!&lt;/h1&gt;
+{:else}
+  &lt;h1&gt;Hello, {name}!&lt;/h1&gt;
+{/if}</code></pre>
+<h2 is-upgraded>Explanation</h2>
+<p><strong>Script Tag</strong>: Define the <code>name</code> variable inside the <code>script</code> tag.<br></p>
+<pre><code>&lt;script&gt;
+    let name = &#39;Alice&#39;;
+&lt;/script&gt;</code></pre>
+<p><strong>Conditional Rendering with Comparison</strong>: Use the <code>{#if}</code> block with the <code>==</code> operator to compare the <code>name</code> variable to the string <code>'Alice'</code>.<br></p>
+<pre><code>{#if name == &#39;Alice&#39;}
+    &lt;h1&gt;Welcome back, Alice!&lt;/h1&gt;
+{:else}
+    &lt;h1&gt;Hello, {name}!&lt;/h1&gt;
+{/if}</code></pre>
+<ul>
+<li><code>{#if name == 'Alice'}</code>: This block checks if the <code>name</code> variable is equal to the string <code>'Alice'</code>.</li>
+<li><code> h1 Welcome back, Alice! /h1</code> : If <code>name</code> is equal to <code>'Alice'</code>, this line shows an <code>h1</code> element with a personalised welcome message for Alice.</li>
+<li><code>{:else}:</code> This block specifies the content to show if the <code>if</code> condition is not met.</li>
+<li><code> h1 Hello, {name}! /h1</code> : If name is not equal to <code>'Alice'</code>, this line shows an <code>h1</code> element with a generic greeting that includes the value of the <code>name</code> variable.</li>
+<li><code>{/if}</code>: This closes the <code>if</code> block.</li>
+</ul>
+<h2 is-upgraded>Try It Yourself</h2>
+<ol type="1" start="5">
+<li>Open your SvelteKit project.</li>
+<li>Add the example code above to one of your Svelte files (e.g., <code>src/routes/+page.svelte</code>).</li>
+<li>Try changing the value of <code>name</code> to <code>‘Bob'</code> and see what happens.</li>
+<li>Run your SvelteKit project and open it in your browser to see the result.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Practice: User Roles" duration="0">
+        <p>In this exercise, you will practise using <code>{#if}</code> statements with the <code>==</code> operator to show content based on the value of a variable. You will create a simple component that checks if a user&#39;s role is <code>'admin'</code> or not and renders different messages accordingly.</p>
+<ol type="1" start="1">
+<li><strong>Create a New Svelte File</strong>: Create a new Svelte component (e.g., <code>UserRole.svelte</code>) in your <code>lib/</code> folder.</li>
+<li><strong>Define the Variables</strong>: In the <code>script</code> tag, define a variable <code>role</code> and assign it a value, e.g., <code>'admin'</code> or <code>'user'</code>.</li>
+<li><strong>Use the </strong><strong><code>{#if}</code></strong><strong> Statement</strong>: Use the <code>{#if}</code> statement with the <code>==</code> operator to check if the <code>role</code> variable is equal to <code>'admin'</code>. Show different messages based on this condition.</li>
+</ol>
+<p class="image-container"><img style="width: 374.10px" src="img/1afba27588b94293.png"><img style="width: 391.67px" src="img/517380989f7bd0d3.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="{:else if} with {#if} in Svelte" duration="0">
+        <p>In Svelte, the <code>{:else if}</code> block allows you to add additional conditions within an <code>{#if}</code> block, similar to <code>else if</code> in vanilla JavaScript. This enables you to check multiple conditions sequentially and render different content based on which condition is met. </p>
+<pre><code>&lt;script&gt;
+  let name = &#39;Alice&#39;
+&lt;/script&gt;
+
+{#if name == &#39;Alice&#39;}
+  &lt;h1&gt;Welcome back, Alice!&lt;/h1&gt;
+{:else if name == &#39;Bob&#39;}
+  &lt;h1&gt;Not you again!&lt;/h1&gt;
+{:else}
+  &lt;h1&gt;Hello, {name}!&lt;/h1&gt;
+{/if}</code></pre>
+<p>The <code>{:else if}</code> block is used after an <code>{#if}</code> statement and before an <code>{:else}</code> block. If the initial <code>{#if}</code> condition evaluates to false, the <code>{:else if}</code> condition is checked. If the <code>{:else if}</code> condition evaluates to true, the corresponding block of code is executed. You can include multiple <code>{:else if}</code> blocks to handle various scenarios. If none of the conditions in the <code>{#if}</code> or <code>{:else if}</code> blocks are met, the <code>{:else}</code> block is executed as a fallback.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Practice: More User Roles" duration="0">
+        <p>Extend your User Roles example so that it can handle more types of logged in users.</p>
+<ol type="1" start="1">
+<li><strong>Add More Roles</strong>: Extend the example by adding more roles (e.g., <code>'guest'</code>, <code>'editor'</code>) and corresponding messages.</li>
+<li><strong>Use Input to Change Role</strong>: Add an <code>input</code> element to allow users to change the role dynamically and see the content update in real-time.</li>
+</ol>
+<p class="image-container"><img style="width: 492.00px" src="img/48e87765364bb2.png"><img style="width: 432.50px" src="img/cd65340037459ad.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
