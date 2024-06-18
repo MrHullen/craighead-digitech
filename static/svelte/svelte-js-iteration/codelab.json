@@ -1,0 +1,20 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-06-18T20:45:27Z",
+  "id": "svelte-js-iteration",
+  "duration": 0,
+  "title": "Svelte JS - Iteration",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab you'll learn to create customisable, reusable components by adding props.",
+  "source": "1Fop2KKegzgtSsplF0QTtysu5riNnmVCU3Sn34-RNaMs",
+  "theme": "",
+  "status": [
+    "draft"
+  ],
+  "category": null,
+  "tags": [],
+  "url": "svelte-js-iteration"
+}

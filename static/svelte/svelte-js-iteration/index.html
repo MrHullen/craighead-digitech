@@ -1,0 +1,192 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Svelte JS - Iteration</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="svelte-js-iteration"
+                  title="Svelte JS - Iteration"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Get started" duration="0">
+        <h2 is-upgraded>Open your code</h2>
+<ol type="1" start="1">
+<li>Open <strong>GitHub Desktop</strong></li>
+<li>Check the <strong>Current Repository</strong> in the top left is your project</li>
+<li>Click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+</ol>
+<h2 is-upgraded>Start your dev server</h2>
+<ol type="1" start="1">
+<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>`</code></li>
+<li>Start the server on your laptop by entering the command <code>npm run dev</code></li>
+<li>Open the link that it creates to view your site</li>
+</ol>
+<aside class="special"><p>The server will update the site in your browser every time you save a file, so that you can easily see the changes as you make them.</p>
+</aside>
+<p>Now you&#39;re ready to get coding!</p>
+<h2 is-upgraded><strong>Using </strong><strong>{#each}</strong><strong> Statements in SvelteKit</strong></h2>
+<p>In Svelte, {#each} statements are used to iterate over arrays and render HTML for each item. This is similar to using forEach loops in vanilla JavaScript, but it integrates directly with Svelte&#39;s templating system, making it easier to create dynamic lists.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Recap: Vanilla JavaScript forEach Loops" duration="0">
+        <p>Before we get into <code>{#each}</code> statements in Svelte, let&#39;s quickly recap how <code>forEach</code> loops work in vanilla JavaScript.</p>
+<pre><code>const students = [
+  &#39;Alice&#39;,
+  &#39;Barbie&#39;,
+  &#39;Charlie&#39;
+]
+
+students.forEach(student =&gt; {
+  alert(student)
+})</code></pre>
+<p>In this example, the <code>forEach</code> loop iterates over the <code>students</code> array and outputs each student&#39;s name.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Iterating with {#each} in Svelte" duration="0">
+        <p>In Svelte, you can use the <code>{#each}</code> block to iterate over an array and show content for each item in there. Here&#39;s an example where we loop through an array of student names and display them in an unordered list.</p>
+<pre><code>&lt;script&gt;
+  let students = [
+    &#39;Alice&#39;,
+    &#39;Barbie&#39;,
+    &#39;Charlie&#39;
+  ]
+&lt;/script&gt;
+
+&lt;ul&gt;
+  {#each students as student}
+    &lt;li&gt;{student}&lt;/li&gt;
+  {/each}
+&lt;/ul&gt;</code></pre>
+<h2 is-upgraded>Explanation</h2>
+<p><strong>Script Tag</strong>: Define the array inside the <code>script</code> tag.<br></p>
+<pre><code>&lt;script&gt;
+  let students = [
+    &#39;Alice&#39;,
+    &#39;Barbie&#39;,
+    &#39;Charlie&#39;
+  ]
+&lt;/script&gt;</code></pre>
+<p><strong>Iterating with </strong></p>
+<p><strong><code>{#each}</code></strong>: Use the <code>{#each}</code> block to iterate over the <code>students</code> array and render a list item for each student.<br></p>
+<pre><code>&lt;ul&gt;
+  {#each students as student}
+    &lt;li&gt;{student}&lt;/li&gt;
+  {/each}
+&lt;/ul&gt;</code></pre>
+<ul>
+<li><code>{#each students as student}</code>: This block iterates over the <code>students</code> array and assigns each item to the <code>student</code> variable.</li>
+<li><code> li {student} /li</code> : For each item in the array, this line renders a list item (<code>li</code>) containing the student&#39;s name.</li>
+<li><code>{/each}</code>: This closes the <code>each</code> block.</li>
+</ul>
+<h2 is-upgraded>Try It Yourself</h2>
+<ol type="1" start="1">
+<li>Open your SvelteKit project.</li>
+<li>Add the example code above to one of your Svelte files (e.g., <code>src/routes/iteration/+page.svelte</code>).</li>
+<li>Try changing the values in the <code>students</code> array and adding more value and see what happens.</li>
+<li>Run your SvelteKit project and open it in your browser to see the result.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Using an Index" duration="0">
+        <p>You can also use the index of each item in the array by including <code>index</code> after <code>as</code> in the <code>{#each}</code> block.</p>
+<pre><code>&lt;script&gt;
+  let students = [
+    &#39;Alice&#39;,
+    &#39;Barbie&#39;,
+    &#39;Charlie&#39;
+  ]
+&lt;/script&gt;
+
+&lt;ul&gt;
+  {#each students as student, index}
+    &lt;li&gt;{index + 1}. {student}&lt;/li&gt;
+  {/each}
+&lt;/ul&gt;</code></pre>
+<p>Here, the <code>index</code> variable provides the position of each item in the array, starting from 0.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Practice: Displaying a List of Products with {#each} Blocks in SvelteKit" duration="0">
+        <p>In this exercise, you will practise using <code>{#each}</code> blocks to iterate over an array of objects and show a list of products. Each product will have a name and a price, which will be displayed in HTML.</p>
+<ol type="1" start="1">
+<li><strong>Create a New Svelte File</strong>: Create a new Svelte file (e.g., <code>ProductList.svelte</code>) in your <code>lib/</code> folder..</li>
+<li><strong>Define the Product Array</strong>: In the <code>script</code> tag, define an array of product objects. Each object should have a <code>name</code> and a <code>price</code> property.</li>
+<li><strong>Use the </strong><strong><code>{#each}</code></strong><strong> Block</strong>: Use the <code>{#each}</code> block to iterate over the product array and show each product&#39;s name and price in an unordered list (<code>ul</code>).</li>
+</ol>
+<p>Here&#39;s what your <code>ProductList.svelte</code> <code>script</code> section might look like:</p>
+<pre><code>&lt;script&gt;
+  let products = [
+    { name: &#39;Apple&#39;, price: 1.0 },
+    { name: &#39;Banana&#39;, price: 0.5 },
+    { name: &#39;Cherry&#39;, price: 2.0 },
+  ]
+&lt;/script&gt;</code></pre>
+<p>Remember you can show values inside an object by using dot notation like <code>product.name</code> or <code>product.price</code>.</p>
+<p>Tip: You can show the price to two decimal places by adding <code>.toFixed(2)</code> inside the curly brackets, <code>{product.price.toFixed(2)}</code> (<a href="https://www.w3schools.com/jsref/jsref_tofixed.asp" target="_blank">source</a>).</p>
+<h2 is-upgraded>Extension</h2>
+<ol type="1" start="1">
+<li><strong>Add a Description</strong>: Extend each product object to include a <code>description</code> property and display this information below the product&#39;s name and price.</li>
+</ol>
+<h2 is-upgraded>Mandatory Extra</h2>
+<ol type="1" start="1">
+<li><strong>Make it a component</strong>: Take the code you&#39;ve written for an individual item and put it in a new component, e.g. <code>ProductItem.svelte</code>. Replace the object references with exported variables, and send each product&#39;s information in the <code>{#each}</code> block to the component as props.</li>
+</ol>
+<h2 is-upgraded>Extra for Emma</h2>
+<ol type="1" start="1">
+<li><strong>Simplify with spread props</strong>: Use <a href="https://svelte.dev/repl/3113facd2e6443f7b140de351de40cd2?version=4.2.18" target="_blank">this example of spread props</a>, which is a way of sending the contents of an object to a component, to simplify the code on your <code>ProductList.svelte</code> page.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
