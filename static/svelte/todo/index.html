@@ -1,0 +1,359 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Todo</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="todo"
+                  title="Todo"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<p>In this tutorial, we will build a simple ToDo list app using SvelteKit.</p>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/skebc8j0Deg?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Define and manage an array of tasks.</li>
+<li>Add new tasks to the array.</li>
+<li>Use <code>{#each}</code> blocks to iterate over the tasks and display them.</li>
+<li>Bind input values to update the tasks dynamically.</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A browser (<a href="https://www.google.com/chrome/" target="_blank">Chrome</a> is recommended because it&#39;s the most fully featured and common)</li>
+<li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+<li>A <a href="https://github.com/" target="_blank">GitHub</a> account</li>
+<li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> </li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Start your project" duration="0">
+        <h2 is-upgraded>Open the assignment</h2>
+<ol type="1" start="1">
+<li>Open your <strong>GitHub Classroom</strong> assignment from the link in Google Classroom</li>
+<li>Check that you&#39;re logged in with your GitHub account</li>
+</ol>
+<aside class="special"><p>First time in GitHub Classroom? You&#39;ll need to choose your name from the class list.</p>
+</aside>
+<ol type="1" start="3">
+<li>Check the name of your assignment is correct and then accept it. GitHub will make a copy of the template for you.</li>
+<li>Click on the link to your repository</li>
+</ol>
+<aside class="special"><p>A GitHub repository is an online copy of your code and the changes that you&#39;ve made.</p>
+</aside>
+<h2 is-upgraded>Get ready to code</h2>
+<ol type="1" start="5">
+<li>Click on the green <strong>Code</strong> button and choose <strong>Open with GitHub Desktop</strong></li>
+<li>If you&#39;re working locally (on your own device), choose a place (such as Documents) to download your code to</li>
+</ol>
+<aside class="special"><p>Keeping all your projects labelled in one folder will help you find stuff you&#39;ve done before. No one remembers absolutely everything about coding so it&#39;s best to be able to find when you did that one thing.</p>
+</aside>
+<ol type="1" start="7">
+<li>Once it has cloned to your computer, click the <strong>Open in Visual Studio Code</strong> button (or press <code>Command</code> + <code>Shift</code> + <code>A</code> on MacOS or <code>Ctrl</code> + <code>Shift</code> + <code>A</code> on Windows)</li>
+</ol>
+<h2 is-upgraded>Start your dev server</h2>
+<ol type="1" start="1">
+<li>Open a new Terminal by clicking <strong>New Terminal</strong> in the <strong>Terminal</strong> menu, or pressing <code>Ctrl</code> + <code>`</code></li>
+<li>Install all the dependencies by entering the command <code>npm install</code></li>
+<li>Start the server on your laptop by entering the command <code>npm run dev</code></li>
+<li>Open the link that it creates to view your site</li>
+</ol>
+<aside class="special"><p>The server will update the site in your browser every time you save a file, so that you can easily see the changes as you make them.</p>
+</aside>
+<p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Todo v1" duration="0">
+        <h2 is-upgraded>Define the Script Section</h2>
+<p>In the <code>script</code> tag on your landing page (<code>+page.svelte</code>), define an array to hold the tasks and a function to add new tasks.</p>
+<p>The following two code blocks do exactly the same thing. The first one has each step written line-by-line to make it easier to follow. The second one combines some steps into a single line.</p>
+<pre><code>&lt;script&gt;
+  let tasks = []
+        
+  function addTask() {
+    const oldTasks = tasks    
+    const newTask = &#39;&#39;
+    
+    tasks = [...oldTasks, newTask]
+  }
+&lt;/script&gt;</code></pre>
+<p>or...</p>
+<pre><code>&lt;script&gt;
+  let tasks = []
+        
+  function addTask() {
+    tasks = [...tasks, &#39;&#39;]
+  }
+&lt;/script&gt;</code></pre>
+<ul>
+<li><code>tasks</code> is an array that will hold the list of tasks.</li>
+<li><code>addTask</code> is a function that adds a new empty string to the <code>tasks</code> array whenever it is called.</li>
+<li>The function uses the spread syntax (<code>...tasks</code>) to create a new array that includes all existing tasks and adds an empty string at the end. This new array overwrites the old one.</li>
+</ul>
+<aside class="special"><p><strong>Spread Syntax</strong></p>
+<p>You&#39;re probably more familiar with adding items to arrays using the <code>.push()</code> method, e.g. <code>tasks.push('')</code>. Unfortunately, this way of doing it doesn&#39;t modify the array enough for the browser to realise it&#39;s changed, so the page won&#39;t update.</p>
+<p>The spread syntax method completely overwrites the original array with a copy plus the new item, which makes the browser update the page and show the new array.</p>
+</aside>
+<h2 is-upgraded>Add a Button to Add Tasks</h2>
+<p>Create a button that, when clicked, will call the <code>addTask</code> function to add a new task.</p>
+<pre><code>&lt;button on:click={addTask}&gt;📝 Add&lt;/button&gt;</code></pre>
+<ul>
+<li><code>on:click={addTask}</code> attaches a click handler to the button that calls the <code>addTask</code> function.</li>
+</ul>
+<h2 is-upgraded>Use the <code>{#each}</code> Block to Display Tasks</h2>
+<p>Use the <code>{#each}</code> block to iterate over the <code>tasks</code> array and render an input for each task. Bind the value of each input to the corresponding task in the array.</p>
+<pre><code>{#each tasks as task, index}
+  &lt;div class=&#34;task&#34;&gt;
+    &lt;input bind:value={tasks[index]}&gt;
+  &lt;/div&gt;
+{/each}</code></pre>
+<ul>
+<li><code>{#each tasks as task, index}</code> iterates over the <code>tasks</code> array, providing the <code>task</code> and its <code>index</code>.</li>
+<li><code>input bind:value={tasks[index]}</code> binds the value of the input to the corresponding task in the <code>tasks</code> array, allowing for real-time updates.</li>
+</ul>
+<h2 is-upgraded>Style the Todo List</h2>
+<p>Add some basic CSS to style the tasks.</p>
+<pre><code>&lt;style&gt;
+  .task {
+    display: block;
+  }
+&lt;/style&gt;</code></pre>
+<ul>
+<li><code>.task</code> class ensures each task input is displayed one below the other.</li>
+</ul>
+<p>]</p>
+<aside class="warning"><p><strong>Commit point</strong></p>
+<p>Now that you&#39;ve added a feature to your website, you should <strong>commit</strong> it to your GitHub repository! Committing creates a full <strong>backup</strong> and a <strong>snapshot</strong> of the code at this point.</p>
+<p>Open GitHub Desktop and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made.</p>
+<p><strong>Green</strong> indicates code that you&#39;ve <strong>added</strong> since your last commit, and <strong>red</strong> is code you&#39;ve <strong>deleted</strong>.</p>
+<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your message could be <code>Adds tasks to array.</code></p>
+</aside>
+<h2 is-upgraded>Review</h2>
+<p>You should test and solidify your understanding of this section.</p>
+<ul>
+<li><a href="https://quizlet.com/nz/925816008/todo-v1-flash-cards/?i=z219w&x=1qqt" target="_blank">Flash cards</a></li>
+<li><a href="https://quizlet.com/nz/925817015/todo-v1-map-diagram/?i=z219w&x=1jqt" target="_blank">Code map</a></li>
+<li><a href="https://create.kahoot.it/details/ebc403bb-0bb2-4d43-85f7-3da12096b8c9" target="_blank">Multichoice quiz</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Todo v2" duration="0">
+        <p>In this part, we&#39;ll extend the simple ToDo list application by adding a feature to remove tasks. You&#39;ll learn how to remove items from an array and ensure the page updates.</p>
+<h2 is-upgraded>Part 1: The Button</h2>
+<pre><code>&lt;button on:click={() =&gt; { removeTask(index) }}&gt;🗑&lt;/button&gt;</code></pre>
+<h3 is-upgraded>Explanation</h3>
+<ol type="1" start="1">
+<li><strong>Button</strong>:</li>
+</ol>
+<ul>
+<li>This line of code defines a button with an icon (🗑) that represents the &#34;Remove&#34; action.</li>
+</ul>
+<ol type="1" start="2">
+<li><strong>Click handler</strong>:</li>
+</ol>
+<ul>
+<li><code>on:click={             }</code>: This listens for a <code>click</code> on the button.</li>
+<li><code>() => { removeTask(index) }</code>: This calls the <code>removeTask</code> function and sends the current <code>index</code> as its argument when the button is clicked.</li>
+</ul>
+<ol type="1" start="3">
+<li><strong>Passing the Index</strong>:</li>
+</ol>
+<ul>
+<li>The <code>index</code> variable comes from the <code>{#each tasks as task, index}</code> block that iterates over the <code>tasks</code> array. It represents the position of the current task in the array.</li>
+<li>By passing <code>index</code> to the <code>removeTask</code> function, the correct task can be identified and removed from the <code>tasks</code> array.</li>
+</ul>
+<p class="image-container"><img style="width: 697.70px" src="img/5e4bbba4bc8afdbc.jpeg"></p>
+<h2 is-upgraded>Part 2: The <code>removeTask</code> Function</h2>
+<p>The following two code blocks do exactly the same thing. The first one has each step written line-by-line to make it easier to follow. The second one combines some steps into a single line.</p>
+<pre><code>function removeTask(index) {
+  const firstPart = tasks.slice(0, index)
+  const secondPart = tasks.slice(index + 1)
+
+  tasks = [
+    ...firstPart,
+    ...secondPart
+  ]
+}</code></pre>
+<p>or...</p>
+<pre><code>function removeTask(index) {
+  tasks = [
+    ...tasks.slice(0, index),
+    ...tasks.slice(index + 1)
+  ]
+}</code></pre>
+<h3 is-upgraded>Explanation</h3>
+<ol type="1" start="1">
+<li><strong>Function Definition</strong>:</li>
+</ol>
+<ul>
+<li>The <code>removeTask</code> function takes the <code>index</code> as its argument. This <code>index</code> represents the position of the task in the <code>tasks</code> array that needs to be removed. If the function didn&#39;t get this, it wouldn&#39;t know which task to remove.</li>
+</ul>
+<ol type="1" start="2">
+<li><strong>Using </strong><strong><code>slice</code></strong><strong> and Spread Syntax</strong>:</li>
+</ol>
+<ul>
+<li><code>tasks.slice(0, index)</code>: This part of the code creates a new array that includes all elements from the start of the <code>tasks</code> array up to (but not including) the element at <code>index</code>.</li>
+<li><code>tasks.slice(index + 1)</code>: This part creates a new array that includes all elements from the element immediately after <code>index</code> to the end of the <code>tasks</code> array.</li>
+<li><code>[...tasks.slice(0, index), ...tasks.slice(index + 1)]</code>: The spread syntax (<code>...</code>) is used to concatenate these two arrays, basically creating a new array out of the old one, but leaving out the element  at <code>index</code>.</li>
+</ul>
+<ol type="1" start="3">
+<li><strong>Overwriting the original </strong><strong><code>tasks</code></strong><strong> Array</strong>:</li>
+</ol>
+<ul>
+<li>The result of concatenating the two slices is assigned back to the <code>tasks</code> array.</li>
+</ul>
+<p class="image-container"><img style="width: 697.70px" src="img/deec634e6fcd0063.jpeg"></p>
+<aside class="special"><p><strong>Slice vs Splice</strong></p>
+<p>You&#39;re probably more familiar with removing items from arrays using the <code>.splice()</code> method, e.g. <code>tasks.splice(index, 1)</code>, which removes 1 item at <code>index</code>. Unfortunately, as before, this way of doing it doesn&#39;t modify the array enough for the browser to realise it&#39;s changed, so the page won&#39;t update.</p>
+<p>The method we just went through cuts the array into two pieces, either side of index and excluding it. Then we use spread syntax again to completely overwrite the original array with a copy without the removed item, which makes the browser update the page and show the new array.</p>
+</aside>
+<aside class="warning"><p><strong>Commit point</strong></p>
+<p>Another feature, another commit!</p>
+<p>Open GitHub Desktop and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made.</p>
+<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your message could be <code>Removes tasks from the array.</code></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Todo v3" duration="0">
+        <p>For the next iteration, we introduce a feature to save the Todo list tasks to the browser&#39;s local storage. This means the tasks are saved even if the page is reloaded or the browser is closed and reopened. It&#39;s a more robust and user-friendly experience, because user&#39;s tasks are not lost when they navigate away from the page or close their browser.</p>
+<p>The following two code blocks do exactly the same thing. The first one has each step written line-by-line to make it easier to follow. The second one combines some steps into a single line.</p>
+<pre><code>function saveTasks() {
+  const tasksAsJSON = JSON.stringify(tasks)
+  localStorage.todos = tasksAsJSON
+}</code></pre>
+<p>or...</p>
+<pre><code>function saveTasks() {
+  localStorage.todos = JSON.stringify(tasks)
+}</code></pre>
+<h3 is-upgraded>Explanation</h3>
+<ol type="1" start="1">
+<li><strong>Using </strong><strong><code>localStorage</code></strong>:</li>
+</ol>
+<ul>
+<li><code>localStorage</code> is an API that allows you to store key-value pairs in a web browser. Data stored in <code>localStorage</code> has no expiration time, meaning it will stay until it&#39;s deleted.</li>
+</ul>
+<aside class="special"><p>An API, or Application Programming Interface, is a set of rules and tools that allows different apps to communicate with each other. It&#39;s like a waiter in a restaurant who takes your order (request) to the kitchen (server) and brings back the food (response) to you.</p>
+</aside>
+<ol type="1" start="2">
+<li><strong>Converting Tasks to JSON</strong>:</li>
+</ol>
+<ul>
+<li><code>JSON.stringify(tasks)</code>: The <code>tasks</code> array, which is a JavaScript object, is converted to a JSON string.</li>
+<li>Converting the <code>tasks</code> array to a JSON string is necessary because <code>localStorage</code> can only store strings.</li>
+</ul>
+<aside class="special"><p>JSON, or JavaScript Object Notation, is the format used to pass information between computers. It&#39;s easy to read and write for humans, and it looks like a mix of text and code with key-value pairs, similar to an object.</p>
+</aside>
+<ol type="1" start="3">
+<li><strong>Storing the JSON String</strong>:</li>
+</ol>
+<ul>
+<li><code>localStorage.todos = JSON.stringify(tasks)</code>: The JSON string representation of the tasks array is stored in <code>localStorage</code> under the <strong>key </strong><code>todos</code>.</li>
+<li>This means that the <code>tasks</code> array is saved as a string in the browser&#39;s local storage and can be retrieved later.</li>
+</ul>
+<p class="image-container"><img style="width: 697.70px" src="img/f90abd9b8a430925.jpeg"></p>
+<h2 is-upgraded>Triggering the save</h2>
+<p>Create a button that will save your tasks. An appropriate icon might be the floppy disk (💾).</p>
+<h2 is-upgraded>Extra</h2>
+<p>It would be nice for the app to automatically save the list every time it changes. Remove the save button and instead, save after every change to the list.</p>
+<aside class="warning"><p><strong>Commit point</strong></p>
+<p>Another feature, another commit!</p>
+<p>Open GitHub Desktop and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made.</p>
+<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your message could be <code>Saves tasks to local storage.</code></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Todo v4" duration="0">
+        <p>Now we introduce a feature to load the Todo list tasks from the browser&#39;s local storage to allow the tasks to be retrieved and displayed when the user revisits the page.</p>
+<p>The <code>loadTasks</code> function allows the tasks to be loaded from local storage. It retrieves the JSON string representing the tasks, parses it into a JavaScript array, and overwrites the <code>tasks</code> array with this data.</p>
+<p>The following two code blocks do exactly the same thing. The first one has each step written line-by-line to make it easier to follow. The second one combines some steps into a single line.</p>
+<pre><code>function loadTasks() {
+  const tasksAsJSON = localStorage.todos
+  const tasksAsArray = JSON.parse(tasksAsJSON)
+
+  tasks = tasksAsArray
+}</code></pre>
+<p>or...</p>
+<pre><code>function loadTasks() {
+  tasks = JSON.parse(localStorage.todos)
+}</code></pre>
+<h3 is-upgraded>Explanation</h3>
+<ol type="1" start="1">
+<li><strong>Getting Data from </strong><strong><code>localStorage</code></strong>:</li>
+</ol>
+<ul>
+<li><code>localStorage.todos</code>: This gets the value stored in <code>localStorage</code> under the key <code>todos</code>. This is the JSON string that was previously saved by the <code>saveTasks</code> function.</li>
+</ul>
+<ol type="1" start="2">
+<li><strong>Converting JSON</strong>:</li>
+</ol>
+<ul>
+<li><code>JSON.parse(localStorage.todos)</code>: The <code>JSON.parse</code> function converts the JSON string back into the array of tasks.</li>
+</ul>
+<ol type="1" start="3">
+<li><strong>All together</strong>:</li>
+</ol>
+<ul>
+<li><code>tasks = JSON.parse(localStorage.todos)</code>: This overwrites the <code>tasks</code> array with the tasks that were previously saved.</li>
+</ul>
+<p class="image-container"><img style="width: 697.70px" src="img/1c7f87e2a2024fa9.jpeg"></p>
+<h2 is-upgraded>Triggering the load</h2>
+<p>Create a button that will load your tasks. An appropriate icon might be the satellite antenna ( 📡 ).</p>
+<h2 is-upgraded>Extra</h2>
+<p>It would be nice if we didn&#39;t accidentally load a list when we aren&#39;t ready, and lose all our items. Add a confirmation dialog to check if the user really wants to load.</p>
+<aside class="warning"><p><strong>Commit point</strong></p>
+<p>Another feature, another commit!</p>
+<p>Open GitHub Desktop and check that the <strong>Current Repository</strong> in the top left is your project, and briefly review the changes you&#39;ve made.</p>
+<p>When you&#39;re happy, write a short (2 - 5 words) <strong>Summary</strong> of what you added in the bottom left. In this case, your message could be <code>Loads tasks from local storage.</code></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Todo v5" duration="0">
+        <p>The app is useful as it is, and you could release it as an app. This would be what&#39;s called an MVP, or Minimum Viable Product. It&#39;s the most basic form of the app that is useful to the user.</p>
+<p>However, we can take this project further.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
