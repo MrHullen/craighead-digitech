@@ -9,6 +9,7 @@ export function GET({ url }) {
         price: 2000,
         img: url.origin + '/car-hire-images/black-lamborghini.jpg',
         credit: 'Adrian N (Unsplash)',
+        available: false,
       },
       {
         car: 'Orange Lamborghini',
@@ -16,6 +17,7 @@ export function GET({ url }) {
         price: 2000,
         img: url.origin + '/car-hire-images/orange-lamborghini.jpg',
         credit: 'Toni Zaat (Unsplash)',
+        available: true,
       },
       {
         car: 'Grey Aston Martin',
@@ -23,6 +25,7 @@ export function GET({ url }) {
         price: 1500,
         img: url.origin + '/car-hire-images/grey-aston-martin.jpg',
         credit: 'Alexandru Ivanov (Unsplash)',
+        available: true,
       },
       {
         car: 'White Bugatti',
@@ -30,6 +33,7 @@ export function GET({ url }) {
         price: 3500,
         img: url.origin + '/car-hire-images/white-bugatti.jpg',
         credit: 'Flavien (username) (Unsplash)',
+        available: true,
       },
 
       {
@@ -38,6 +42,7 @@ export function GET({ url }) {
         price: 1500,
         img: url.origin + '/car-hire-images/red-ferrari.jpg',
         credit: 'Molim Karbelaei (Unsplash)',
+        available: true,
       },
     ],
     nice: [
@@ -47,6 +52,7 @@ export function GET({ url }) {
         price: 1500,
         img: url.origin + '/car-hire-images/black-maserati.jpg',
         credit: 'Krysztof Kubicki (Unsplash)',
+        available: true,
       },
       {
         car: 'Black Mercedes',
@@ -54,6 +60,7 @@ export function GET({ url }) {
         price: 1500,
         img: url.origin + '/car-hire-images/black-mercedes.jpg',
         credit: 'Martin Katler (Unsplash)',
+        available: false,
       },
       {
         car: 'Green Chevrolet',
@@ -61,14 +68,15 @@ export function GET({ url }) {
         price: 1000,
         img: url.origin + '/car-hire-images/green-chevrolet.jpg',
         credit: 'Markus Spiske (Unsplash)',
+        available: true,
       },
-
       {
         car: 'Orange Volks Wagon',
         description: 'A charming orange Volkswagen with a retro appeal and modern features.',
         price: 500,
         img: url.origin + '/car-hire-images/orange-volks-wagon.jpg',
         credit: 'Oli Woodman (Unsplash)',
+        available: true,
       },
       {
         car: 'Black MG',
@@ -76,6 +84,7 @@ export function GET({ url }) {
         price: 1000,
         img: url.origin + '/car-hire-images/black-mg.jpg',
         credit: 'Robin Vet (Unsplash)',
+        available: true,
       },
     ],
   }
