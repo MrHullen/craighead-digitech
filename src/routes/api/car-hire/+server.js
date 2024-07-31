@@ -6,14 +6,14 @@ export function GET({ url }) {
       {
         car: 'Black Lamborghini',
         description: 'A sleek, high-performance sports car in a striking black finish.',
-        price: 1500,
+        price: 2000,
         img: url.origin + '/car-hire-images/black-lamborghini.jpg',
         credit: 'Adrian N (Unsplash)',
       },
       {
         car: 'Orange Lamborghini',
         description: 'An eye-catching orange Lamborghini with top-tier speed and luxury.',
-        price: 1500,
+        price: 2000,
         img: url.origin + '/car-hire-images/orange-lamborghini.jpg',
         credit: 'Toni Zaat (Unsplash)',
       },
@@ -27,7 +27,7 @@ export function GET({ url }) {
       {
         car: 'White Bugatti',
         description: 'A luxurious white Bugatti known for its exceptional speed and design.',
-        price: 1500,
+        price: 3500,
         img: url.origin + '/car-hire-images/white-bugatti.jpg',
         credit: 'Flavien (username) (Unsplash)',
       },
@@ -58,7 +58,7 @@ export function GET({ url }) {
       {
         car: 'Green Chevrolet',
         description: 'A vibrant green Chevrolet that blends style with reliable performance.',
-        price: 1500,
+        price: 1000,
         img: url.origin + '/car-hire-images/green-chevrolet.jpg',
         credit: 'Markus Spiske (Unsplash)',
       },
@@ -66,14 +66,14 @@ export function GET({ url }) {
       {
         car: 'Orange Volks Wagon',
         description: 'A charming orange Volkswagen with a retro appeal and modern features.',
-        price: 1500,
+        price: 500,
         img: url.origin + '/car-hire-images/orange-volks-wagon.jpg',
         credit: 'Oli Woodman (Unsplash)',
       },
       {
         car: 'Black MG',
         description: 'A classic black MG known for its elegant design and smooth ride.',
-        price: 1500,
+        price: 1000,
         img: url.origin + '/car-hire-images/black-mg.jpg',
         credit: 'Robin Vet (Unsplash)',
       },
