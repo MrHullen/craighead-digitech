@@ -1,0 +1,126 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Firebase Setup</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="firebase-setup"
+                  title="Firebase Setup"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p class="image-container"><img style="width: 624.00px" src="img/d824482c74440cd1.png"></p>
+<h2 is-upgraded>What you&#39;ll build</h2>
+<ul>
+<li>A database to store objects from your existing web app.</li>
+</ul>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>What a database is and does.</li>
+<li>How to create and set up a Firebase database.</li>
+<li>How to connect your web app to the database.</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>Knowledge of HTML, CSS, JavaScript, and <a href="https://svelte.dev/" target="_blank">Svelte</a>.</li>
+<li>A web app with some data that needs to be stored.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create a Firebase Project" duration="0">
+        <h2 is-upgraded>Login to Firebase</h2>
+<p>Firebase is a free Google product that lets you build apps with databases, analytics, hosting, and more. In this example, we&#39;re going to use it for the database features.</p>
+<ol type="1" start="1">
+<li>Go to <a href="https://firebase.google.com/" target="_blank">Firebase</a></li>
+<li>Login with your school email address</li>
+</ol>
+<h2 is-upgraded><img style="width: 697.70px" src="img/305939cbfaf42764.png"></h2>
+<h2 is-upgraded>Create a project</h2>
+<ol type="1" start="3">
+<li><a href="https://console.firebase.google.com/" target="_blank"><strong>Go to console</strong></a> in the top right of the screen and click <strong>Create a project</strong></li>
+<li>You&#39;ll be prompted to enter a project name and choose whether to enable Google Analytics (which you can skip for now as per the tip).</li>
+</ol>
+<p class="image-container"><img style="width: 425.50px" src="img/d2d2b00975a353ec.png"></p>
+<p>It might take a few moments to set up everything for the first time.</p>
+<aside class="special"><p><strong>Tip:</strong><em> You do </em><strong><em>not </em></strong><em>need to enable Google Analytics.</em></p>
+</aside>
+<aside class="warning"><p><strong>Checkpoint</strong></p>
+<p>You&#39;ve started a <strong>Firebase project</strong> and are ready to <strong>use its features</strong>.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add your app to the project" duration="0">
+        <p>You need to tell Firebase that you have an app so that it can give you the <strong>configuration</strong> information you&#39;ll need to connect to it. To get the specific connection details for your web app, you first need to register it in your Firebase project.</p>
+<p class="image-container"><img style="width: 697.70px" src="img/66a2d91e981d4191.png"></p>
+<ol type="1" start="1">
+<li>Click the <strong>&lt;/&gt;</strong> button to add a web app.</li>
+<li>The <strong>App nickname </strong>should be the same or similar to your app&#39;s name that you&#39;ve been developing.</li>
+</ol>
+<p class="image-container"><img style="width: 697.70px" src="img/b84ea23239ae6d9c.png"></p>
+<aside class="special"><p><strong>Tip: </strong><em>You do </em><strong><em>not </em></strong><em>need to tick Firebase Hosting at this time.</em></p>
+</aside>
+<p>Once you&#39;ve registered your app, Firebase will give you some instructions and information for you to use to add the <strong>Firebase SDK</strong> which will connect your app to the Firestore database.</p>
+<p><strong>Keep this window open for a while - you&#39;ll need to refer back to it in the following steps.</strong></p>
+<aside class="warning"><p><strong>Checkpoint</strong></p>
+<p>You&#39;ve got the <strong>information</strong> you need to <strong>connect your app</strong> to your <strong>Firebase project</strong>.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Connect your app to the project" duration="0">
+        <p>Your app will need the Firebase files and configuration information to be able to connect to Firebase and your database.</p>
+<ol type="1" start="1">
+<li>In Visual Studio Code, install the Firebase files by running the command it gave you: <code>npm install firebase</code></li>
+</ol>
+<aside class="special"><p><strong>Tip</strong></p>
+<p>Remember that you can run commands in Visual Studio code by opening the terminal and typing them in.</p>
+<p>You can open the terminal by using the shortcut <code>⌘</code> + <code>`</code> or clicking the <strong>Terminal</strong> menu and choosing <strong>New Terminal</strong>.</p>
+</aside>
+<ol type="1" start="2">
+<li>Create a new file in your <code>lib/</code> folder called <code>db.js</code></li>
+<li>Copy and paste the code that Firebase gave you into the new file. It looks like this, except it has <em>your specific configuration information</em> in the middle. <strong>Don&#39;t copy the config from this guide - the configuration is unique to your project because it contains the keys to connect to your Firebase services.</strong></li>
+</ol>
+<p class="image-container"><img style="width: 410.63px" src="img/afc1266811a7ccf6.png"></p>
+<p class="image-container"><img style="width: 553.18px" src="img/37e1e4b9256b15dd.png"></p>
+<aside class="warning"><p><strong>Checkpoint</strong></p>
+<p>Your app is <strong>connected</strong> to your <strong>Firebase project</strong>. You&#39;ve established the link between your <strong>app</strong> and your <strong>Firebase backend</strong>. You&#39;re now ready to integrate specific Firebase services, such as setting up the <strong>Firestore database</strong> to store and retrieve data for your app, or adding <strong>Firebase Authentication</strong> to manage user logins.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

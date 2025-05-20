@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-05-20T00:53:30Z",
+  "id": "firestore-database",
+  "duration": 0,
+  "title": "Firestore Database",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to add persistent storage to your SvelteKit app with Firebase.",
+  "source": "14w0xJF4fnjXc8vPTX7zq7hIBvJrPVwRYDA9-_tT0xJo",
+  "theme": "svelte",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "svelte"
+  ],
+  "tags": [],
+  "url": "firestore-database"
+}

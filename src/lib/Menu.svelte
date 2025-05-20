@@ -51,6 +51,17 @@
     </a>
   </p>
 
+  <p class="menu-label">
+    <a
+    class="menu-link"
+    class:has-text-primary={!$page.url.pathname.includes('/firebase')}
+    class:has-text-dark={$page.url.pathname == '/firebase'}
+    href="/firebase">
+    <i class="icon fa fa-fire fa-2x" />
+      <span class="link-text"> Firebase </span>
+    </a>
+  </p>
+
 </nav>
 
 <style>

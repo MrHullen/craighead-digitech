@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-05-19T21:24:46Z",
+  "id": "firebase-setup",
+  "duration": 0,
+  "title": "Firebase Setup",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to connect your app to a Firebase project.",
+  "source": "1WDs2v6qL7epgYgiVUfBJ470eqkdYSrtheY94JOV8dD8",
+  "theme": "svelte",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "svelte"
+  ],
+  "tags": [],
+  "url": "firebase-setup"
+}

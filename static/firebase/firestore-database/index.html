@@ -1,0 +1,349 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Firestore Database</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="firestore-database"
+                  title="Firestore Database"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p class="image-container"><img style="width: 624.00px" src="img/d824482c74440cd1.png"></p>
+<h2 is-upgraded>What you&#39;ll build</h2>
+<ul>
+<li>A database to store objects from your existing web app.</li>
+</ul>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>What a database is and does.</li>
+<li>How to create and set up a Firebase database.</li>
+<li>How to connect your web app to the database.</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>Knowledge of HTML, CSS, JavaScript, and <a href="https://svelte.dev/" target="_blank">Svelte</a>.</li>
+<li>A web app with some data that needs to be stored.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create a Firestore Database" duration="0">
+        <p>Firebase includes a feature called Cloud Firestore, which is their database. A database holds data for your web app and will send it to your app when you need it. Keeping the data separate helps keep everything manageable, flexible, and robust.</p>
+<ol type="1" start="1">
+<li>Click on the <strong>Cloud Firestore card</strong> (<em>or click on the </em><strong><em>Build</em></strong><em> menu dropdown and select </em><strong><em>Firestore Database)</em></strong>.</li>
+<li>Click <strong>Create database</strong> to create the database for this project.</li>
+</ol>
+<p class="image-container"><img style="width: 697.70px" src="img/4a67d857887dd64b.png"></p>
+<ol type="1" start="3">
+<li>Leave the settings on the defaults and click <strong>Next </strong>until you&#39;re done.</li>
+</ol>
+<aside class="special"><p><strong>Tip:</strong><em> You can set the location closer to New Zealand (e.g. Sydney) to get a miniscule improvement in how fast your data arrives to your app.</em></p>
+</aside>
+<aside class="warning"><p><strong>Checkpoint</strong></p>
+<p>You&#39;ve started a <strong>Firebase project</strong> and are ready to <strong>use its features</strong>.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Allow access" duration="0">
+        <p>Databases often store information that you want to control access to, like people&#39;s email addresses or even passwords. Firebase lets you do that with rules.</p>
+<p>When you first create your database, <strong>by default no one can access anything</strong>. This is to make sure you don&#39;t accidentally share something you don&#39;t want to.</p>
+<p>Your database doesn&#39;t store anything sensitive yet, so we&#39;ll change the rules so that anyone can read or write information to the collections.</p>
+<ol type="1" start="1">
+<li>Go to the <strong>Rules </strong>tab of your database.</li>
+<li>Change the <strong><code>allow</code></strong> line so that it says <code>true</code> instead of <code>false</code>.</li>
+<li>Click <strong>Publish</strong> to save your changes.</li>
+</ol>
+<p class="image-container"><img style="width: 697.70px" src="img/26ce5f0141c2b0bc.png"></p>
+<aside class="warning"><p><strong>Checkpoint</strong></p>
+<p>You&#39;ve set up your<strong> Firestore database</strong> and <strong>access rules</strong>. It&#39;s ready to be <strong>connected</strong> to your web app.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Connect your app to the database" duration="0">
+        <p>In the previous guide you added the connection to your <strong>Firebase project</strong>, but now we need to add the actual <strong>Firestore database</strong>.</p>
+<ol type="1" start="1">
+<li>Import the Firestore functions by replacing the TODO line with this import line:</li>
+</ol>
+<p><code>import { getFirestore } from 'firebase/firestore'</code></p>
+<ol type="1" start="2">
+<li>Create your database connection variable by adding this line after you&#39;ve initialized Firebase:</li>
+</ol>
+<p><code>const db = getFirestore(app)</code></p>
+<p>This constant variable represents the database for the rest of your SvelteKit app.</p>
+<p class="image-container"><img style="width: 697.70px" src="img/4f015cad5aa36ce8.png"></p>
+<aside class="warning"><p><strong>Checkpoint</strong></p>
+<p>Your app is <strong>connected</strong> to your <strong>Firestore database</strong>, and you&#39;re ready to <strong>send and receive data</strong>.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add data -  your function" duration="0">
+        <p>Adding data to your database is going to require two parts:</p>
+<ul>
+<li>a function to send that information to the database</li>
+<li>an interface to collect the information and send it to the function</li>
+</ul>
+<p>The function will live in your <code>db.js</code> file and save whatever classroom comes to it into the database. It&#39;ll save it into the <strong>classrooms</strong> collection.</p>
+<p><a href="https://firebase.google.com/docs/firestore/manage-data/add-data#add_a_document" target="_blank">You can read all about this in Firebase&#39;s excellent documentation.</a></p>
+<ol type="1" start="1">
+<li>Import the <code>collection</code> and <code>addDoc</code> functions from <code>firestore</code>. You can put them in the same set of curly brackets that has <code>getFirestore</code>.</li>
+<li>Add a function to the bottom of your db.js file called addClassroom as per the example here. The explanation of how it works is below the image.</li>
+</ol>
+<h3 is-upgraded>db.js</h3>
+<p>// Saves a person object to the database.</p>
+<p>export async function addClassroom(classroom) {</p>
+<p>  const personDoc = await addDoc(collection(db, &#39;classrooms&#39;), classroom)</p>
+<p>}</p>
+<p class="image-container"><img style="width: 697.70px" src="img/4c57b1fd55486fe1.png"></p>
+<aside class="special"><p><strong>How it Works</strong></p>
+<ol type="1" start="1">
+<li>You call addClassroom from anywhere in your app, passing it an object with classroom details.</li>
+<li>Being async (asynchronous), it prepares to perform a database operation that might take time.</li>
+<li>It tells Firestore: &#34;I want to add a new document (addDoc) to the &#39;classrooms&#39; collection (collection(db, &#39;classrooms&#39;)). Here&#39;s the data for that new document (the classroom object).&#34;</li>
+<li>The await keyword makes the function pause and wait for Firestore to confirm that the document has been successfully created and its data saved.</li>
+<li>Once Firestore confirms this, the reference to this new document (including its ID) is stored in the personDoc constant.</li>
+<li>The function then finishes. Our version doesn&#39;t actually use the reference to the new document, but it got stored in the database anyway.</li>
+</ol>
+<p>This function provides a clean, reusable way to add classroom data to your Firestore database.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add data - your interface" duration="0">
+        <p>The interface will be on the main page of your app for now.</p>
+<ol type="1" start="1">
+<li>Import the <code>addClassroom</code> function you just created.</li>
+<li>Create a <code>newClassroom</code> object with properties for <code>roomNumber</code>, <code>description</code>, and <code>numberOfSeats</code></li>
+<li>Create a <code>label</code> for each of the object&#39;s properties and inside each <code>label</code> <strong>bind</strong> an <code>input</code> to the property.</li>
+<li>Create a <code>button</code> that sends the <code>newClassroom</code> object to the <code>addClassroom</code> function.</li>
+</ol>
+<h3 is-upgraded>+page.svelte</h3>
+<pre><code>&lt;script&gt;
+  import Header from &#39;$lib/Header.svelte&#39;
+  import Footer from &#39;$lib/Footer.svelte&#39;
+
+  import { addClassroom } from &#39;$lib/db.js&#39;
+
+  let newClassroom = {
+    roomNumber: &#39;&#39;,
+    description: &#39;&#39;,
+    numberOfSeats: &#39;&#39;,
+  }
+&lt;/script&gt;
+
+&lt;Header /&gt;
+
+&lt;main class=&#34;content section&#34;&gt;
+
+  &lt;label class=&#34;label&#34;&gt;
+    Room number: &lt;input type=&#34;number&#34; bind:value={newClassroom.roomNumber} /&gt;
+  &lt;/label&gt;
+  
+  &lt;label class=&#34;label&#34;&gt;
+    Description: &lt;input bind:value={newClassroom.description} /&gt;
+  &lt;/label&gt;
+
+  &lt;label class=&#34;label&#34;&gt;
+    Number of seats: &lt;input type=&#34;number&#34; bind:value={newClassroom.numberOfSeats} /&gt;
+  &lt;/label&gt;
+
+  &lt;button class=&#34;button&#34; on:click={() =&gt; { addClassroom(newClassroom) }}&gt;
+    Save
+  &lt;/button&gt;
+  
+&lt;/main&gt;
+
+&lt;Footer /&gt;</code></pre>
+<aside class="warning"><p><strong>Checkpoint</strong></p>
+<p>Your app can now <strong>send data</strong> to your database. Try <strong>adding</strong> some classrooms using your <strong>interface</strong>, and check what <strong>Firestore</strong> has stored using the <strong>Firebase Console</strong>.</p>
+</aside>
+<p class="image-container"><img style="width: 697.70px" src="img/361ee936cb679988.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Get data - your function" duration="0">
+        <p>Getting data from your database is also going to require two parts:</p>
+<ul>
+<li>a function to get the information from the database</li>
+<li>an interface to display the information</li>
+</ul>
+<p>The function will live in your <code>db.js</code> file and get all the classrooms from the <strong>classrooms</strong> collection in your database.</p>
+<ol type="1" start="1">
+<li>Add <code>getDocs</code> to your <code>import</code> from <code>firestore</code>.</li>
+<li>Create a new <strong>function</strong> called <code>getClassrooms</code>, but also add <code>export</code> and <code>async</code> to the start.</li>
+</ol>
+<aside class="special"><p>This line is just like a normal function line, but it has the <code>export</code> and <code>async</code> keywords as well. The <code>export</code> keyword makes this function <strong>available to other files</strong> so that they can import it, and the <code>async</code> keyword means that inside this function there&#39;s going to be something that <strong>the app needs to wait for</strong>.</p>
+</aside>
+<h3 is-upgraded>db.js</h3>
+<pre><code>// Gets all the classrooms from the database.
+export async function getClassrooms() {
+  
+}</code></pre>
+<ol type="1" start="3">
+<li>Add the code from the <a href="https://firebase.google.com/docs/firestore/query-data/get-data#get_all_documents_in_a_collection" target="_blank">Firestore documentation</a> for <strong>getting all the documents</strong> from a <strong>collection</strong>.</li>
+<li>Create an empty <strong>array</strong> called <code>classrooms</code>.</li>
+</ol>
+<aside class="special"><p>This line creates a constant variable and makes it store all of the documents from the database. It also has the <code>await</code> keyword, which is linked to the <code>async</code> keyword from before. When you use the <code>await</code> keyword, the app will <strong>wait until the data arrives</strong> before moving on with the rest of the function.</p>
+</aside>
+<h3 is-upgraded>db.js</h3>
+<pre><code>// Gets all the classrooms from the database.
+export async function getClassrooms() {
+  let classroomDocs = await getDocs(collection(db, &#39;classrooms&#39;))
+
+  let classrooms = []
+}</code></pre>
+<ol type="1" start="5">
+<li>Use a <strong>loop</strong> to iterate over the documents and put their <strong>data</strong> into the <strong>array</strong> as an <strong>object</strong>.</li>
+</ol>
+<aside class="special"><p>This iteration loop will go through all of the documents the function got from the database and put the <strong>data</strong> from them into an <strong>object</strong>, and put that <strong>object</strong> into the <strong>array</strong>. The <code>classrooms</code> <strong>array</strong> started out empty, but when this finishes, you can imagine the it looks like this:</p>
+<p><code>classrooms = {</code></p>
+<p><code>  { roomNumber: 31,  description: 'Digital Technology',  numberOfSeats: 26 },</code></p>
+<p><code>  { roomNumber: 32,  description: 'Careers',  numberOfSeats: 24 },</code></p>
+<p><code>}</code></p>
+</aside>
+<h3 is-upgraded>db.js</h3>
+<pre><code>// Gets all the classrooms from the database.
+export async function getClassrooms() {
+  let classroomDocs = await getDocs(collection(db, &#39;classrooms&#39;))
+
+  let classrooms = []
+
+  classroomDocs.forEach((classroomDoc) =&gt; {
+    classrooms = [...classrooms, classroomDoc.data()]
+  })
+}</code></pre>
+<ol type="1" start="6">
+<li>Use a return statement to send the <code>classrooms</code> array back to wherever the function was called from.</li>
+</ol>
+<h3 is-upgraded>db.js</h3>
+<pre><code>// Gets all the classrooms from the database.
+export async function getClassrooms() {
+  let classroomDocs = await getDocs(collection(db, &#39;classrooms&#39;))
+
+  let classrooms = []
+
+  classroomDocs.forEach((classroomDoc) =&gt; {
+    classrooms = [...classrooms, classroomDoc.data()]
+  })
+
+  return classrooms
+}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Get data - your interface" duration="0">
+        <ol type="1" start="1">
+<li>Import your new function on the home page.</li>
+<li>Create a new variable to store the classrooms, and use your new function to get them.</li>
+</ol>
+<h3 is-upgraded>routes/+page.svelte</h3>
+<pre><code>&lt;script&gt;
+  import Header from &#39;$lib/Header.svelte&#39;
+  import Footer from &#39;$lib/Footer.svelte&#39;
+
+  import { addClassroom, getClassrooms } from &#39;$lib/db.js&#39;
+
+  let classrooms = getClassrooms()
+
+  let newClassroom = {
+    roomNumber: &#39;&#39;,
+    description: &#39;&#39;,
+    numberOfSeats: &#39;&#39;,
+  }
+&lt;/script&gt;</code></pre>
+<ol type="1" start="3">
+<li>Run the <code>npm run dev</code> command in the <strong>terminal</strong> and <strong>open</strong> the page in your <strong>browser</strong>. Make sure you haven&#39;t got any errors on the page or in the <strong>console</strong>.</li>
+</ol>
+<p>We have an <strong>array</strong> of <code>classroom</code> <strong>objects</strong>, so let&#39;s start by putting all their details on the front page.</p>
+<ol type="1" start="1">
+<li>At the top of your <code>main</code>, use the <code>{#await ...}</code> block to get the page to show that it&#39;s <strong>loading</strong> while we wait for the data from the database to arrive.</li>
+</ol>
+<h3 is-upgraded>+page.svelte</h3>
+<pre><code>{#await classrooms}
+  &lt;p&gt;Loading...&lt;/p&gt;
+{:then classrooms}
+
+{/await}</code></pre>
+<ol type="1" start="2">
+<li>Once the <code>classroom</code> <strong>array</strong> arrives, we can use an <code>{#each ...}</code> block to <strong>iterate</strong> over it.</li>
+</ol>
+<h3 is-upgraded>+page.svelte</h3>
+<pre><code>{#await classrooms}
+  &lt;p&gt;Loading...&lt;/p&gt;
+{:then classrooms}
+  {#each classrooms as classroom}
+
+  {/each}
+{/await}</code></pre>
+<ol type="1" start="3">
+<li>And output the details of the <code>person</code> <strong>object</strong> in any way we want.</li>
+</ol>
+<h3 is-upgraded>+page.svelte</h3>
+<pre><code>{#await classrooms}
+  &lt;p&gt;Loading...&lt;/p&gt;
+{:then classrooms}
+  {#each classrooms as classroom}
+    &lt;p&gt;{classroom.roomNumber} {classroom.description} {classroom.numberOfSeats}&lt;/p&gt;
+  {/each}
+{/await}</code></pre>
+<aside class="warning"><p><strong>Checkpoint</strong></p>
+<p>Your page is now getting its <strong>content</strong> directly from your <strong>database</strong>. This is how seriously big web apps do it as well. <strong>Nice work</strong>!</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Final thoughts" duration="0">
+        <p>Well done! You&#39;ve successfully got the basics of Firebase Firestore by connecting your application to a powerful cloud database, storing your first pieces of information as objects, and bringing all that data back to display on your page. These are foundational skills that open up heaps of possibilities for the applications you&#39;re building.</p>
+<p>While fetching an entire collection is useful, often you&#39;ll want to work with more precision. Imagine needing to:</p>
+<ul>
+<li>Instead of getting <em>all</em> classrooms, what if you needed to retrieve just one specific classroom by its room number?</li>
+<li>You might need to change a classroom&#39;s seats, or change its description.</li>
+<li>Remove outdated entries: Sometimes information is no longer needed, and you&#39;ll want to delete specific documents from your collection.</li>
+</ul>
+<p>Beyond these individual operations, you can also start asking more intelligent questions of your database. Think about sorting your retrieved classrooms alphabetically. Firestore allows you to do these things as part of the function in your code, or you can write the JavaScript to do it yourself.</p>
+<p>It&#39;s important to think about what functionality <em>your</em> project needs. Do you need to edit data? Search for specific items? The official Firebase documentation is an excellent resource, packed with examples. Even if you&#39;re not sure how to do it now, as long as you know what you need to do then you&#39;ll be able to figure out how to do it by looking at examples, reading the documentation, and helping each other.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
