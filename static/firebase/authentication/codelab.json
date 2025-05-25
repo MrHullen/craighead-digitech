@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-05-25T18:47:33Z",
+  "id": "authentication",
+  "duration": 0,
+  "title": "Authentication",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to add persistent storage to your SvelteKit app with Firebase.",
+  "source": "11hLayIzzTt7cdKnYPc_h_i6bec1jO1JDLDge8YQbRKA",
+  "theme": "svelte",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "svelte"
+  ],
+  "tags": [],
+  "url": "authentication"
+}

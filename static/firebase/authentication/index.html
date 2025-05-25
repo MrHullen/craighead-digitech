@@ -1,0 +1,207 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Authentication</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="authentication"
+                  title="Authentication"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p class="image-container"><img style="width: 624.00px" src="img/d824482c74440cd1.png"></p>
+<h2 is-upgraded>What you&#39;ll build</h2>
+<ul>
+<li>A database to store objects from your existing web app.</li>
+</ul>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>What a database is and does.</li>
+<li>How to create and set up a Firebase database.</li>
+<li>How to connect your web app to the database.</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>Knowledge of HTML, CSS, JavaScript, and <a href="https://svelte.dev/" target="_blank">Svelte</a>.</li>
+<li>A web app with some data that needs to be stored.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Enable Authentication on your Project" duration="0">
+        <p>Firebase includes a feature called Authentication. This allows you to use Google logins in your app, and offloads all of the complexity and issues of user management and security to Google.</p>
+<p>The next few steps are based on <a href="https://firebase.google.com/docs/auth/web/google-signin#handle_the_sign-in_flow_with_the_firebase_sdk" target="_blank">Firebase&#39;s Authentication documentation</a>, but simplified for our use.</p>
+<ol type="1" start="1">
+<li>Click on the <strong>Authentication card</strong> (<em>or click on the </em><strong><em>Build</em></strong><em> menu dropdown and select </em><strong><em>Authentication)</em></strong>.</li>
+<li>Click <strong>Get started</strong> to enable authentication for this project.</li>
+</ol>
+<p class="image-container"><img style="width: 697.70px" src="img/248c081b92e13ea3.png"></p>
+<ol type="1" start="3">
+<li>Choose the <strong>Google</strong> sign-in method and then toggle <strong>enable</strong>.</li>
+<li>Use <strong>your email address</strong> as the support email address.</li>
+</ol>
+<p class="image-container"><img style="width: 456.00px" src="img/85ff0a05945ea5b0.png"></p>
+<ol type="1" start="5">
+<li>Click Save and <strong>Google</strong> authentication has been enabled on your app.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create a login function" duration="0">
+        <ol type="1" start="1">
+<li>Add <strong>three imports</strong> from firebase/auth to your <strong>db.js</strong> file for the services you need:</li>
+</ol>
+<ul>
+<li>getAuth</li>
+<li>GoogleAuthProvider</li>
+<li>signInWithPopup</li>
+</ul>
+<ol type="1" start="2">
+<li>Create <strong>two constants</strong> to initialize the authentication services:</li>
+</ol>
+<ul>
+<li>auth for the getAuth</li>
+<li>provider for the GoogleAuthProvider</li>
+</ul>
+<p class="image-container"><img style="width: 697.70px" src="img/250d6bfcbff82f78.png"></p>
+<ol type="1" start="3">
+<li>Create a <strong>new function</strong> at the bottom of your <strong>db.js</strong> file called login. This function will use the signInWithPopup function to let the user <strong>authenticate</strong> with their Google login and then it&#39;ll <strong>log the result</strong> to the console so you can see if it&#39;s working.</li>
+</ol>
+<pre><code>// Signs in a user with Google authentication.
+export async function login() {
+  const result = await signInWithPopup(auth, provider)
+  console.log(&#39;User signed in:&#39;, result.user)
+}</code></pre>
+<ol type="1" start="4">
+<li>Include your new login function in your list of <strong>imports</strong> on the <strong>front page</strong>.</li>
+<li>Create a button in your main section that calls the login function when it&#39;s clicked.</li>
+</ol>
+<aside class="warning"><p><strong>Checkpoint</strong></p>
+<p>Your app can now <strong>login</strong> to your app. Try clicking the button in the browser and going through the login process. When you&#39;re done, you should be able to see your <strong>login details </strong>in the <strong>Console</strong> window of your app.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Store the user&#39;s information" duration="0">
+        <p>Your app will need to be able to access information across different pages. The user is one example of this kind of information and it&#39;s a good opportunity to introduce the idea of <strong>state</strong>. An app&#39;s state is essentially all the important information that your application needs to remember at any given moment while it&#39;s running.</p>
+<p>It&#39;s a bit like the app&#39;s short-term memory. This &#39;memory&#39; can include things like:</p>
+<ul>
+<li>Whether a user is logged in or out.</li>
+<li>What items a user has added to a shopping cart.</li>
+<li>The current score in a game.</li>
+</ul>
+<p>When this information (the state) changes – like when your user logs in – the app can react to that change, such as showing them their personalised dashboard.</p>
+<p>SvelteKit uses $state as a special kind of variable for this task. When this variable changes, all the components that use it get notified to update themselves to show the new information.</p>
+<p>The next steps are based on <a href="https://svelte.dev/docs/svelte/stores#When-to-use-stores" target="_blank">SvelteKit&#39;s Stores and Runes documentation</a>.</p>
+<ol type="1" start="1">
+<li>Create a new file in your /lib called state.svelte.js</li>
+<li>Create a new exportable variable named user</li>
+<li>The user variable uses the $state syntax to create a new <strong>object</strong> with four <strong>properties</strong>:</li>
+</ol>
+<ul>
+<li>uid</li>
+<li>email</li>
+<li>displayName</li>
+<li>photoURL</li>
+</ul>
+<p class="image-container"><img style="width: 697.70px" src="img/60c893b408ef9b57.png"></p>
+<ol type="1" start="4">
+<li>Import your new user variable into your <strong>db.js</strong></li>
+</ol>
+<p class="image-container"><img style="width: 697.70px" src="img/c80152c3c22632b8.png"></p>
+<ol type="1" start="5">
+<li>Update your login function so that it adds the new user information to the user object.</li>
+<li>You can also delete the console.log now, just to keep everything tidy.</li>
+</ol>
+<pre><code>// Signs in a user with Google authentication.
+export async function login() {
+  const result = await signInWithPopup(auth, provider)
+  console.log(&#39;User signed in:&#39;, result.user)
+
+  user.uid = result.user.uid
+  user.email = result.user.email
+  user.displayName = result.user.displayName
+  user.photoURL = result.user.photoURL
+}</code></pre>
+<aside class="warning"><p><strong>Checkpoint</strong></p>
+<p>Your app can now <strong>login</strong> to your app and it will remember you between pages.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create a logout function" duration="0">
+        <p>The logout function is as simple as importing the signOut function and creating a logout function that resets the user variable and calls the signOut function.</p>
+<p class="image-container"><img style="width: 697.70px" src="img/34d98f8be40d38d8.png"></p>
+<pre><code>// Signs out the current user.
+export async function logout() {
+  user.uid = null
+  user.email = null
+  user.displayName = null
+  user.photoURL = null
+
+  await signOut(auth)
+}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Update the button" duration="0">
+        <p>At the moment your front page doesn&#39;t react to the user logging in. You can change that by <strong>adding</strong> an {#if} block that checks if there&#39;s a user <strong>currently logged in</strong>.</p>
+<p>If the user variable is null, then the button should offer the user to <strong>login</strong>.</p>
+<p>If the user variable has info in it, then <strong>the user is logged in</strong> and we can display <strong>their information</strong> and offer them a <strong>logout</strong>.</p>
+<pre><code>{#if user.uid == null}
+  &lt;button class=&#34;button&#34; on:click={login}&gt;
+    Login
+  &lt;/button&gt;
+{:else}
+  &lt;p&gt;{user.displayName}&lt;/p&gt;
+  &lt;button class=&#34;button&#34; on:click={logout}&gt;
+    Logout
+  &lt;/button&gt;
+{/if}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Next steps" duration="0">
+        <p>You can <strong>personalise</strong> the page when the user is logged in by using their <strong>display picture</strong> and <strong>name</strong>.</p>
+<p>You can create more $state variables in the <strong>state.svelte.js</strong> file to track other things <strong>your app needs to remember</strong> between pages, such as the classroom information.</p>
+<p>You can change your main page so that it <strong>only shows</strong> the inputs <strong>if the user is logged in</strong>. You can also <strong>include</strong> their uid in the classrooms you store in the database. This would let you get <strong>only</strong> the classrooms with their uid.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
